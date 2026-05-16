@@ -1,0 +1,43 @@
+isotope,tracer,genotype,metric,value,region,condition,source
+11C,PK11195,HAB,VT,0.7,global_mean,baseline_hc,Fujita 2017
+11C,PK11195,HAB,BPND,0.8,global_mean,baseline_hc,Fujita 2017
+11C,PK11195,HAB,time_stability_VT,26,global_mean,baseline_hc,Fujita 2017
+11C,PK11195,HAB,fP,unspecified,plasma,baseline_hc,Fujita 2017
+
+11C,DPA-713,HAB,VT,3.6,global_mean,baseline_hc,Fujita 2017
+11C,DPA-713,HAB,BPND,7.3,global_mean,baseline_hc,Fujita 2017
+11C,DPA-713,HAB,time_stability_VT,25,global_mean,baseline_hc,Fujita 2017
+11C,DPA-713,HAB,fP,unspecified,plasma,baseline_hc,Endres 2009
+
+11C,PBR-28,HAB,VT,4.33,whole_brain,baseline_hc,Owen 2014
+11C,PBR-28,HAB,VND,1.98,whole_brain,baseline_hc,Owen 2014
+11C,PBR-28,HAB,BPND,1.2,global_mean,baseline_hc,Fujita 2017
+11C,PBR-28,NA,VT_over_fP,96.8,mean_of_10_rois,baseline_hc,Dickstein 2011
+11C,PBR-28,NA,fP,0.044,plasma,baseline_hc,Dickstein 2011
+11C,PBR-28,NA,identifiability_SE,5,mean_of_10_rois,baseline_hc,Dickstein 2011
+
+18F,PBR-06,NA,VT,2.1,mean_of_10_rois,baseline_hc,Dickstein 2011
+18F,PBR-06,NA,VT_over_fP,100.7,mean_of_10_rois,baseline_hc,Dickstein 2011
+18F,PBR-06,NA,fP,0.022,plasma,baseline_hc,Dickstein 2011
+18F,PBR-06,NA,identifiability_SE,3,mean_of_10_rois,baseline_hc,Dickstein 2011
+
+18F,GE-180,HAB,VT,0.17,whole_brain,baseline_hc,Fan 2016
+18F,GE-180,NA,VT,0.29,whole_brain,ms_cohort,Sridharan 2019
+18F,GE-180,NA,VND,0.11,whole_brain,ms_occupancy_plot,Sridharan 2019
+18F,GE-180,NA,VND,0.20,whole_brain,ms_polymorphism_plot,Sridharan 2019
+18F,GE-180,NA,VND_fraction,55,whole_brain,ms_cohort,Sridharan 2019
+18F,GE-180,NA,fP,unspecified,plasma,baseline_hc,Fan 2016
+
+18F,PBR-111,HAB,BPND,2.78,global_mean,baseline_hc,Guo 2013
+18F,PBR-111,NA,VND,1.18,global_mean,baseline_hc,Guo 2013
+18F,PBR-111,HAB,VT,unspecified,global_mean,baseline_hc,Ottoy 2018
+18F,PBR-111,NA,fP,unspecified,plasma,baseline_hc,Ottoy 2018
+
+11C,AC-5216,HAB,BPND,4.6,thalamus,baseline_hc,Miyoshi 2009
+11C,AC-5216,HAB,BPND,3.5,striatum,baseline_hc,Miyoshi 2009
+11C,AC-5216,HAB,VT,unspecified,global_mean,baseline_hc,Miyoshi 2009
+11C,AC-5216,HAB,fP,unspecified,plasma,baseline_hc,Miyoshi 2009
+
+11C,DAA1106,HAB,BPND,unspecified,global_mean,baseline_hc,Ikoma 2007
+11C,DAA1106,HAB,VT,unspecified,global_mean,baseline_hc,Ikoma 2007
+11C,DAA1106,HAB,fP,unspecified,plasma,baseline_hc,Ikoma 2007
