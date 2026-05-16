@@ -1,0 +1,64 @@
+This is BibTeX, Version 0.99e (TeX Live 2026)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: biorxiv2.aux
+The style file: zHenriquesLab-StyleBib.bst
+Database file #1: refs_min.bib
+Warning--empty journal in team2025
+Warning--empty journal in information2025
+Warning--empty journal in information2026
+Warning--empty journal in information2026b
+Warning--empty journal in information2026c
+Warning--empty journal in information2026d
+Warning--empty journal in information2026e
+Warning--empty journal in information2026f
+Warning--empty journal in information2026g
+Warning--empty journal in information2026h
+Warning--empty journal in lammertsma2015
+Warning--empty journal in rdkitn.d
+Warning--empty journal in agency2024
+Warning--empty journal in communityn.d
+Warning--empty journal in centre2018
+Warning--empty journal in centren.d
+Warning--empty journal in centre2016
+You've used 68 entries,
+            2450 wiz_defined-function locations,
+            811 strings with 14725 characters,
+and the built_in function-call counts, 17273 in all, are:
+= -- 1479
+> -- 476
+< -- 68
++ -- 315
+- -- 136
+* -- 870
+:= -- 2892
+add.period$ -- 204
+call.type$ -- 68
+change.case$ -- 136
+chr.to.int$ -- 25
+cite$ -- 85
+duplicate$ -- 1156
+empty$ -- 1769
+format.name$ -- 204
+if$ -- 3588
+int.to.chr$ -- 44
+int.to.str$ -- 69
+missing$ -- 68
+newline$ -- 348
+num.names$ -- 204
+pop$ -- 578
+preamble$ -- 1
+purify$ -- 68
+quote$ -- 0
+skip$ -- 672
+stack$ -- 0
+substring$ -- 136
+swap$ -- 179
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 476
+warning$ -- 17
+while$ -- 136
+width$ -- 0
+write$ -- 806
+(There were 17 warnings)

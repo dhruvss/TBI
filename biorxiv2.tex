@@ -1,0 +1,365 @@
+\documentclass[times, twoside]{zHenriquesLab-StyleBioRxiv}
+	
+	% Please give the surname of the lead author for the running footer
+	\leadauthor{Subramanian}
+	
+	\begin{document}
+		
+		\title{In Silico Evaluation of Haloalkylated Human 18kDa Translocator Protein PET Tracer Candidates for Traumatic Brain Injury Neuroinflammation}
+		\shorttitle{Haloalkylated TSPO Tracers for Traumatic Brain Injury}
+		
+		% Use letters for affiliations, numbers to show equal authorship (if applicable) and to indicate the corresponding author
+		\author[1,\Letter]{Dhruv Subramanian}
+		
+		\affil[1]{The Quarry Lane School}
+		
+		\maketitle
+		
+		\section*{Abstract}
+		Traumatic brain injury (TBI) associated neuroinflammation, which affects over 50\,million worldwide [\cite{galgano2017}], progresses gradually from acute (<72~hours) to chronic phases across three cellular sources.  Current tracers in human translocator protein (TSPO) protein [\cite{scarf2011}] positron emission tomography (PET) imaging are inadequate because of low blood–brain barrier (BBB) permeability and high nonspecific binding in brain tissue, leading to inaccurate neuroinflammation diagnoses in the acute phase.  This results in suboptimal patient outcomes.  Here we describe the computational prioritization of novel haloalkylated TSPO PET tracer candidates with increased predicted BBB permeability.  Eight existing TSPO tracers were ranked through $z$-score normalisation with emapunil (AC‑5216) emerging as the highest‑ranked tracer.  Emapunil was systematically modified using targeted haloalkylation for two functional groups, with the third being kept as a control.  A library of 1,922 analogues was generated and evaluated for lowest predicted docking energy through the CNS-MPO framework.  Finally, 17 lead candidates were evaluated for partition coefficients ($K_{\mathrm{p}}$) and brain–plasma ratios; simulated PET kinetics were calculated via plasma‑input graphical Logan analysis to derive predicted ($V_{\mathrm{T}}$).  All 17 candidates contained haloalkyl attachments, of which 15 contained a fluorinated side chain, thus supporting the hypothesis that haloalkylation improves brain partitioning in TSPO PET.  Pharmacokinetic simulations predicted 5.4\,\ensuremath{\times} improvements in $K_{\mathrm{p}}$ and 4\,\ensuremath{\times} improvements in brain–plasma ratio compared to emapunil, consistent with increased BBB permeability. Logan-derived $V_{\mathrm{T}}$ estimates remained internally consistent across tested t* values, supporting kinetic feasibility for future experimental validation. These findings hence suggest that novel haloalkylated emapunil analogs may improve predicted CNS exposure and warrant radiosynthesis and labeling, binding studies, and preclinical PET validation.
+		\begin{keywords}
+			
+			neuropharmacology $\mid$ traumatic brain injury $\mid$ blood–brain barrier $\mid$ radioligand development $\mid$ pharmacokinetics
+		\end{keywords}
+		
+		\begin{corrauthor}
+			dhruv.subramanian\at gmail.com
+		\end{corrauthor}
+		
+		\section*{Introduction}
+		Traumatic brain injury (TBI) is a debilitating neurological condition that affects over 50 million people worldwide.  Clinical diagnostics and treatments in TBI have long been subjects of interest among neuroscientists.  My research is primarily focused on developing novel methods of diagnostic development for this condition.  The current approaches for TBI diagnostics are primarily structural and neuroanatomical in nature—examples include computed tomography (CT), magnetic resonance imaging (MRI) and diffusion tensor imaging (DTI).  CT primarily quantifies intracerebral haemorrhage and cranial fractures, MRI assesses edema and fluid build‑up, and DTI addresses white matter lesions and axonal neurodegeneration that occur post injury.  These approaches fail to accurately delineate the complex neuroinflammatory pathology that is the main root cause for chronic neurodegeneration post‑injury, common to conditions like chronic traumatic encephalopathy (CTE) and traumatic encephalopathy syndrome (TES).  In TBI, dysregulated neuroinflammation drives synaptic loss, circuit dysfunction, and secondary neurodegeneration via cytokine excess, oxidative stress, and impaired resolution.
+		
+		The neuroinflammatory pathology of TBI is an intricate, hierarchical immune response that is constituted by 3 key cellular sources and is temporally demarcated according to activity of damage-associated molecular patterns (DAMPs) such as ATP, heat-shock proteins, damaged DNA, and histone proteins, which leak out of damaged neurons [\cite{al2020}]. The 18kDa human translocator protein (TSPO) is a protein upregulated in all three cellular sources in the chain of TBI neuroinflammation [\cite{lavisse2012}, \cite{cosenzanashat2009}]. TSPO is a mitochondrial membrane protein that is upregulated in these disease states, and contributes to the neuroimmune reaction post-TBI. Cosenza-Nashat et al. observed that in “disease states, elevated TSPO was present in parenchymal microglia, macrophages and some hypertrophic astrocytes,” and is considered a feasible clinical marker for neuroinflammation [\cite{cosenzanashat2009}]. High-affinity TSPO radioligands enable sensitive detection of activated microglial and myeloid cells, and clinical efforts involve increasing the binding potentials of these radioligands across several polymorphisms, using these radioligands in PET imaging to detect neuroinflammation patterns. Currently, TSPO PET is considered a premier imaging technique for detecting neuroinflammation in research studies and clinical trials, but its reliability in evaluating TBI neurotrauma is unclear. The main bottleneck preventing TSPO PET from accurately quantifying TBI neuroinflammation lies in the performance of these radioligands in passing the blood-brain barrier and binding specifically to TSPO in injury sites with low signal to noise ratios. My study endeavors to develop a TSPO PET radioligand optimized for TBI pharmacokinetics and BBB permeability parameters by means of a multimodal computational architecture. I hypothesize that the addition of fluoro- and perfluoroalkyl side chains and halogen-based modifications may increase the brain exposure and permeability of CNS tracers through the blood brain barrier, and provide greater confidence in PET imaging findings of neuroinflammation in TBI on the biochemical principle that haloalkyl modifications have higher lipophilicity leading to higher BBB permeability and bioactivity as a result. 
+		
+		
+		
+		\section*{Materials and Methods}
+		
+		\subsection{Initial Radioligand Reference Selection}
+		Eight currently produced TSPO tracers (PK11195, PBR28, PBR06, PBR111, DAA1106, AC‑5216, GE‑180 and DPA‑713) were selected based on the availability of human PET kinetic and physicochemical data in current literature by means of the programming language R [\cite{team2025}]. Physicochemical values such as reported inhibition constant and $\log D_{7.4}$ were extracted from synthetic evaluations for each radiotracer [\cite{owen2011, pike2009, sokias2017, wickstrm2014, chau2015, wadsworth2012, imaizumi2008, boutin2007, zhang2021, luu2022}].  PET metrics (e.g., $V_{\mathrm{T}}$, $B_{\mathrm{PND}}$, $f_\mathrm{P}$, $V_{\mathrm{ND}}$) were extracted from clinical human PET studies [\cite{fujita2017, fan2016, miyoshi2009, endresn.d, dickstein2011, owen2014, yn.d}].  Missing PET metrics for radiotracers were normalized accordingly, with $z$-scores taken for each parameter and missing values displayed as N/A for the composite score protocol. DAA1106 PET metrics were unspecified by current literature, and due to the lack of adequate PET data, the tracer was excluded from composite scoring. The $K_{i}$ value for AC-5216 was calculated based on evidence from Sokias et al. which suggested a “...12.6-fold loss in affinity at LAB brain tissue compared to HAB brain tissue, the affinity of XBD-173 at LABs (30.3 nM) is almost identical to the affinity at TSPO A17T in this study (31.3 nM),” where the HAB Ki value was extrapolated as 2.4 nM ($\frac{30.3}{12.6}$ nM). 
+		
+		
+		\subsection{TSPO Modelling and Docking Protocol}
+		The \textit{Homo sapiens} TSPO protein model was extracted from AlphaFold, and the PDBFixer Python library was used to add missing atoms/hydrogens and prepare the AlphaFold TSPO model for docking under physiological pH assumptions. Three‑dimensional conformers were retrieved from PubChem for each radioligand [\cite{information2025, information2026, information2026b, information2026c, information2026d, information2026e, information2026f, information2026g, information2026h}].  Each conformer was converted to a PDBQT file using OpenBabel [\cite{oboyle2011}] and docked with TSPO via AutoDock~Vina v1.2.0 [\cite{trott2010}, \cite{eberhardt2021}], using a grid centre of (5.2, 12.8, 8.3), grid size $20\times20\times20$ and exhaustiveness~8, which defined the reliability of the optimal binding pocket in the TSPO molecule.  The top‑scoring pose in the two binding pockets of TSPO (the central cavity and auxiliary hydrophobic site) [\cite{riond1991}] with the lowest energy (lower values correspond to higher binding affinity) was documented. 
+		
+		\subsection{Weighted $z$‑score and Composite TBI Index}
+		The seven reference tracers were ranked in a weighted $z$‑score framework that considered both physicochemical and PET‑kinetic properties.  For each metric, values were standardised according to a standard normal distribution $z = (x - \mu_m)/\sigma_m$.  Because TSPO rs6971 polymorphism strongly affects ligand affinity and PET quantification, reference-tracer comparison was restricted where possible to high-affinity binder (HAB) data for Ki, VT, BPND, and logD7.4. However, the structural docking and PBPK stages did not explicitly model rs6971-dependent TSPO conformational variants, because validated open-source structural models for these variants are not currently available. Therefore, the present results should be interpreted as HAB-calibrated computational prioritization rather than genotype-generalizable tracer validation. The $z$‑score pipeline was developed using R 4.5.1, involving the \texttt{tidyr}, \texttt{readr} and \texttt{dplyr} packages for statistical analysis and CSV parsing.  Statistical weighting was informed by literature, with the main framework based on basic principles of PET kinetic modelling and consensus definitions for PET metrics, considering binding potential and specific binding in the form of $V_{\mathrm{T}}/f_\mathrm{p}$, while $V_{\mathrm{ND}}^{-1}$ acted as a penalty gate [\cite{lammertsma2015}, \cite{innis2007}].  Due to the small sample size ($n=7$), weights were not defined statistically but were qualitatively informed by the literature. 
+		
+		
+		\begin{figure}
+			\centering
+			% Place your actual data table or graphic here.  The placeholder below
+			% corresponds to Figure~2.1 in the original manuscript.
+			\includegraphics[width=.8\linewidth]{figures/StatsWeightsTable.png}
+			\caption{Statistical weights applied to sample PET statistics.  The composite TBI suitability score was computed from the weights applied to each statistic combined with the $z$‑score relative to the sample.  AC‑5216 (emapunil) showed the highest TBI suitability score and was selected for systematic modification.}
+			\label{fig:StatsWeightsTable}
+		\end{figure}
+		
+		\subsection{Radioligand Enumeration}
+		Systematic modification of the selected pharmacophore was performed using the RDKit cheminformatics Python library [\cite{rdkitn.d}]. Viviano et al. observed key modifiable functional groups as the CH3 group attached to the purine and the CH3 attached to the tertiary amide nitrogen between the N-benzyl and ethyl groups [\cite{viviano2022}]. A similar modification framework was instituted here, defining three functional groups (R1, R2, R3) in the pharmacophore (Figure~\ref{fig:emapunilcore}).  R1 is the tertiary amide nitrogen between the N‑benzyl and ethyl groups, acting as a constant scaffold handle to monitor conformational changes due to R2 and R3 modifications.  R2 is the terminal N‑benzyl group that toggles hydrophobicity in the TSPO conformer model, and R3 is the heterocyclic nitrogen handle at the edge of the purine near the previous CH\(_3\) attachment.
+		
+		\begin{figure}
+			\centering
+			% Replace `emapunilcore.png` with the actual image of the emapunil core
+			\includegraphics[width=.8\linewidth]{figures/emapunilcore.png}
+			\caption{Functional groups marked as areas of modification on the emapunil core.  R2 and R3 were modified while R1 was held constant.}
+			\label{fig:emapunilcore}
+		\end{figure}
+		
+		Modifications for each functional group were curated based on a series of four computational enumeration stages. I hypothesized that fluorination, a common strategy in drug discovery pipelines to increase the potency and binding potential of small molecule scaffolds [\cite{kim2020}], may correlate to higher brain specificity and exposure in the form of partition coefficient in CNS PET tracers. The first stage focused on baseline enumeration, substituting R2 with simple aromatic groups (methyl, ethyl, phenyl, butyl, propyl) and mild fluorinations with simple side chains, establishing a baseline for properties such as molecular weight increase and $\log D_{7.4}$. This stage generated a total of 32 analogs, however four analogs had invalid molecular geometries that could not parse in the Embedded3D algorithm which models 3D homologies for each analog. Stage 2 primarily modified R2 and focused on permuting logD7.4 levels with substitutions of fluoroalkyls, perfluoroalkyls, halogen substitutions, and pentafluorosulfanyl groups as an exploratory replacement in the place of R3 [\cite{haranahalli2019}]. 112 analogs total were generated from this stage. Stages 3 and 4 were combined into one overall round, generating the remaining 1782 analogs, and acted as targeted stress tests for each parameter, checking efflux risk increase for higher molecular weight, topological polar surface area, and dipole moment. The main modifications done on the AC5216 pharmacophore at this stage included ether-linked, expanded fluoroalkyl derivative side chains, and exploratory testing of silyl ether additions. Specifically, one of the main goals for Stage 3 was the testing of trifluoromethyl ethers [\cite{leroux2008}], which are quite commonly used in CNS drug scaffolds, and were tested as a substitution of the R2 functional group in AC-5216. All emapunil ligands enumerated were assigned an analogue key defined as \texttt{emap[Stage]\_modification(R2)\_modification(R3)}, where each modification was listed as a specialised functional group added to the emapunil core.
+		
+		% Placeholder for Figure~2.3 (code snippet for main RDKit enumeration pipeline)
+		\begin{figure}
+			\centering
+			% Provide a schematic or diagram illustrating the enumeration pipeline.  This figure
+			% replaces the original code snippet and should succinctly convey the enumeration
+			% process.  Replace `Fig2_3_RDKit.png` with your own figure file.
+			\includegraphics[width=.8\linewidth]{figures/Enumeration.png}
+			\caption{Overview of the RDKit enumeration pipeline for generating analogues of the emapunil scaffold.}
+			\label{fig:RDKitPipeline}
+		\end{figure}
+		
+		\subsection{CNS Multi-Parameter Optimization and Lead Candidate Sampling}
+		The CNS multi-parameter optimization framework used in this project was based off the MPO instituted by Wager et al. [\cite{wager2010}], using the same key parameters of molecular weight, topological polar surface area (TPSA), hydrogen bond donors (HBD), hydrogen bond acceptors (HBA), rotatable bonds (RotB), cLogP, and estimated $\log D_{7.4}$. However, the bounds for the pass/fail CNS gate were optimized for the International Atomic Energy Agency (IAEA)’s technical document 2052, for ease in influx and washout in PET scan framing windows [\cite{agency2024}]. Because exact pH-dependent logD relies on pKa values, I used a TPSA-based lipophilicity heuristic estimated from RDKit’s Crippen $logP(mol)$ descriptor using the equation $logD_{7.4}EST$= $clogP$-$\frac{TPSA}{120}$. This proxy is motivated by empirical BBB and logBB studies showing linear relationships between brain distribution and combined lipophilicity–polarity terms (e.g., models incorporating cLogP and TPSA) [\cite{shityakov2015}]. Efflux risk and estimated logS were also calculated, with efflux risk calculated on a scale of 0 to 2, using physicochemical properties for in silico screening where all parameters thresholds were determined by common medicinal chemistry conventions (e.g. $TPSA$ \ensuremath{\le} 90), and HBD-P-gp efflux relationships were observed and scored according to the study by Gou et al. 2023 on hydrogen bonding in P-gp transporters. LogS estimates were determined by a truncated regression model of ESOL solubility considering $clogP$, molecular weight, and rotatable bonding in the formula 0.16 - 0.63$clogP$ - 0.0062$MW$ + 0.066$RotB$ and omitting the term of the aromatic proportion at the end of the equation as it is considered irrelevant in the CNS investigation [\cite{delaney2004}]. 22 lead candidates were determined from a weighted average taken from each parameter and the overall MPO score, with penalty (fail) gates determined by thresholds for each parameter optimized for PET framing. 
+		% Placeholder for Figure~2.4 (definition of properties as per MPO framework)
+		\begin{figure}
+			\centering
+			% Replace `Fig2_4_MPO.png` with an illustration or diagram describing key
+			% physicochemical properties used in the CNS MPO framework.  This figure
+			% replaces the original code snippet.
+			\includegraphics[width=.8\linewidth]{figures/MPO.png}
+			\caption{CNS multiparameter optimization framework.  The diagram outlines how molecular weight, topological polar surface area, hydrogen bond donors and acceptors, and $\log D_{7.4}$ contribute to the scoring of radiotracer candidates.}
+			\label{fig:MPOProperties}
+		\end{figure}
+		\subsection{Physiologically Based Pharmacokinetic (PBPK) Modeling }
+		22 lead candidates were advanced to the PBPK stage of the computational pipeline. Systematic errors caused by SMILES duplication in the enumeration process and parsing errors of $\mathrm{C}{F}_2$ groups pruned the 22 candidate set down to 17 lead analogs for PKSim-MoBi pharmacokinetic modeling. Fine docking was completed on the 17 leads for tighter binding potential thresholds of grid size $14\times14\times14$ and exhaustiveness index 32 for increased accuracy in $z$-scoring. Lead candidates were assigned an ID of A(x) with x being the number out of 17. The human anatomy and physiology template used for PKSim modeling was of a European male human, 30 years old, 70.00 kg, 175.00 cm and BMI 22.86 $kg/m^2$. Free fraction in plasma (fP) values per lead were computed for PKSim parameters through the linear regression model based on $\log D_{7.4}$ using the equation $f_p = \frac{1}{1+10^{mlogD_{pr/pl}}}$ with $mlogD_(pr/pl)$ being the estimated $\log D_{7.4}$ calculation in the computational framework [\cite{zoghbi2012}], and these regression-derived values were used as predictions for true fP values. Parameters integrated into PKSim’s small molecule pharmacokinetic evaluation were molecular weight (MW), halogen-offset MW, free fraction $fP$ and $logD$ at set physiological pH 7.4. The administration protocol for the simulation was 0.01 mg of analog in IV bolus form—a standard volume of radiotracer injected in PET studies. PKSim simulations were run with the key measurements being concentrations in arterial blood plasma, brain tissue, liver tissue, and peripheral venous blood plasma, with time-concentration (activity) curves plotted for each concentration measurement. For brain tissue and composite plasma curves, areas under the curves (AUC) were extrapolated to infinity using the terminal 10 percent of data points loaded in the analysis and were normalized according to other analog values (relative scale) [\cite{communityn.d}]. AUC at the end of the PET frame window was also plotted in the scale. Maximum concentration in each compartment, total body and hepatic clearance, volume of distribution in plasma at steady state (Vss), apparent volume of distribution in plasma ($V_{d}$), half-life, and mean residence time were also calculated and plotted for each lead candidate and the reference tracer. Brain and plasma concentration values were selected from 30, 60, and 90 minute timepoints in the PET framing window, with brain to plasma ratios and washout statistics being computed through these values. Simulations were done for all 17 lead candidates and were validated against an emapunil simulation that used pharmacodynamic data extracted from Owen et al. [\cite{owen2022}]. A weighted z-score was applied to the selected parameters of brain-plasma ratios, AUC of brain tissue, docking energy, and CNS MPO score to arrive at the top 3-5 modified lead candidates as computationally prioritized PET tracer candidates. Washout kinetics of brain tissue and composite plasma were used as penalty gates—if bounds were exceeded, they would be marked with a penalty of -0.2 and -0.1 $SD$ respectively in the final weighted average. 
+		
+		% Placeholder for Figure~2.5 (statistical weights for pharmacokinetic modelling)
+		\begin{figure}
+			\centering
+			% Replace `Fig2_5_PKWeights.png` with a figure that summarises statistical
+			% weights applied to PBPK modelling parameters.  This figure would typically
+			% illustrate how the various PK metrics combine into a final composite score.
+			\includegraphics[width=.8\linewidth]{figures/PKWeights.png}
+			\caption{Statistical weights applied during pharmacokinetic modelling.  This diagram summarises the weighting scheme used to prioritise brain partition coefficient, brain‑plasma ratios and docking energy in the final selection of lead analogues.}
+			\label{fig:PKWeights}
+		\end{figure}
+		
+		\subsection{MoBi PET Kinetics and Data Validation}
+		Data validation was accomplished through evaluation of PET kinetics for each of the top 3 finalists through MoBi and Turku PET Centre kinetic modeling frameworks. PK time-activity curves were plotted through OSP’s MoBi platform for eight compartments in total: arterial blood plasma, peripheral venous blood, brain intracellular, brain tissue, hepatic clearance, brain plasma, and brain-resident blood cells, which increased validation accuracy when comparing rate constants between cellular and histological sources. In this stage of the pipeline, I aimed to evaluate VT, BPND and other rate constants commonly produced in PET imaging. I utilized the 2-tissue compartmental modeling system from the Turku PET Centre’s documentation [\cite{centre2018, vainio2022, buchert2003, hong2010, koeppe1985}]. Initial attempts to estimate 2TCM microparameters (K1–k4) by nonlinear fitting were not scientifically sound as parameter estimates frequently approached boundary values and yielded implausible k4 and BPND (k3/k4), which is consistent with non-identifiability and sensitivity to the definition of the modeled tissue observable in the PBPK/MoBi exports. k4 tended to converge to very small values, producing inflated BPND estimates, and some curve fitting attempts failed in producing objective values that satisfied curve bounds. The R library \texttt{kinfitR} was then used as a final troubleshooting measure for these k4 bound values, but even this method failed to isolate these corner cases and renormalize these results [\cite{tjerkaski2020}, \cite{matheson2019}]. Therefore, microparameter-derived BPND was not reported. Instead, VT was estimated using plasma-input Logan graphical analysis [\cite{centren.d}, \cite{centre2016}] using brain intracellular+interstitial and arterial blood plasma compartments as total tissue concentration and plasma concentration respectively, and VT consistency was verified by sensitivity to t* (10–40 min), which showed <0.1 percent variation across candidates. Logan graphical analysis demonstrated internal kinetic consistency of the simulated time–activity curves across tested t* values, hence supporting the feasibility of advancing these candidates to experimental validation.
+		
+		
+		% Placeholder for Figure~2.6 (R code snippet for VT sensitivity analysis)
+		\begin{figure}
+			\centering
+			% Replace `Fig2_6_VTSensitivity.png` with an illustration or flowchart that summarises
+			% the sensitivity analysis performed on $V_{\mathrm{T}}$ as a function of the linearised
+			% start time $t^*$ (placeholder).  The original code has been removed in favour of
+			% this schematic representation.
+			% Escape spaces in file names by renaming the file (spaces replaced with underscores).
+			\includegraphics[width=.8\linewidth]{figures/VT_Sensitivity.png}
+			\caption{Summary of the sensitivity analysis of $V_{\mathrm{T}}$ with respect to the linearized start time $t^*$.  The diagram outlines how cumulative integrals and linear regression were used to estimate $V_{\mathrm{T}}$ at various $t^*$ values.}
+			\label{fig:VT_Sensitivity}
+		\end{figure}
+		
+		\section*{Results and Discussion}
+		
+		\subsection*{AC‑5216 Pharmacophore Selection}
+		AC‑5216 (emapunil, $\mathrm{C}_{23}\mathrm{H}_{23}\mathrm{N}_5\mathrm{O}_2$) was selected for systematic modification through the weighted $z$‑score pipeline.  The TBI suitability score (TBISS) created in standard deviation units was 0.916—the highest among all seven tracers measured.  This indicated that AC‑5216 achieved the best overall balance between PET binding metrics, physicochemical suitability, BBB permeability and structure–activity relationships calculated through docking.  Although DPA‑713 performed better than AC‑5216 in $BP_{\mathrm{ND}}$ and $\log D_{7.4}$ measurements (assuming an optimal $\log D$ value of 2.5), it drastically underperformed with respect to inhibition constant and docking energy, hence AC‑5216 emerged as the superior tracer through the composite framework.
+		
+		\subsection*{Enumeration Outcomes and Error Correction}
+		Systematic enumeration of the emapunil core generated 1,926 analogs across the three stages executed, of which 1,922 were retained after excluding four compounds with invalid RDKit parsing. After the CNS multi-parameter optimization scoring, 22 analogs advanced to pharmacokinetic evaluation stages. Quality-control investigation revealed one duplicated SMILES entry and 4 RDKit parsing errors in determining $\mathrm{C}{F}$ and $\mathrm{C}{F}_2$ modifications. These analogs were maintained in the dataset for documentation, but were excluded from pharmacokinetic analysis for dataset integrity. Hence, the final advancement set included 17 analogs (0.88\% of the original enumerated ligand population) indicating that only a narrow subset of structural modifications preserved the balance of CNS exposure, tracer-like physicochemical properties, and kinetic feasibility required for TBI-oriented PET applications. Of these 17 tracer analogs, 15 out of the 17 analogs’ modifications included fluorinated R-group substitutions across all three stages of enumeration that validate the hypothesis that fluorinations in CNS scaffolds correlate to superior physicochemical properties and PET kinetics in TBI environments. The remaining two lead candidates had chlorine additions, showing the effectiveness of halogen-based modifications in optimal CNS physicochemical ranges.
+		
+		However, CNS MPO scores were similar between the reference AC-5216 and the 17-analog set, which indicated that MPO was not the strongest differentiator among candidates. Instead, the strongest differentiation emerged in PBPK exposure metrics, particularly predicted brain partition coefficients ($K_p$) and brain-to-plasma ratios during the PET framing window. The primary differences in PBPK analyses appeared in the plasma concentrations rather than absolute brain kinetics. The top three finalists of the weighted PBPK $z$-score (\texttt{emap2\_Bn\_CH2CF3, emap2\_Bn-3,4diF\_Me, and emap2\_Bn-3,4diF\_CHF2}) showed a clear reduction in plasma concentration compared to AC5216, where plasma AUC at the end of the simulation window decreased from 0.50157 (AC-5216) to [0.13385, 0.19343, 0.12460] for the three finalists, which marked a 61-75\% decrease in plasma concentrations, showing increased brain to plasma partition, and a decrease from 0.002686 in AC5216 to [0.001462, 0.001698, 0.001364] for the three finalists in maximum plasma concentrations (Cmax), showing a clear influx of tracer in brain tissue and permeability in brain compartments. In contrast, brain concentrations improved between AC-5216 and the top three finalists with $AUC_{brain}{tEnd}$ increasing from 0.01367 in AC-5216 to 0.01528–0.02028 in the finalists, indicating a 12-48\% increase. Thus, brain-plasma ratios (60 min timepoint) increased from 0.0050 in AC-5216 to 0.01541-0.02020 in the finalists, corresponding to 3.1-4.0\ensuremath{\times} improvements. Simulated brain partition coefficients increased significantly as well, with brain $K_{p}$ rising from 0.0273 in AC-5216 to 0.1048–0.1478 in the finalists (3.8–5.4\ensuremath{\times}). 
+		
+			% Placeholder for Figure~2.5 (statistical weights for pharmacokinetic modelling)
+		\begin{figure}
+			\centering
+			% Replace `Fig2_5_PKWeights.png` with a figure that summarises statistical
+			% weights applied to PBPK modelling parameters.  This figure would typically
+			% illustrate how the various PK metrics combine into a final composite score.
+			\includegraphics[width=.8\linewidth]{figures/Kp_graph.png}
+			\caption{Partition coefficients for the top 5 lead candidates in relation to the reference AC-5216 tracer, through PKSim and GraphPad Prism 11.}
+			\label{fig:Kp_graph}
+		\end{figure}
+		
+		\begin{figure}
+			\centering
+			% Replace `Fig2_5_PKWeights.png` with a figure that summarises statistical
+			% weights applied to PBPK modelling parameters.  This figure would typically
+			% illustrate how the various PK metrics combine into a final composite score.
+			\includegraphics[width=.8\linewidth]{figures/BPRatio.png}
+			\caption{Brain tissue to arterial blood plasma concentration ratios of top 5 lead candidates and reference tracer AC-5216 through PKSim and GraphPad Prism 11.}
+			\label{fig:BPRatio}
+		\end{figure}
+		
+		\begin{figure}
+			\centering
+			% Replace `Fig2_5_PKWeights.png` with a figure that summarises statistical
+			% weights applied to PBPK modelling parameters.  This figure would typically
+			% illustrate how the various PK metrics combine into a final composite score.
+			\includegraphics[width=.8\linewidth]{figures/Plasma_Reduction.png}
+			\caption{Plasma concentration (AUC of the total plasma at t = 24h, end of simulation) for top 5 lead candidates by z-score and reference tracer AC-5216 by PKSim and GraphPad Prism 11.}	\label{fig:PlasmaReduction}
+		\end{figure}
+		
+		These findings indicated that the novel fluorinated emapunil analogs improved CNS exposure by reducing plasma tracer concentration while maintaining favorable brain availability during the PET framing interval. All three finalists came from Stage 2 of enumeration, further indicating a correlation between fluoro- and perfluoroalkyl modifications and increase in partition coefficient in PET windows. 
+		
+		\subsection*{Top Tracer Identification}
+		Among all finalists, emap2\_Bn\_3,4diF\_CHF\(_2\) ranked highest in the TBI–PBPK weighted average with a score of 1.44189 standard deviations.  This was primarily due to the most favourable brain–plasma ratios across 30, 60 and 90\,min time points in the PET window and high AUCs for the brain‑tissue concentration curve, while consistently remaining under washout penalty bounds.  Thus, final prioritisation was driven less by CNS‑MPO differentiation and more by a favourable plasma–brain kinetic profile under simulated PET conditions.
+		
+		\begin{figure}
+			\centering
+			% Escape spaces in folder names by renaming the folder (spaces replaced with underscores) and file name in a safe form.
+			\includegraphics[width=.8\linewidth]{figures/Final Analog Renderings/A7.png}
+			\caption{A7, the highest-ranking tracer in the final pharmacokinetic z-score, showed a 5.4× increase in Kp and a 4.0× increase in brain–plasma ratio relative to AC-5216.}
+			\label{fig:A7}
+		\end{figure}
+		
+		\subsection*{Data Validation through Mathematical Modelling}
+		The top finalists’ PET kinetic metrics were further validated using a two‑tissue compartment model derived from PKSim/MoBi time‑activity curves.  However, microparameter estimation of the first‑order washout rate constant $k_4$ was unreliable because $k_4$ consistently violated 2TCM bounds and produced implausible $BP_{\mathrm{ND}}$ statistics, leading to the exclusion of $BP_{\mathrm{ND}}$ from the validation procedure.  Therefore, plasma‑input Logan graphical analysis was used to estimate $V_{\mathrm{T}}$, using brain intracellular+interstitial and arterial blood plasma compartments as total tissue concentration and plasma concentration, respectively.  Logan‑derived $V_{\mathrm{T}}$ values remained consistent across linearised start time ($t^*$) values from 10–40\,min with <0.1\,\% variation, confirming the robustness of the final kinetic validation step.  The Logan plot displayed a clear linear relationship ($R^2 = 0.999975$) between the two compartmental concentrations, supporting internal consistency of the $V_{\mathrm{T}}$ estimates within the simulated TAC framework. These values were comparatively analysed across candidates using the same interstitial/intracellular brain and arterial plasma compartments rather than absolute PET $V_{\mathrm{T}}$ values with region‑of‑interest identification.
+		
+		% Placeholder for Figure~3.1 (Logan plot)
+		\begin{figure}
+			\centering
+			\includegraphics[width=.8\linewidth]{figures/A7_logan_vt.png}
+			\caption{Logan plot for the top analog A7 at $t^{*}=10$ showing a linear relationship between the integral of plasma concentration over time divided by tissue concentration and the integral of tissue concentration divided by tissue concentration.  The slope corresponds to $V_{\mathrm{T}}$, with a goodness of fit of $R^2 = 0.999975$.}
+			\label{fig:LoganPlot}
+		\end{figure}
+		
+		\paragraph{Limitations}
+		This study is entirely computational and does not include in vivo or clinical validation, which is hence a future direction for this approach. The present work does not demonstrate radiosynthesis; future work must evaluate 18F-labeling route, molar activity, radiochemical yield, in vivo stability, and bone uptake/defluorination. TSPO expression reflects broader neuroinflammatory activity and is not specific to a single cell type, limiting cellular-level interpretation of PET signal. The reference-tracer z-score framework used a small comparison set, so the composite score should be interpreted as a qualitative prioritization metric rather than a statistically definitive ranking. PBPK modeling relied on estimated solubility, estimated plasma free fraction, and population-level physiological parameters that may not capture individual or rs6971-dependent variability. Finally, PET detectability depends on scanner sensitivity, tracer metabolism, nonspecific binding, and experimental input-function measurement; therefore, in vitro binding, competition assays, autoradiography, and preclinical TBI PET studies are required to validate specific binding and imaging performance.
+		
+		
+		\section*{Conclusions}
+		This study established a computational architecture for the optimisation of novel fluorinated TSPO PET tracers targeting traumatic brain injury pathology, addressing the unmet need in TBI diagnostics for radioligand performance in PET imaging.  The pipeline began with AC‑5216 (emapunil), identified as the highest‑ranked reference pharmacophore through a composite TBI suitability score.  Systematic modification via RDKit enumeration across four stages and CNS MPO identified a narrow subset of analogues with tracer‑like physicochemical properties that advanced to pharmacokinetic simulation.  CNS MPO scores offered limited differentiation relative to the reference in molecular weight, topological polar surface area and $\log D_{7.4}$; thus, PBPK modelling was the primary differentiator.  PBPK analysis demonstrated clear improvements in reducing arterial plasma concentrations while maintaining stable brain‑tissue concentrations, resulting in higher brain partition coefficients among the top three lead candidates compared with the reference tracer.  Logan plot–based PET kinetic validation showed consistent $V_{\mathrm{T}}$ results across several linearised start times for sensitivity analysis, validating the scientific robustness of the study.  Overall, my work produced novel halogenated TSPO tracers with increased predicted suitability for TBI pathology and provides guidance for future efforts in synthesis and in vitro preclinical validation with TBI PET models.
+		
+		
+		\begin{acknowledgements}
+			I am deeply grateful to my mentors, Dr.~Niranjan~Bose, Ph.D. (Alzheimer’s Disease Data Initiative) and Dr.~Karpagam~Srinivasan, Ph.D. (Gates Ventures) for their intellectual support on this project and their review of my work to date.  I also extend my thanks to my parents, Veena and Satheesh Subramanian, for their unwavering support and encouragement over the course of the project, and to my biology teacher, Dr.~Aparajita~Ghosh, who assisted me with the original conceptualisation of this work.
+			
+			\paragraph{Generative AI Statement}
+			Generative artificial intelligence (ChatGPT, OpenAI version~5.2, 2025) was used to a limited extent for the design of initial code snippets (enumeration and CNS MPO), documentation analysis for PKSim startup and error handling in R for initial $z$‑score normalisation and kinfitR management for the two‑tissue compartment model.  All literature review and synthesis was independently conducted by the student researcher, and all ideas, writing and revision of the abstract and paper were performed by the student researcher.  All instances of AI use were disclosed in the research logbook and involved only initial code scaffolds and error management.
+		\end{acknowledgements}
+		
+		\section*{Bibliography}
+		% Bibliography entries are drawn from a separate .bib file.  Ensure that the
+		% citation keys used in the text correspond to entries in your bibliography.
+        % Use the correct bibliography file name matching the actual .bib file.
+        % Use the refs bibliography file (refs.bib) to ensure all entries are available.
+       \bibliography{refs_min}
+		
+		%% Word count and supplementary materials (optional).  This section can be
+		%% removed if not needed for submission.  Note that \detailtexcount macro
+		%% requires the `zHenriquesLab-StyleBioRxiv` class.
+		%TC:ignore
+		\onecolumn
+		\newpage
+		
+		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		% Supplementary Information %
+		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		\captionsetup*{format=largeformat}
+		\section{Supplementary Material}
+		\subsection{Supplementary Note 1: Abbreviations Used in the Manuscript and Abstract}
+		
+		TBI - traumatic brain injury
+		
+		CNS - central nervous system
+		
+		MPO - multi-parametric optimization (Wager et al.)
+		
+		TSPO - the human 18 kDa translocator protein
+		
+		PET - positron emission tomography
+		
+		DAMPs - damage-associated molecular patterns
+		
+		CT - computerized tomography
+		
+		MRI - magnetic resonance imaging
+		
+		DTI - diffusion tensor imaging
+		
+		CD - cluster-differentiating marker (surface marker)
+		
+		ATP - adenosine triphosphate
+		
+		lncRNA - long noncoding RNA
+		
+		BBB - blood brain barrier
+		
+		GFAP - glial fibrillary acidic protein
+		
+		Ki - inhibition constant in nM
+		
+		logD7.4 - lipophilicity measure at physiological pH 7.4
+		
+		K1, K2, K3, K4 - PET kinetic rate constants for integral rate law
+		
+		VT - total distribution volume, reflecting specific plus nondisplaceable uptake under reversible tracer kinetic integrals
+		
+		BPND - non-displaceable binding potential, a PET outcome related to specific binding relative to nondisplaceable uptake
+		
+		VND - non-displaceable PET volume (specific binding)
+		
+		fP - free fraction of tracer in plasma
+		
+		NMR - nuclear magnetic resonance
+		
+		SMILES - Simplified Molecular Input Line Entry System
+		
+		R1, R2, R3 - emapunil functional groups
+		
+		R1 - tertiary amide nitrogen monitored for conformational change during docking
+		
+		R2 - terminal R-benzyl group that was fluorinated and haloalkylated
+		
+		R3 - heterocyclic nitrogen handle at edge of purine nucleus
+		
+		Trifluoromethyl ether - –OCF3 group (one of the key permutations)
+		
+		Bn - benzyl
+		
+		Et - ethyl
+		
+		Me - methyl
+		
+		Ph - phenyl
+		
+		Pr - propyl
+		
+		Bu - butyl
+		
+		iPr - isopropyl
+		
+		cPr - cyclopropyl
+		
+		nPr - normal-propyl (CH2CH2CH3)
+		
+		cBu - cyclobutyl
+		
+		iBu - isobutyl
+		
+		sBu - sec-butyl
+		
+		tBu - tert-butyl
+		
+		diF - difluoride
+		
+		diCl - dichloride
+		
+		Br - bromine
+		
+		MW - molecular weight
+		
+		TPSA - topological polar surface area (measured in Å2)
+		
+		HBA - hydrogen bond acceptors
+		
+		HBD - hydrogen bond donors
+		
+		clogP - Crippen’s lipophilicity (logP) value extracted from RDKit
+		
+		RotB - rotatable bonds
+		
+		AUC - area under the curve (for compartmental concentrations in time activity curves)
+		
+		Plasma-input graphical Logan analysis - statistical method to plot VT as slope vs. time sensitivities (for linearized start time t*) and compartmental concentrations
+		
+		\subsection{Supplementary Note 2: Biological and Mechanistic Ideas of Neuroinflammation in TBI}
+		On initial onset of TBI, DAMPs such as ATP, heat-shock proteins, damaged DNA, and histone proteins leak out of damaged neurons and are released into the extracellular fluid at the area of the lesion [\cite{cieri2025}]. 
+		M1 microglia recognize these DAMPs and are activated through CD32, CD16 and CD86+ [\cite{loane2016}]. 
+		This contributes to a pro-inflammatory cytokine release response that uses Toll-like receptors TLR1, TLR2, TLR5 and TLR6 to release TNF-\ensuremath{\alpha} and IFN\ensuremath{\gamma} and the lipopolysaccharide (LPS) immune complex to exploit TLR4 to release interleukin-1\ensuremath{\beta} and promote the canonical NF-\ensuremath{\kappa}B pathway [\cite{proces2025}]. 
+		The NF-\ensuremath{\kappa}B pathway results in the nuclear translocation of the RelA-p50 heterodimer, which causes the increased transcription of pro-inflammatory mechanisms such as cytokine release in the damaged neuron [\cite{lawrence2009}]. 
+		This leads to stress signaling in the form of reactive oxygen species, free radicals, excitotoxicity through glutamate Ca\textsuperscript{2+} release, and mitochondrial rupture. During this process, the TSPO expression is also increased in activated microglia, supporting its use as a PET-accessible marker of neuroinflammatory activity. [\cite{brackhan2016}].
+		After the initial microglial response, the pathophysiology transitions into a subacute phase, generally 3--28 days post-injury. 
+		In this phase, reactive astrogliosis is the primary response, and is activated by a leaky blood-brain barrier (BBB). 
+		TNF-\ensuremath{\alpha}, ATP and reactive oxygen species are transduced by astrocytes, leading to a multi-partite pro-inflammatory response combined with a glial reparation process. 
+		The NF-\ensuremath{\kappa}B is promoted in the reactive astrogliosis response as well, promoting glial scarring [\cite{cieri2025}] and lncRNA activity is also prevalent near the injury site. 
+		The MAPK-ERK and JAK-STAT3 signaling pathways are also implicated in reactive astrogliosis [\cite{herrmann2008}, \cite{mandell1999}]. 
+		The MAPK pathway is implicated in mediating secondary neuroinflammatory responses and apoptosis, while the STAT3 pathway is in fact involved in producing glial fibrillary acidic protein (GFAP), a key marker of TBI neuroinflammatory pathology. 
+		Transforming growth factor (TGF-B) is a multifunctional “paradoxical” cytokine that is involved in both pro-inflammatory responses such as secondary neuroinflammation, and in anti-inflammatory “glial scar” formation [\cite{cieri2025}], where the growth factor assists in closing the gap in the BBB created by the injury. 
+		Simultaneously, due to the leaky BBB, monocytes infiltrate into the lesion in order to be differentiated into varied immune cell types for an immune response. 
+		Finally, in the chronic phase of neuroinflammatory pathology, in a timeframe of 28 days to up to 17 years, the response is primarily anti-inflammatory, and aims to heal the injured brain tissue. 
+		This response involves M2 microglia, which are activated by phosphatidylserine activity in apoptotic cells, and involve the clearance of pro-inflammatory cells through apoptosis, myelin sheath reparation, and the dimerization of growth factors such as insulin growth factor that reduce reactive oxygen species and ATP production. 
+		Monocytes complete differentiation in this phase into peripheral macrophages [\cite{hsieh2013}], through the addition of chemokine CCR2+ as a surface marker [\cite{semple2010}] and these macrophages clear debris, such as apoptotic inflammatory cells through phagocytosis and remodel the extracellular matrix.
+		
+		\subsection{Supplementary Note 3: Error Correction Outcomes - Technical Details}
+		
+		After further investigation, Analog 18 revealed a duplication error in SMILES strings and a mismatched modification label, which indicated an RDKit parsing complication, hence the analog was excluded from final analyses to maintain scientific robustness. Analogs 15, 16, 17, and 19 shared similar issues, except in this case, RDKit was not able to parse CF vs. CF2 group modifications, hence this systematic error led to statistical inflation in the CNS MPO window by causing lower molecular weight and lower lipophilicity, which would have caused the sample success set to be greater than warranted. These analogs were redocked and SMILES were corrected, and as predicted, these analogs presented lower MPO scores, TBI weighted averages, and higher molecular weights, which led to their failure in the CNS window and exclusion from the final PK-analysis set. The error log of these analogs were maintained in the dataset for accurate documentation, but did not advance to pharmacokinetic simulation stages.
+		
+	\section*{Supplementary Tables}
+	
+	\textbf{Supplementary Table S1. Full enumerated analogue library.}
+	CSV file containing the complete set of 1,922 retained emapunil analogues, including ligand identifiers, SMILES strings, enumeration stage, R-group modifications, physicochemical descriptors, estimated logD$_{7.4}$, estimated solubility, efflux-risk score, CNS-MPO score, docking score, and CNS gate status.
+	
+	\textbf{Supplementary Table S2. Lead-candidate quality-control table.}
+	CSV file containing the 22 candidates advanced after CNS-MPO and docking prioritisation, including duplicate-SMILES and CF/CF$_2$ parsing exclusions, corrected values, and final inclusion or exclusion status.
+	
+	\textbf{Supplementary Table S3. Final PBPK-screened candidate table.}
+	CSV file containing the 17 retained PBPK-screened analogues and the AC-5216 reference compound, including docking score, CNS-MPO, plasma free fraction, PBPK outputs, brain:plasma ratios, washout metrics, Kp, and final weighted score.
+	
+	\textbf{Supplementary Table S4. Final lead physicochemical summary.}
+	CSV file containing an abbreviated physicochemical and PBPK summary for the final 17 candidates and AC-5216 reference.
+		
+	\end{document}

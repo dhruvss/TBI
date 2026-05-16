@@ -1,0 +1,431 @@
+\begin{thebibliography}{68}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[et~al.(2017{\natexlab{a}})]{galgano2017}
+Galgano et~al.
+\newblock Traumatic brain injury: Current treatment strategies and future
+  endeavors.
+\newblock \emph{Cell Transplantation}, 2017{\natexlab{a}}.
+
+\bibitem[et~al.(2011{\natexlab{a}})]{scarf2011}
+Scarf et~al.
+\newblock The translocator protein.
+\newblock \emph{Journal of Nuclear Medicine}, 2011{\natexlab{a}}.
+
+\bibitem[et~al.(2020{\natexlab{a}})]{al2020}
+Alam et~al.
+\newblock Cellular infiltration in traumatic brain injury.
+\newblock \emph{Journal of Neuroinflammation.}, 2020{\natexlab{a}}.
+
+\bibitem[et~al.(2012{\natexlab{a}})]{lavisse2012}
+Lavisse et~al.
+\newblock Reactive astrocytes overexpress tspo and are detected by tspo
+  positron emission tomography imaging.
+\newblock \emph{Journal of Neuroscience.}, 2012{\natexlab{a}}.
+
+\bibitem[et~al.(2009{\natexlab{a}})]{cosenzanashat2009}
+Cosenza-Nashat et~al.
+\newblock Expression of the translocator protein of 18 kda by microglia,
+  macrophages and astrocytes based on immunohistochemical localization in
+  abnormal human brain.
+\newblock \emph{Neuropathology and Applied Neurobiology.}, 2009{\natexlab{a}}.
+
+\bibitem[et~al.(2025{\natexlab{a}})]{team2025}
+R~Core~Team et~al.
+\newblock R: A language and environment for statistical computing. r foundation
+  for statistical computing. https://www.r-project.org/.
+\newblock 2025{\natexlab{a}}.
+
+\bibitem[et~al.(2011{\natexlab{b}})]{owen2011}
+Owen et~al.
+\newblock Mixed-affinity binding in humans with 18-kda translocator protein
+  ligands.
+\newblock \emph{Journal of Nuclear Medicine}, 2011{\natexlab{b}}.
+
+\bibitem[et~al.(2009{\natexlab{b}})]{pike2009}
+Pike et~al.
+\newblock Pet radiotracers: Crossing the blood-brain barrier and surviving
+  metabolism.
+\newblock \emph{Trends in Pharmacological Sciences}, 2009{\natexlab{b}}.
+
+\bibitem[et~al.(2017{\natexlab{b}})]{sokias2017}
+Sokias et~al.
+\newblock Determination and reduction of translocator protein (tspo) ligand
+  rs6971 discrimination.
+\newblock \emph{Med. Chem. Commun.}, 2017{\natexlab{b}}.
+
+\bibitem[et~al.(2014{\natexlab{a}})]{wickstrm2014}
+Wickstrøm et~al.
+\newblock The development of an automated and gmp compliant fastlab™
+  synthesis of 18-f-ge-180; a radiotracer for imaging translocator protein
+  (tspo).
+\newblock \emph{Journal of Labelled Compounds and Radiopharmaceuticals},
+  2014{\natexlab{a}}.
+
+\bibitem[et~al.(2015{\natexlab{a}})]{chau2015}
+Wai-Fung~Chau et~al.
+\newblock Exploration of the impact of stereochemistry on the identification of
+  the novel translocator protein pet imaging agent [18f]ge-180.
+\newblock \emph{Nuclear Medicine and Biology}, 2015{\natexlab{a}}.
+
+\bibitem[et~al.(2012{\natexlab{b}})]{wadsworth2012}
+Wadsworth et~al.
+\newblock [18f]ge-180: A novel fluorine-18 labelled pet tracer for imaging
+  translocator protein 18 kda (tspo).
+\newblock \emph{Bioorganic \\& Medicinal Chemistry}, 2012{\natexlab{b}}.
+
+\bibitem[et~al.(2008{\natexlab{a}})]{imaizumi2008}
+Imaizumi et~al.
+\newblock Brain and whole-body imaging in nonhuman primates of [11c]pbr28, a
+  promising pet radioligand for peripheral benzodiazepine receptors.
+\newblock \emph{NeuroImage}, 2008{\natexlab{a}}.
+
+\bibitem[et~al.(2007{\natexlab{a}})]{boutin2007}
+Boutin et~al.
+\newblock 11c-dpa-713: a novel peripheral benzodiazepine receptor pet ligand
+  for in vivo imaging of neuroinflammation.
+\newblock \emph{Journal of nuclear medicine : official publication, Society of
+  Nuclear Medicine, 48(4), 573–581.}, 2007{\natexlab{a}}.
+
+\bibitem[et~al.(2021{\natexlab{a}})]{zhang2021}
+Zhang et~al.
+\newblock Recent developments on pet radiotracers for tspo and their
+  applications in neuroimaging.
+\newblock \emph{Acta Pharmaceutica Sinica}, 2021{\natexlab{a}}.
+
+\bibitem[et~al.(2022{\natexlab{a}})]{luu2022}
+Luu et~al.
+\newblock 18f-radiolabeled translocator protein (tspo) pet tracers: Recent
+  development of tspo radioligands and their application to pet study.
+\newblock \emph{Pharmaceutics}, 2022{\natexlab{a}}.
+
+\bibitem[et~al.(2017{\natexlab{c}})]{fujita2017}
+Fujita et~al.
+\newblock Comparison of four 11c-labeled pet ligands to quantify translocator
+  protein 18 kda (tspo) in human brain: (r)-pk11195, pbr28, dpa-713, and
+  er176-based on recent publications that measured specific-to-non-displaceable
+  ratios.
+\newblock \emph{EJNMMI research, 7(1), 84}, 2017{\natexlab{c}}.
+
+\bibitem[et~al.(2016{\natexlab{a}})]{fan2016}
+Fan et~al.
+\newblock Flutriciclamide (18f-ge180) pet: First-in-human pet study of novel
+  third-generation in vivo marker of human translocator protein.
+\newblock \emph{Journal of nuclear medicine : official publication, Society of
+  Nuclear Medicine, 57(11), 1753–1759.}, 2016{\natexlab{a}}.
+
+\bibitem[et~al.(2009{\natexlab{c}})]{miyoshi2009}
+Miyoshi et~al.
+\newblock Quantitative analysis of peripheral benzodiazepine receptor in the
+  human brain using pet with (11)c-ac-5216.
+\newblock \emph{Journal of nuclear medicine : official publication, Society of
+  Nuclear Medicine}, 2009{\natexlab{c}}.
+
+\bibitem[et~al.(2009{\natexlab{d}})]{endresn.d}
+Endres et~al.
+\newblock Initial evaluation of 11c-dpa-713, a novel tspo pet ligand, in
+  humans.
+\newblock \emph{Journal of Nuclear Medicine}, 2009{\natexlab{d}}.
+
+\bibitem[et~al.(2011{\natexlab{c}})]{dickstein2011}
+Dickstein et~al.
+\newblock Comparison of 18f- and 11c-labeled aryloxyanilide analogs to measure
+  translocator protein in human brain using positron emission tomography.
+\newblock \emph{European journal of nuclear medicine and molecular imaging},
+  2011{\natexlab{c}}.
+
+\bibitem[et~al.(2014{\natexlab{b}})]{owen2014}
+Owen et~al.
+\newblock Determination of [(11)c]pbr28 binding potential in vivo: a first
+  human tspo blocking study.
+\newblock \emph{Journal of cerebral blood flow and metabolism : official
+  journal of the International Society of Cerebral Blood Flow and Metabolism},
+  2014{\natexlab{b}}.
+
+\bibitem[et~al.(2007{\natexlab{b}})]{yn.d}
+Ikoma~Y et~al.
+\newblock Quantitative analysis for estimating binding potential of the
+  peripheral benzodiazepine receptor with [11c]daa1106.
+\newblock \emph{Journal of Cerebral Blood Flow \\& Metabolism.},
+  2007{\natexlab{b}}.
+
+\bibitem[for Biotechnology Information~et al.(2025)]{information2025}
+National~Center for Biotechnology Information~et al.
+\newblock Pubchem compound summary for cid 6433109, emapunil.
+\newblock 2025.
+
+\bibitem[for Biotechnology Information~et
+  al.(2026{\natexlab{a}})]{information2026}
+National~Center for Biotechnology Information~et al.
+\newblock Pubchem compound summary for cid 10430788,
+  n-(2,5-dimethoxybenzyl)-n-(5-fluoro-2-phenoxyphenyl)acetamide.
+\newblock 2026{\natexlab{a}}.
+
+\bibitem[for Biotechnology Information~et
+  al.(2026{\natexlab{b}})]{information2026b}
+National~Center for Biotechnology Information~et al.
+\newblock Pubchem compound summary for cid 11595759,
+  n,n-diethyl-2-(2-(4-methoxyphenyl)-5,7-dimethylpyrazolo(1,5-a)pyrimidin-3-yl)acetamide.
+\newblock 2026{\natexlab{b}}.
+
+\bibitem[for Biotechnology Information~et
+  al.(2026{\natexlab{c}})]{information2026c}
+National~Center for Biotechnology Information~et al.
+\newblock Pubchem compound summary for cid 11696868, pbr-06 f-18.
+\newblock 2026{\natexlab{c}}.
+
+\bibitem[for Biotechnology Information~et
+  al.(2026{\natexlab{d}})]{information2026d}
+National~Center for Biotechnology Information~et al.
+\newblock Pubchem compound summary for cid 1345, pk11195
+  (1-(2-chlorophenyl)-n-methyl-n-(1-methylpropyl)-3-isoquinolinecarboxamide).
+\newblock 2026{\natexlab{d}}.
+
+\bibitem[for Biotechnology Information~et
+  al.(2026{\natexlab{e}})]{information2026e}
+National~Center for Biotechnology Information~et al.
+\newblock Pubchem compound summary for cid 24754521,
+  n-(2-hydroxybenzyl)-n-(4-phenoxypyridin-3-yl)acetamide.
+\newblock 2026{\natexlab{e}}.
+
+\bibitem[for Biotechnology Information~et
+  al.(2026{\natexlab{f}})]{information2026f}
+National~Center for Biotechnology Information~et al.
+\newblock Pubchem compound summary for cid 24895171, pbr-111.
+\newblock 2026{\natexlab{f}}.
+
+\bibitem[for Biotechnology Information~et
+  al.(2026{\natexlab{g}})]{information2026g}
+National~Center for Biotechnology Information~et al.
+\newblock Pubchem compound summary for cid 51040949, flutriciclamide f-18.
+\newblock 2026{\natexlab{g}}.
+
+\bibitem[for Biotechnology Information~et
+  al.(2026{\natexlab{h}})]{information2026h}
+National~Center for Biotechnology Information~et al.
+\newblock Pubchem gene summary for gene 706, tspo - translocator protein
+  (human).
+\newblock 2026{\natexlab{h}}.
+
+\bibitem[et~al.(2011{\natexlab{d}})]{oboyle2011}
+O’Boyle et~al.
+\newblock Open babel: An open chemical toolbox.
+\newblock \emph{Journal of Cheminformatics}, 2011{\natexlab{d}}.
+
+\bibitem[et~al.(2010{\natexlab{a}})]{trott2010}
+Trott et~al.
+\newblock Autodock vina: Improving the speed and accuracy of docking with a new
+  scoring function, efficient optimization, and multithreading.
+\newblock \emph{Journal of Computational Chemistry.}, 2010{\natexlab{a}}.
+
+\bibitem[et~al.(2021{\natexlab{b}})]{eberhardt2021}
+Eberhardt et~al.
+\newblock Autodock vina 1.2.0.
+\newblock \emph{Journal of Chemical Information and Modeling.},
+  2021{\natexlab{b}}.
+
+\bibitem[et~al.(1991)]{riond1991}
+Riond et~al.
+\newblock Molecular cloning and chromosomal localization of a human
+  peripheral-type benzodiazepine receptor.
+\newblock \emph{European journal of biochemistry}, 1991.
+
+\bibitem[et~al.(2015{\natexlab{b}})]{lammertsma2015}
+Adriaan A.~Lammertsma et~al.
+\newblock Basic principles of tracer kinetic modelling. department of nuclear
+  medicine \\& pet research, vu university medical center, amsterdam, the
+  netherlands; and peter brust, et al. http://neurosci.cn/.
+\newblock 2015{\natexlab{b}}.
+
+\bibitem[et~al.(2007{\natexlab{c}})]{innis2007}
+Innis et~al.
+\newblock Consensus nomenclature for in vivo imaging of reversibly binding
+  radioligands.
+\newblock \emph{Journal of Cerebral Blood Flow \\& Metabolism.},
+  2007{\natexlab{c}}.
+
+\bibitem[et~al.(2025{\natexlab{b}})]{rdkitn.d}
+RDKit et~al.
+\newblock (n.d.). rdkit: Open-source cheminformatics. https://www.rdkit.org.
+\newblock 2025{\natexlab{b}}.
+
+\bibitem[et~al.(2022{\natexlab{b}})]{viviano2022}
+Viviano et~al.
+\newblock Essential principles and recent progress in the development of tspo
+  pet ligands for neuroinflammation imaging.
+\newblock \emph{Current medicinal chemistry}, 2022{\natexlab{b}}.
+
+\bibitem[et~al.(2020{\natexlab{b}})]{kim2020}
+Kim et~al.
+\newblock Synthesis and properties of pentafluorosulfanyl group
+  (sf5)-containing meta-diamide insecticides.
+\newblock \emph{Molecules}, 2020{\natexlab{b}}.
+
+\bibitem[et~al.(2019{\natexlab{a}})]{haranahalli2019}
+Haranahalli et~al.
+\newblock Recent progress in the strategic incorporation of fluorine into
+  medicinally active compounds.
+\newblock \emph{Journal of Fluorine Chemistry.}, 2019{\natexlab{a}}.
+
+\bibitem[et~al.(2008{\natexlab{b}})]{leroux2008}
+Leroux et~al.
+\newblock Trifluoromethyl ethers – synthesis and properties of an unusual
+  substituent.
+\newblock \emph{Beilstein Journal of Organic Chemistry.}, 2008{\natexlab{b}}.
+
+\bibitem[et~al.(2010{\natexlab{b}})]{wager2010}
+Wager et~al.
+\newblock Moving beyond rules: The development of a central nervous system
+  multiparameter optimization (cns mpo) approach to enable alignment of
+  druglike properties.
+\newblock \emph{ACS Chemical Neuroscience.}, 2010{\natexlab{b}}.
+
+\bibitem[et~al.(2024{\natexlab{a}})]{agency2024}
+IAEA et~al.
+\newblock International atomic energy agency, central nervous system
+  radiotracer development: Bench to bedside, iaea-tecdoc-2052).
+\newblock 2024{\natexlab{a}}.
+
+\bibitem[et~al.(2015{\natexlab{c}})]{shityakov2015}
+Shityakov et~al.
+\newblock Blood–brain barrier transport studies, aggregation, and molecular
+  dynamics simulation of multiwalled carbon nanotube functionalized with
+  fluorescein isothiocyanate.
+\newblock \emph{International Journal of Nanomedicine}, 2015{\natexlab{c}}.
+
+\bibitem[et~al.(2004)]{delaney2004}
+Delaney et~al.
+\newblock Esol: estimating aqueous solubility directly from molecular
+  structure. journal of chemical information and computer sciences.
+\newblock \emph{ACS J Chem Informatics \\& Computer Science}, 2004.
+
+\bibitem[et~al.(2012{\natexlab{c}})]{zoghbi2012}
+Zoghbi et~al.
+\newblock On quantitative relationships between drug-like compound
+  lipophilicity and plasma free fraction in monkey and human.
+\newblock \emph{Journal of Pharmaceutical Sciences}, 2012{\natexlab{c}}.
+
+\bibitem[et~al.(2025{\natexlab{c}})]{communityn.d}
+Open Systems Pharmacology Suite~Community et~al.
+\newblock (n.d.). pk-sim® and mobi® user documentation (version 12).
+  https://docs.open-systems-pharmacology.org.
+\newblock 2025{\natexlab{c}}.
+
+\bibitem[et~al.(2022{\natexlab{c}})]{owen2022}
+Owen et~al.
+\newblock Human pharmacokinetics of xbd173 and etifoxine distinguish their
+  potential for pharmacodynamic effects mediated by translocator protein.
+\newblock \emph{British Journal of Clinical Pharmacology}, 2022{\natexlab{c}}.
+
+\bibitem[et~al.(2018)]{centre2018}
+Turku PET~Centre et~al.
+\newblock Two-tissue compartmental models (2tcm).
+\newblock 2018.
+
+\bibitem[et~al.(2022{\natexlab{d}})]{vainio2022}
+Vainio et~al.
+\newblock Experimental models of focal neuroinflammation: Efficacy assessment
+  of pharmaceuticals of multiple sclerosis using pet imaging (publication no.
+  1618), doctoral dissertation, university of turku.
+\newblock \emph{Annales Universitatis Turkuensis}, 2022{\natexlab{d}}.
+
+\bibitem[et~al.(2003)]{buchert2003}
+Buchert et~al.
+\newblock Accurate determination of metabolic rates from dynamic positron
+  emission tomography data with very-low temporal resolution.
+\newblock \emph{Journal of Computer Assisted Tomography}, 2003.
+
+\bibitem[et~al.(2010{\natexlab{c}})]{hong2010}
+Hong et~al.
+\newblock Kinetic modelling using basis functions derived from two-tissue
+  compartmental models with a plasma input function: General principle and
+  application to [18f]fluorodeoxyglucose positron emission tomography.
+\newblock \emph{NeuroImage}, 2010{\natexlab{c}}.
+
+\bibitem[et~al.(1985)]{koeppe1985}
+Koeppe et~al.
+\newblock Performance comparison of parameter estimation techniques for the
+  quantification of local cerebral blood flow by dynamic positron emission
+  tomography.
+\newblock \emph{Journal of Cerebral Blood Flow \\& Metabolism}, 1985.
+
+\bibitem[et~al.(2020{\natexlab{c}})]{tjerkaski2020}
+Tjerkaski et~al.
+\newblock Kinfitr – an open source tool for reproducible pet modelling:
+  Validation and evaluation of test-retest reliability.
+\newblock \emph{bioRxiv - PREPRINT}, 2020{\natexlab{c}}.
+
+\bibitem[et~al.(2019{\natexlab{b}})]{matheson2019}
+Matheson et~al.
+\newblock Kinfitr: Reproducible pet pharmacokinetic modelling in r.
+\newblock \emph{bioRxiv - PREPRINT}, 2019{\natexlab{b}}.
+
+\bibitem[et~al.(2024{\natexlab{b}})]{centren.d}
+Turku PET~Centre et~al.
+\newblock (n.d.). simulation of pet time frames.
+\newblock 2024{\natexlab{b}}.
+
+\bibitem[et~al.(2016{\natexlab{b}})]{centre2016}
+Turku PET~Centre et~al.
+\newblock logan (tpcclib): Calculate distribution volume (vt) using
+  multiple-time graphical analysis (mtga).
+\newblock 2016{\natexlab{b}}.
+
+\bibitem[et~al.(2025{\natexlab{d}})]{cieri2025}
+Cieri et~al.
+\newblock Astrocytes, reactive astrogliosis, and glial scar formation in
+  traumatic brain injury.
+\newblock \emph{Neural Regeneration Research.}, 2025{\natexlab{d}}.
+
+\bibitem[et~al.(2016{\natexlab{c}})]{loane2016}
+Loane et~al.
+\newblock Microglia in the tbi brain: The good, the bad, and the dysregulated.
+\newblock \emph{Experimental Neurology}, 2016{\natexlab{c}}.
+
+\bibitem[et~al.(2025{\natexlab{e}})]{proces2025}
+Procès et~al.
+\newblock Deciphering the mechanobiology of microglia in traumatic brain injury
+  with advanced microsystems.
+\newblock \emph{Neural Regeneration Research.}, 2025{\natexlab{e}}.
+
+\bibitem[et~al.(2009{\natexlab{e}})]{lawrence2009}
+Lawrence et~al.
+\newblock The nuclear factor nf-kappab pathway in inflammation.
+\newblock \emph{Cold Spring Harbor Perspectives in Biology.},
+  2009{\natexlab{e}}.
+
+\bibitem[et~al.(2016{\natexlab{d}})]{brackhan2016}
+Brackhan et~al.
+\newblock Serial quantitative tspo-targeted pet reveals peak microglial
+  activation up to 2 weeks after an epileptogenic brain insult.
+\newblock \emph{Journal of Nuclear Medicine, 57(8), 1302–1308.},
+  2016{\natexlab{d}}.
+
+\bibitem[et~al.(2008{\natexlab{c}})]{herrmann2008}
+Herrmann et~al.
+\newblock Stat3 is a critical regulator of astrogliosis and scar formation
+  after spinal cord injury.
+\newblock \emph{Journal of Neuroscience}, 2008{\natexlab{c}}.
+
+\bibitem[et~al.(1999)]{mandell1999}
+Mandell et~al.
+\newblock Erk/map kinase is chronically activated in human reactive astrocytes.
+\newblock \emph{Neuroreport}, 1999.
+
+\bibitem[et~al.(2013)]{hsieh2013}
+Hsieh et~al.
+\newblock Traumatic brain injury induces macrophage subsets in the brain.
+\newblock \emph{European Journal of Immunology.}, 2013.
+
+\bibitem[et~al.(2010{\natexlab{d}})]{semple2010}
+Semple et~al.
+\newblock Role of ccl2 (mcp-1) in traumatic brain injury (tbi): Evidence from
+  severe tbi patients and ccl2-/- mice.
+\newblock \emph{Journal of Cerebral Blood Flow \\& Metabolism,},
+  2010{\natexlab{d}}.
+
+\end{thebibliography}
