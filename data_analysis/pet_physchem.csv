@@ -1,9 +1,0 @@
-isotope,tracer,mean_Ki_nM,genotype,LAB-HAB_ratio,logD7.4,species,extraction,Ki_ref,logD_ref
-3H,PK11195,27.35,HAB,0.8,4.58,human,brain_tissue,Owen et al. (2011),Pike, 2009; Shah et al., 1994
-11C,DPA-713,15.0,HAB,4.4,2.41,human,brain_tissue,Owen et al. (2011),Luu et al. 2022 (extrapolation) - questionable reliability
-3H,PBR-28,3.4,HAB,55,3.01,human,brain_tissue,Owen et al. (2011),Imaizumi et al. 2009
-18F,GE-180,9.2,unspecified,2.95,human,brain_tissue,Chau et al. (2015),Wadsworth et al.,2012; Wickstrøm et al., 2014
-11C,AC-5216,2.41,HAB,12.60,3.3,human,brain_tissue,Sokias et al. (2017) - calculated value,Zhang et al. 2021
-18F,PBR-111,15.6,HAB,4.0,NA,human,brain_tissue,Owen et al. (2011),NA
-18F,PBR-O6,8.6,HAB,17,4.05,human,brain_tissue,Owen et al. (2011),Imaizumi et al. 2009
-11C,DAA1106,2.8,HAB,4.7,NA,human,brain_tissue,Owen et al. (2011),NA
