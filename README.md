@@ -21,4 +21,4 @@ This project is entirely computational. The proposed analogs should be interpret
 
 ## Citation
 
-Preprint citation will be added after bioRxiv posting.
+Preprint citation will be added after posting.
