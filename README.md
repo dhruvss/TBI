@@ -21,4 +21,5 @@ This project is entirely computational. The proposed analogs should be interpret
 
 ## Citation
 
-Preprint citation will be added after posting.
+Dhruv Subramanian. In Silico Evaluation of Haloalkylated Human 18kDa Translocator Protein PET Tracer Candidates for Traumatic Brain Injury Neuroinflammation. ChemRxiv. 21 May 2026.
+DOI: https://doi.org/10.26434/chemrxiv.15003660/v1
