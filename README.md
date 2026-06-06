@@ -18,6 +18,7 @@ This project is entirely computational. The proposed analogs should be interpret
 - `figures/`: Manuscript and analysis figures.
 - `templates_functional_groups/`: Functional-group templates used for analog enumeration.
 - `manuscripts/`: Manuscript and supplementary information files.
+- 'PKSim TAC figures/': PKSim time-activity curves for top 17 lead candidate data + respective figs
 
 ## Citation
 
