@@ -1,16 +1,27 @@
 # === Round 3 docking (Vina 1.2.5) ===
-cd ~/Documents/Research/TBI-tracer
-eval "$(/Users/dhruv/miniconda3/bin/conda shell.zsh hook)"
-conda activate tspo-tracer
+#!/usr/bin/env zsh
+set -euo pipefail
 
-BASE=~/Documents/Research/TBI-tracer
-RECDIR="$BASE/docking/TSPO"
-LIGDIR="$BASE/docking/emap_enum_round3/pdbqt_meeko"   # or .../pdbqt_clean if that's what you generated
-OUTCSV="$BASE/docking/results_round3_coarse.csv"
-FAILCSV="$BASE/docking/results_round3_failures.csv"
+SCRIPT_DIR="${0:A:h}"
+PROJECT_ROOT="${SCRIPT_DIR:h}"
 
-VINA_BIN=$(command -v vina)
-[[ -x "$VINA_BIN" ]] || { echo "vina not found in env tspo-tracer"; exit 1; }
+DOCKING_DIR="$PROJECT_ROOT/docking"
+RECDIR="$PROJECT_ROOT/TSPO"
+ROUND3_DIR="$DOCKING_DIR/emap_enum_round3"
+
+LIGDIR="$ROUND3_DIR/pdbqt_meeko"
+OUTCSV="$DOCKING_DIR/results_round3_coarse.csv"
+FAILCSV="$DOCKING_DIR/results_round3_failures.csv"
+OUTDIR="$ROUND3_DIR/out_coarse"
+LOGDIR="$ROUND3_DIR/logs_coarse"
+
+VINA_BIN="$(command -v vina || true)"
+
+if [[ -z "$VINA_BIN" || ! -x "$VINA_BIN" ]]; then
+  echo "AutoDock Vina was not found in PATH."
+  echo "Activate the required environment before running this script."
+  exit 1
+fi
 
 # receptor cleanup (same as R1/R2)
 grep -vE '^(ROOT|BRANCH|ENDBRANCH|ENDROOT|TORSDOF)' "$RECDIR/TSPO_prepped.pdbqt" > "$RECDIR/TSPO_receptor.pdbqt"
