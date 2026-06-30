@@ -4,8 +4,8 @@ import os, sys, csv
 from rdkit import Chem
 from rdkit.Chem import Descriptors, Crippen, rdMolDescriptors
 
-IN_ALL  = "all_rounds_smiles.csv"
-OUT_CSV = "master_stats.csv"
+IN_ALL  = "docking/all_rounds_smiles.csv"
+OUT_CSV = "docking/master_stats.csv"
 
 # AC-5216 reference constants
 AC_ID      = "AC-5216_emapunil"
