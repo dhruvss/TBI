@@ -7,8 +7,8 @@ invisible(lapply(pkgs, library, character.only = TRUE))
 ok <- function(msg) cat("✓", msg, "\n")
 
 # 1) Files 
-physchem_path <- "pet_physchem.csv"     # tracer,mean_Ki_nM,logD7.4
-metrics_path  <- "pet_metrics.csv"      # isotope,tracer,genotype,metric,value,region,condition
+physchem_path <- "data_analysis/pet_physchem.csv"     # tracer,mean_Ki_nM,logD7.4
+metrics_path  <- "data_analysis/pet_metrics.csv"      # isotope,tracer,genotype,metric,value,region,condition
 docking_path  <- "docking/results.csv"  # tracer,energy
 stopifnot(file.exists(physchem_path), file.exists(metrics_path), file.exists(docking_path))
 ok("found input CSVs")
@@ -127,7 +127,7 @@ wide <- wide %>%
 ok("computed z-scores + composite")
 
 # 9) Save CSV + Figures to figures/
-figdir <- "figures"; dir.create(figdir, showWarnings = FALSE, recursive = TRUE)
+figdir <- "TBI/figures"; dir.create(figdir, showWarnings = FALSE, recursive = TRUE)
 write_csv(wide, file.path(figdir, "pet_tracer_features_and_z.csv"))
 
 leader <- wide %>% arrange(desc(composite_mean)) %>%
