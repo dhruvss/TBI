@@ -1,5 +1,0 @@
-round,ligand_id,smiles,MW,cLogP,logD7.4,logD7.4_est,TPSA,HBD,HBA,RotB,logS_ESOL_est,efflux_risk_0to2,E_dock,CNS_MPO_TE2052,Ki_note,Weighted Average,pass/fail_cns_window,Fraction unbound
-R3,"emap3_Bn-3,5diF_CH2CH2CF2CH3",CCN(Cc1c(F)cc(F)cc1)C(=O)Cn2c3c(cnc(n3)c4ccccc4)n(c2=O)CCC(F)(F)C,483.494,3.945,,3.336,73.02,0,6,8,-4.795,0,,5.4,
-R3,"emap3_Bn-3,4diF_OCH2CF2CH3",CCN(Cc1c(F)ccc(F)c1)C(=O)Cn2c3c(cnc(n3)c4ccccc4)n(c2=O)COCC(F)(F)C,499.493,3.877,,3.191,82.25,0,7,9,-4.785,0,,5.4,
-R3,"emap3_Bn-2,6diF_CH2CH2CHF2",CCN(Cc1c(F)cccc(F)1)C(=O)Cn2c3c(cnc(n3)c4ccccc4)n(c2=O)CCC(F)F,487.457,3.852,,3.244,73.02,0,6,8,-4.761,0,,5.4,
-R3,"emap3_Bn-2,6diF_CH2CH2CF2CH3",CCN(Cc1c(F)cccc(F)1)C(=O)Cn2c3c(cnc(n3)c4ccccc4)n(c2=O)CCC(F)(F)C,483.494,3.945,,3.336,73.02,0,6,8,-4.795,0,,5.4,
