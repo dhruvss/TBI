@@ -1,15 +1,19 @@
 # src/prepare_tspo.py
 import os
 import sys
+from pathlib import Path
+
 from pdbfixer import PDBFixer
 from openmm.app import PDBFile
 
-# Paths (relative to project root)
-PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
-DOCKING_DIR  = os.path.join(PROJECT_ROOT, 'docking')
-HUMAN_PDB    = os.path.join(DOCKING_DIR, 'Human_TSPO.pdb')
-BACT_PDB     = os.path.join(DOCKING_DIR, '4UC1.pdb')
-OUTPUT_PDB   = os.path.join(DOCKING_DIR, 'TSPO_prepped.pdb')
+# Paths relative to repository root
+PROJECT_ROOT = Path(__file__).resolve().parents[1]
+DOCKING_DIR = PROJECT_ROOT / "docking"
+TSPO_DIR = DOCKING_DIR / "TSPO"
+
+HUMAN_PDB = TSPO_DIR / "Human_TSPO.pdb"
+BACT_PDB = TSPO_DIR / "4UC1.pdb"
+OUTPUT_PDB = TSPO_DIR / "TSPO_prepped.pdb"
 
 # Choose input
 if os.path.isfile(HUMAN_PDB):
