@@ -4,7 +4,7 @@ set -euo pipefail
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 PROJECT_ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
 
-RECEPTOR="$PROJECT_ROOT/TSPO/TSPO_receptor.pdbqt"
+RECEPTOR="$PROJECT_ROOT/docking/TSPO/TSPO_receptor.pdbqt"
 LIGAND="${1:-}"
 OUTPUT="${2:-}"
 
