@@ -6,12 +6,34 @@ invisible(lapply(pkgs, library, character.only = TRUE))
 
 ok <- function(msg) cat("✓", msg, "\n")
 
-# 1) Files 
-physchem_path <- "data_analysis/pet_physchem.csv"     # tracer,mean_Ki_nM,logD7.4
-metrics_path  <- "data_analysis/pet_metrics.csv"      # isotope,tracer,genotype,metric,value,region,condition
-docking_path  <- "docking/results.csv"  # tracer,energy
-stopifnot(file.exists(physchem_path), file.exists(metrics_path), file.exists(docking_path))
-ok("found input CSVs")
+# Resolve repository root from the location of this script
+args_full <- commandArgs(trailingOnly = FALSE)
+file_arg <- grep("^--file=", args_full, value = TRUE)
+
+if (length(file_arg) == 1) {
+  script_path <- normalizePath(
+    sub("^--file=", "", file_arg),
+    winslash = "/",
+    mustWork = TRUE
+  )
+  project_root <- normalizePath(
+    file.path(dirname(script_path), ".."),
+    winslash = "/",
+    mustWork = TRUE
+  )
+} else {
+  project_root <- normalizePath(".", winslash = "/", mustWork = TRUE)
+}
+
+data_dir <- file.path(project_root, "data_analysis")
+docking_dir <- file.path(project_root, "docking")
+figdir <- file.path(project_root, "figures")
+
+physchem_path <- file.path(data_dir, "pet_physchem.csv")
+metrics_path <- file.path(data_dir, "pet_metrics.csv")
+docking_path <- file.path(docking_dir, "results.csv")
+
+dir.create(figdir, showWarnings = FALSE, recursive = TRUE)
 
 # 2) Load
 physchem <- read_csv(physchem_path, na = c("unspecified","NA",""), show_col_types = FALSE)
@@ -127,7 +149,6 @@ wide <- wide %>%
 ok("computed z-scores + composite")
 
 # 9) Save CSV + Figures to figures/
-figdir <- "TBI/figures"; dir.create(figdir, showWarnings = FALSE, recursive = TRUE)
 write_csv(wide, file.path(figdir, "pet_tracer_features_and_z.csv"))
 
 leader <- wide %>% arrange(desc(composite_mean)) %>%
