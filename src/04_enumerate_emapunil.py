@@ -1,9 +1,7 @@
-# ~/Documents/Research/TBI-tracer/src/enumerate_emapunil.py
 # First enumeration script for emapunil analogs (AC5216, C23H23N5O2) - 32 analogs based on 8 R1 and 4 R2 variations.
 from rdkit import Chem
 from rdkit.Chem import AllChem, Descriptors, Crippen, Lipinski, rdMolDescriptors
 from rdkit.Chem.rdmolfiles import SDWriter
-import os, csv, itertools, pathlib, random
 
 from pathlib import Path
 import csv
