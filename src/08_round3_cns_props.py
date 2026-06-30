@@ -4,9 +4,22 @@ import os, sys, csv
 from rdkit import Chem
 from rdkit.Chem import Descriptors, Crippen, rdMolDescriptors
 
-BASE = os.path.expanduser("~/Documents/Research/TBI-tracer/docking/emap_enum_round3")
-SRC = os.path.join(BASE, "round3_max.csv")
-OUT_PROPS = os.path.join(BASE, "props_round3.csv")
+from pathlib import Path
+import sys
+import csv
+
+# Repository paths
+PROJECT_ROOT = Path(__file__).resolve().parents[1]
+ROUND3_DIR = PROJECT_ROOT / "docking" / "emap_enum_round3"
+
+SRC = ROUND3_DIR / "round3_max.csv"
+OUT_PROPS = ROUND3_DIR / "props_round3.csv"
+
+if not SRC.is_file():
+    sys.exit(f"Missing Round 3 input CSV: {SRC}")
+with SRC.open(newline="") as f:
+with OUT_PROPS.open("w", newline="") as f:
+
 # KEEP_TXT = os.path.join(BASE, "round3_cns_lead.txt") - originally used, but manually calculated and selected later after regex gate was applied in Sheets.
 # KEEP_SMI = os.path.join(BASE, "round3_cns_lead.smi")
 
