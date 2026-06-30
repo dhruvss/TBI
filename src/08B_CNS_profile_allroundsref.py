@@ -31,7 +31,6 @@ def read_csv(path: str):
         txt = txt.lstrip("\ufeff")
     lines = txt.splitlines()
     rdr = csv.DictReader(lines)
-    rows = read_csv(str(IN_ALL))
     rows = []
     for row in rdr:
         clean = {}
@@ -43,6 +42,7 @@ def read_csv(path: str):
             clean[key] = val
         rows.append(clean)
     return rows
+rows = read_csv(str(IN_ALL))
 
 
 def write_csv(path, rows, header):
