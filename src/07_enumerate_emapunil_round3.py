@@ -1,3 +1,10 @@
+# Run as: python src/07_enumerate_emapunil_round3.py \
+ # --r1_tsv templates_functional_groups/R1_round3.tsv \
+ # --r2_tsv templates_functional_groups/R2_round3.tsv \
+ # --out_sdf docking/emap_enum_round3/round3_max.sdf \
+ # --out_smiles docking/emap_enum_round3/round3_max.csv \
+ # --manifest docking/emap_enum_round3/round3_manifest.txt
+
 # Created 11/28/25
 import os, csv, argparse, hashlib, sys
 from rdkit import Chem
