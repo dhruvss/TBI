@@ -4,8 +4,24 @@ from pathlib import Path
 from rdkit import Chem
 from rdkit.Chem import Descriptors, Crippen, rdMolDescriptors
 
-IN_DIR = ["docking/emap_enum_round1", "docking/emap_enum_round2"]
-OUT_CSV = "figures/leaderboards/round12_CNS.csv"
+from pathlib import Path
+import glob
+import csv
+
+# Repository paths
+PROJECT_ROOT = Path(__file__).resolve().parents[1]
+DOCKING_DIR = PROJECT_ROOT / "docking"
+FIGURES_DIR = PROJECT_ROOT / "figures"
+LEADERBOARD_DIR = FIGURES_DIR / "leaderboards"
+
+IN_DIRS = [
+    DOCKING_DIR / "emap_enum_round1",
+    DOCKING_DIR / "emap_enum_round2",
+]
+
+OUT_CSV = LEADERBOARD_DIR / "round12_CNS.csv"
+LEADERBOARD_DIR.mkdir(parents=True, exist_ok=True)
+
 os.makedirs(os.path.dirname(OUT_CSV), exist_ok=True)
 # CNS gate applied here with the log_gate function, which tells us the threshold TPSA and clogP values for penalizing borderline non-permeable and poor permeability values through BBB
 def log_gate(tpsa, clogp):
