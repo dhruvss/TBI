@@ -2,7 +2,6 @@
 from rdkit import Chem
 from rdkit.Chem import AllChem, Descriptors, Crippen, Lipinski, rdMolDescriptors
 from rdkit.Chem.rdmolfiles import SDWriter
-import os, csv, itertools, pathlib
 
 from pathlib import Path
 import csv
