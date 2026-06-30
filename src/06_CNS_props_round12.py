@@ -1,28 +1,21 @@
-# Created 11/28/25
-import os, glob, csv
 from pathlib import Path
+import csv
+
 from rdkit import Chem
 from rdkit.Chem import Descriptors, Crippen, rdMolDescriptors
-
-from pathlib import Path
-import glob
-import csv
 
 # Repository paths
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 DOCKING_DIR = PROJECT_ROOT / "docking"
-FIGURES_DIR = PROJECT_ROOT / "figures"
-LEADERBOARD_DIR = FIGURES_DIR / "leaderboards"
 
 IN_DIRS = [
     DOCKING_DIR / "emap_enum_round1",
     DOCKING_DIR / "emap_enum_round2",
 ]
 
-OUT_CSV = LEADERBOARD_DIR / "round12_CNS.csv"
-LEADERBOARD_DIR.mkdir(parents=True, exist_ok=True)
+OUT_CSV = DOCKING_DIR / "round12_CNS.csv"
+OUT_CSV.parent.mkdir(parents=True, exist_ok=True)
 
-os.makedirs(os.path.dirname(OUT_CSV), exist_ok=True)
 # CNS gate applied here with the log_gate function, which tells us the threshold TPSA and clogP values for penalizing borderline non-permeable and poor permeability values through BBB
 def log_gate(tpsa, clogp):
     if tpsa < 90 and 0 < clogp < 5: return "Brain"
@@ -68,13 +61,18 @@ for d in IN_DIRS:
             # rows of CSV appended with all parameters calced for each molecule with CNS gates and MPO applied
             rows.append({
                 "ligand_id": name,
-                "source_round": ("round1" if "emap_enum_round1" in sdf else "round2"),
-                "MW": round(mw,2), "TPSA": round(tpsa,2),
-                "HBD": int(hbd), "HBA": int(hba), "RB": int(rb),
-                "cLogP": round(clogp,2), "logD74_EST": round(logd,2),
-                "CNS_gate": gate, "Efflux_risk": eff, "logS_EST": round(logs,2)
+                "source_round": source_round,
+                "MW": round(mw, 2),
+                "TPSA": round(tpsa, 2),
+                "HBD": int(hbd),
+                "HBA": int(hba),
+                "RB": int(rb),
+                "cLogP": round(clogp, 2),
+                "logD": round(logd, 2),
+                "CNS_gate": gate,
+                "Efflux_risk": eff,
+                "logS_EST": round(logs, 2),
             })
-
 with open(OUT_CSV,"w",newline="") as f:
     w=csv.DictWriter(f, fieldnames=list(rows[0].keys()))
     w.writeheader(); w.writerows(rows)
