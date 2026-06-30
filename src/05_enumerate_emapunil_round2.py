@@ -4,8 +4,16 @@ from rdkit.Chem import AllChem, Descriptors, Crippen, Lipinski, rdMolDescriptors
 from rdkit.Chem.rdmolfiles import SDWriter
 import os, csv, itertools, pathlib
 
-BASE_DIR = os.path.expanduser("~/Documents/Research/TBI-tracer")
-OUT_DIR  = os.path.join(BASE_DIR, "docking", "emap_enum_round2")
+from pathlib import Path
+import csv
+import itertools
+
+# Repository paths
+PROJECT_ROOT = Path(__file__).resolve().parents[1]
+DOCKING_DIR = PROJECT_ROOT / "docking"
+OUT_DIR = DOCKING_DIR / "emap_enum_round2"
+
+OUT_DIR.mkdir(parents=True, exist_ok=True)
 RNG_SEED = 20251002
 
 pathlib.Path(OUT_DIR).mkdir(parents=True, exist_ok=True)
