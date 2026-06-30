@@ -1,11 +1,19 @@
 
 # Date created: 2025-12-04
-import os, sys, csv
+import os
+
+from pathlib import Path
+import csv
+import sys
+
 from rdkit import Chem
 from rdkit.Chem import Descriptors, Crippen, rdMolDescriptors
 
-IN_ALL  = "docking/all_rounds_smiles.csv"
-OUT_CSV = "docking/master_stats.csv"
+PROJECT_ROOT = Path(__file__).resolve().parents[1]
+DOCKING_DIR = PROJECT_ROOT / "docking"
+
+IN_ALL = DOCKING_DIR / "all_rounds_smiles.csv"
+OUT_CSV = DOCKING_DIR / "master_stats.csv"
 
 # AC-5216 reference constants
 AC_ID      = "AC-5216_emapunil"
@@ -23,6 +31,7 @@ def read_csv(path: str):
         txt = txt.lstrip("\ufeff")
     lines = txt.splitlines()
     rdr = csv.DictReader(lines)
+    rows = read_csv(str(IN_ALL))
     rows = []
     for row in rdr:
         clean = {}
