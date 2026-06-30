@@ -3,7 +3,7 @@
 # Run with: pymol -cq ~/Documents/Research/TBI-tracer/render_spacefill.py
 
 # import os, glob, sys
-from pathlib import Path
+# from pathlib import Path
 
 # ---------- CONFIG ----------
 #DOCK_DIR   = os.path.expanduser("~/Documents/Research/TBI-tracer/docking")
