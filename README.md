@@ -8,7 +8,7 @@ This project is entirely computational. The proposed analogs should be interpret
 
 ## Repository Structure
 
-- 'docking/': Docking requirements and structures of lead candidates, errors and error logs in docking, and all TSPO/2nd generation tracer structures loaded.
+- `docking/`: Docking requirements and structures of lead candidates, errors and error logs in docking, and all TSPO/2nd generation tracer structures loaded.
 - `src/`: Source code for enumeration, screening, docking analysis, PBPK aggregation, and PET kinetic analysis.
 - `data_analysis/`: Reference-tracer scoring and z-score analysis scripts.
 - `processed_data_supplements/`: Final supplementary CSV tables supporting the manuscript.
