@@ -8,12 +8,9 @@ This project is entirely computational. The proposed analogs should be interpret
 
 ## Repository Structure
 
-- `TSPO/`: AlphaFold/UniProt-derived human TSPO structural model and receptor preparation files.
-- `tracers/`: PubChem-derived reference tracer conformations and prepared docking inputs.
+- 'docking/': Docking requirements and structures of lead candidates, errors and error logs in docking, and all TSPO/2nd generation tracer structures loaded.
 - `src/`: Source code for enumeration, screening, docking analysis, PBPK aggregation, and PET kinetic analysis.
 - `data_analysis/`: Reference-tracer scoring and z-score analysis scripts.
-- `fine_all_rounds/`: Fine docking outputs for final lead candidates using a 14 × 14 × 14 grid and exhaustiveness 32.
-- `error_round3/`: Error correction logs and recomputed files for problematic Round 3 candidates.
 - `processed_data_supplements/`: Final supplementary CSV tables supporting the manuscript.
 - `figures/`: Manuscript and analysis figures.
 - `templates_functional_groups/`: Functional-group templates used for analog enumeration.
