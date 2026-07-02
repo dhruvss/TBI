@@ -1,0 +1,19 @@
+Analog,Water solubility,Caco2 permeability,Intestinal absorption (human),Skin Permeability,P-glycoprotein substrate,P-glycoprotein I inhibitor,P-glycoprotein II inhibitor,VDss (human),Fraction unbound (human),BBB permeability,CNS permeability,CYP2D6 substrate,CYP3A4 substrate,CYP1A2 inhibitior,CYP2C19 inhibitior,CYP2C9 inhibitior,CYP2D6 inhibitior,CYP3A4 inhibitior,Total Clearance,Renal OCT2 substrate,AMES toxicity,Max. tolerated dose (human),hERG I inhibitor,hERG II inhibitor,Oral Rat Acute Toxicity (LD50),Oral Rat Chronic Toxicity (LOAEL),Hepatotoxicity,Skin Sensitisation,T.Pyriformis toxicity,Minnow toxicity
+A1,-3.136,1.421,90.998,-2.735,Yes,Yes,Yes,0.499,0.23,-1.553,-2.647,No,Yes,No,Yes,Yes,No,Yes,0.121,Yes,Yes,0.56,No,Yes,2.521,0.771,No,No,0.285,1.078
+A2,-3.148,1.381,92.129,-2.735,Yes,Yes,Yes,0.514,0.232,-1.432,-2.787,No,Yes,No,Yes,Yes,No,Yes,0.354,Yes,Yes,0.565,No,Yes,2.517,0.935,No,No,0.285,1.051
+A3,-3.218,1.395,90.109,-2.735,Yes,Yes,Yes,0.707,0.173,-0.984,-2.507,No,Yes,Yes,Yes,Yes,No,Yes,0.279,Yes,No,0.539,No,Yes,2.656,0.729,No,No,0.285,1.412
+A4,-3.131,1.345,93.211,-2.735,Yes,Yes,Yes,0.49,0.248,-0.819,-2.64,No,Yes,Yes,Yes,Yes,No,Yes,0.495,Yes,Yes,0.436,No,Yes,2.515,1.235,No,No,0.285,1.199
+A5,-3.133,1.32,90.905,-2.735,Yes,Yes,Yes,0.524,0.3,-1.192,-3.802,No,No,Yes,Yes,Yes,No,Yes,0.523,Yes,No,0.469,No,Yes,2.49,1.137,No,No,0.285,0.637
+A6,-3.123,1.43,92.749,-2.735,Yes,Yes,Yes,0.463,0.262,-0.996,-3.55,No,Yes,Yes,Yes,Yes,No,Yes,0.414,Yes,Yes,0.444,No,Yes,2.461,1.195,No,No,0.285,0.114
+A7,-3.161,1.434,89.722,-2.735,Yes,Yes,Yes,0.529,0.254,-1.274,-3.534,No,Yes,Yes,Yes,Yes,No,Yes,0.305,Yes,No,0.463,No,Yes,2.493,0.843,No,No,0.285,0.23
+A8,-3.19,1.404,91.099,-2.735,Yes,Yes,Yes,0.607,0.209,-0.931,-2.339,No,Yes,Yes,Yes,Yes,No,Yes,0.463,Yes,Yes,0.586,No,Yes,2.604,0.832,No,No,0.285,0.138
+A9,-3.136,1.421,90.998,-2.735,Yes,Yes,Yes,0.499,0.23,-1.553,-2.647,No,Yes,No,Yes,Yes,No,Yes,0.121,Yes,Yes,0.56,No,Yes,2.521,0.771,No,No,0.285,1.078
+A10,-3.171,1.404,91.289,-2.735,Yes,Yes,Yes,0.629,0.218,-1.553,-2.71,No,Yes,No,Yes,Yes,No,Yes,0.289,Yes,No,0.55,No,Yes,2.571,0.779,Yes,No,0.285,1.459
+A11,-2.997,1.485,89.104,-2.735,Yes,Yes,Yes,0.037,0.194,-1.084,-2.624,No,Yes,Yes,Yes,Yes,No,Yes,0.291,Yes,No,0.174,No,Yes,2.404,0.341,No,No,0.285,1.036
+A12,-2.98,1.399,89.7,-2.735,Yes,Yes,Yes,-0.056,0.227,-1.057,-2.549,No,Yes,Yes,Yes,Yes,No,Yes,0.225,Yes,No,0.116,No,Yes,2.362,0.532,Yes,No,0.285,0.4
+A13,-3.533,1.13,95.951,-2.858,Yes,Yes,Yes,1.413,0.421,-1.287,-2.295,No,Yes,No,No,Yes,No,Yes,0.625,No,No,0.294,No,Yes,2.9,1.674,Yes,No,0.415,0.791
+A14,-2.961,1.328,90.618,-2.735,Yes,Yes,Yes,-0.124,0.281,-0.853,-3.368,No,Yes,Yes,Yes,Yes,No,Yes,0.594,Yes,No,0.14,No,Yes,2.379,0.942,No,No,0.285,-0.205
+A15,-3.03,1.419,91.025,-2.735,Yes,Yes,Yes,0.072,0.201,-0.787,-2.294,No,Yes,Yes,Yes,Yes,No,Yes,0.472,Yes,No,0.156,No,Yes,2.412,0.654,No,No,0.285,0.054
+A16,-2.972,1.385,90.809,-2.735,Yes,Yes,Yes,-0.05,0.248,-1.155,-3.546,No,Yes,Yes,Yes,Yes,No,Yes,0.383,Yes,No,0.17,No,Yes,2.356,0.712,No,No,0.285,0.14
+A17,-3.023,1.422,91.302,-2.735,Yes,Yes,Yes,0.04,0.22,-1.021,-2.45,No,Yes,No,Yes,Yes,No,Yes,0.265,Yes,No,0.156,No,Yes,2.357,0.544,No,No,0.285,0.015
+AC-5216,-3.009,1.543,94.501,-2.735,Yes,Yes,Yes,0.16,0.235,-0.759,-2.56,No,Yes,Yes,Yes,Yes,No,Yes,0.553,Yes,Yes,0.559,No,Yes,2.498,1.083,No,No,0.285,0.077
