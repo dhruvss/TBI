@@ -18,6 +18,38 @@ This project is entirely computational. The proposed analogs should be interpret
 - `PKSim TAC figures/`: PKSim time-activity curves for top 17 lead candidate data + respective figs
 - `supp_ref-scripts `: auxiliary zcripts to src - use when needed, includes a SMILES converter script, validations, plotting, and overall file conversion for SDFs for easier visualization
 
+## Environment setup
+
+The reproducible analysis environment is defined in `environment.yml`.
+
+Create and activate the environment with:
+
+```bash
+conda env create -f environment.yml
+conda activate tbi-tracer
+```
+# To update an existing environment
+```bash
+conda env update -f environment.yml --prune
+```
+## Important limitation
+
+Do not include PK-Sim or MoBi in this file. They are external GUI applications and need separate installation instructions.
+
+## External software
+
+The following software is not managed through Conda:
+
+- PK-Sim
+- MoBi
+- PyMOL, used for molecular visualization
+- CHARMM-GUI, accessed through its web interface
+- Google Colab, optionally used for GPU-based molecular dynamics
+- Excel/Google Sheets for basic z-scoring and ranking of lead candidates
+
+Processed PK-Sim and MoBi exports are included so that downstream analyses
+can be reproduced without rebuilding every simulation manually.
+
 ## Citation
 
 Dhruv Subramanian. In Silico Evaluation of Haloalkylated Human 18kDa Translocator Protein PET Tracer Candidates for Traumatic Brain Injury Neuroinflammation. ChemRxiv. 21 May 2026.
