@@ -107,21 +107,36 @@ def cns_mpo_IAEA(clogp, logd74, mw, tpsa, hbd, pka=None):
     return (sum(terms)/len(terms))*6.0
 
 # function loading of docking energies
+def norm_id(x):
+    """
+    Normalize ligand IDs so docking IDs and analog-library IDs match
+    across CSVs, filenames, and Vina output names.
+    """
+    if x is None:
+        return ""
+
+    x = str(x).strip()
+    x = x.replace(",", "__")
+    x = x.replace(" ", "")
+    x = x.replace(".pdbqt", "")
+    x = x.replace("_out", "")
+    x = x.replace("_fine", "")
+    x = x.replace("_coarse", "")
+
+    return x.lower()
+
 def load_Edocks():
     ID_KEYS = ("ligand_id", "name", "id", "ligand")
-    # normalized key across all csvs where energies are named differently, need to be sure of correct energy column
-    E_KEYS  = ("affinity_kcal_per_mol", "e_dock", "energy", "affinity", "score")
+    E_KEYS = ("affinity_kcal_per_mol", "e_dock", "energy", "affinity", "score")
 
     energy_by_norm = {}
     candidates = []
 
-    for root, _, files in os.walk("."):
+    for root, _, files in os.walk(DOCKING_DIR):
         for fn in files:
             low = fn.lower()
-            # want: results_round1_.csv, results_round2_.csv, results_round3_coarse.csv, etc.
             if low.endswith(".csv") and "fail" not in low and "results_round" in low:
                 candidates.append(os.path.join(root, fn))
-
     picked = 0
     for fp in candidates:
         rows = read_csv(fp)
@@ -163,10 +178,8 @@ def load_Edocks():
 
 # main file finder for the all_rounds_smiles and each of the round csvs - merges it all into a master_stats.csv for further big data normalization with enumeration
 # AI was used to write this code snippet - ChatGPT, OpenAI, 5.2 version. 
-if __name__ == "__main__":
-    if not os.path.isfile(IN_ALL):
-        sys.exit(f"Missing {IN_ALL} (expected columns: round,ligand_id,smiles)")
-
+if not IN_ALL.is_file():
+    sys.exit(f"Missing {IN_ALL} (expected columns: round,ligand_id,smiles)")
     base_rows = read_csv(IN_ALL)
     print(f"[debug] base_rows loaded: {len(base_rows)}")
     if not base_rows:
@@ -226,12 +239,12 @@ if __name__ == "__main__":
 
     # append AC-5216 reference row
     if AC_SMILES:
-        props = compute_props(AC_SMILES)
+        props = properties(AC_SMILES)
         if props:
             mw, tpsa, hbd, hba, rotb, clogp = props
             logS = esol_logS_est(clogp, mw, rotb)
-            mpo  = cns_mpo_te2052(clogp, AC_LOGD74, mw, tpsa, hbd, None)
-            efflux = efflux_risk_0to2(mw, AC_LOGD74, hbd, hba, tpsa)
+            mpo = cns_mpo_IAEA(clogp, AC_LOGD74, mw, tpsa, hbd)
+            efflux = efflux_risk_Pgp(mw, AC_LOGD74, hbd, hba, tpsa)
             out_rows.append({
                 "round": "REF",
                 "ligand_id": AC_ID,
