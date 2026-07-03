@@ -17,8 +17,8 @@ OUT_PROPS = ROUND3_DIR / "props_round3.csv"
 
 if not SRC.is_file():
     sys.exit(f"Missing Round 3 input CSV: {SRC}")
-    with SRC.open(newline="") as f:
-    with OUT_PROPS.open("w", newline="") as f:
+
+OUT_PROPS.parent.mkdir(parents=True, exist_ok=True)
 
 # KEEP_TXT = os.path.join(BASE, "round3_cns_lead.txt") - originally used, but manually calculated and selected later after regex gate was applied in Sheets.
 # KEEP_SMI = os.path.join(BASE, "round3_cns_lead.smi")
@@ -52,7 +52,7 @@ def pass_cns(mw, tpsa, logp, hbd, hba, rotb):
     if rotb > ROTB_MAX: return False
     return True
 
-with open(SRC) as f:
+with SRC.open(newline="") as f:
     r = csv.DictReader(f)
     rows = list(r)
 
@@ -76,7 +76,7 @@ for row in rows:
     if keep:
         keepers.append((name, smi))
 
-with open(OUT_PROPS, "w", newline="") as f:
+with OUT_PROPS.open("w", newline="") as f:
     w = csv.writer(f)
     w.writerow(["ligand_id","smiles","MW","TPSA","cLogP","HBD","HBA","RotB","CNS_keep"])
     w.writerows(out_rows)
