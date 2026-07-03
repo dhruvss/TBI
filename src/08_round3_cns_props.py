@@ -17,8 +17,8 @@ OUT_PROPS = ROUND3_DIR / "props_round3.csv"
 
 if not SRC.is_file():
     sys.exit(f"Missing Round 3 input CSV: {SRC}")
-with SRC.open(newline="") as f:
-with OUT_PROPS.open("w", newline="") as f:
+    with SRC.open(newline="") as f:
+    with OUT_PROPS.open("w", newline="") as f:
 
 # KEEP_TXT = os.path.join(BASE, "round3_cns_lead.txt") - originally used, but manually calculated and selected later after regex gate was applied in Sheets.
 # KEEP_SMI = os.path.join(BASE, "round3_cns_lead.smi")
