@@ -18,6 +18,7 @@ dependencies:
   - openbabel
   - pdbfixer
   - openmm
+  - gemmi
 
   # Docking
   - vina
@@ -31,6 +32,6 @@ dependencies:
   - r-ggplot2
   - r-ggrepel
 
-  # Packages installed through pip
+  # Pip packages
   - pip:
       - meeko
