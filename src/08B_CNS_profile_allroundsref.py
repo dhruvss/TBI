@@ -200,7 +200,7 @@ if __name__ == "__main__":
         logd_use = logd_meas if logd_meas is not None else logd_est
         logS   = esol_logS_est(clogp, mw, rotb)
         efflux = efflux_risk_Pgp(mw, logd_use if logd_use is not None else 0.0, hbd, hba, tpsa)
-        mpo    = cns_mpo_IAEA(clogp, logd_use, mw, tpsa, hbd, pka)
+        mpo    = cns_mpo_IAEA(clogp, logd_use, mw, tpsa, hbd)
         edock  = energy_by_norm.get(norm_id(lig), "")
 
         out_rows.append({
