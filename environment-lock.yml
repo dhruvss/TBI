@@ -1,4 +1,4 @@
-name: tbi-tracer-test
+name: tbi-tracer-locked
 channels:
   - conda-forge
   - defaults
@@ -211,4 +211,3 @@ dependencies:
   - zstd=1.5.7
   - pip:
       - meeko==0.7.1
-prefix: /Users/dhruv/miniconda3/envs/tbi-tracer-test
