@@ -67,20 +67,20 @@ dock     <- dock     %>% mutate(tracer_c = canon(tracer))
 ok("standardized tracer names")
 
 # 4) Filter metrics to healthy/baseline; keep blockade-derived VND
-keep_row <- function(cond) if (is.na(cond)) TRUE else !str_detect(cond, "(?i)\\bMS\\b|^ms_")
-metrics_f <- metrics %>%
-  filter(keep_row(condition)) %>%
-  mutate(
-    geno_rank = case_when(toupper(coalesce(genotype,""))=="HAB" ~ 1L, TRUE ~ 2L), # nolint
-    region_rank = case_when(
-      is.na(region) ~ 5L,
-      region %in% c("global_mean","whole_brain") ~ 1L,
-      region %in% c("mean_of_10_rois") ~ 2L,
-      region %in% c("frontal_cortex","frontal","cortex") ~ 3L,
-      TRUE ~ 4L
-    ),
-    value = suppressWarnings(as.numeric(value))
-  ) %>% drop_na(value)
+keep_row <- function(cond) {
+  cond <- as.character(cond)
+
+  is_missing <- is.na(cond) | trimws(cond) == ""
+
+  keep <- is_missing |
+    grepl("HAB", cond, ignore.case = TRUE) |
+    grepl("healthy", cond, ignore.case = TRUE) |
+    grepl("control", cond, ignore.case = TRUE) |
+    grepl("baseline", cond, ignore.case = TRUE) |
+    grepl("HC", cond, ignore.case = FALSE)
+
+  keep
+}
 
 # pick one value per (tracer, metric)
 metrics_pick <- metrics_f %>%
