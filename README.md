@@ -18,6 +18,8 @@ This project is entirely computational. The proposed analogs should be interpret
 - `PKSim TAC figures/`: PKSim time-activity curves for top 17 lead candidate data + respective figs
 - `supp_ref-scripts `: auxiliary zcripts to src - use when needed, includes a SMILES converter script, validations, plotting, and overall file conversion for SDFs for easier visualization
 
+# Reproducibility Instructions
+
 ## Environment setup
 
 The reproducible analysis environment is defined in `environment.yml`.
@@ -28,19 +30,19 @@ Create and activate the environment with:
 conda env create -f environment.yml
 conda activate tbi-tracer
 ```
-# To update an existing environment
+## To update an existing environment
 ```bash
 conda env update -f environment.yml --prune
 ```
 
-# Then run the core reproducibility checks:
+## Then run the core reproducibility checks:
 ```
 python -m py_compile src/*.py
 python src/08B_CNS_profile_allroundsref.py
 Rscript src/02_z-score_refs.R
 Rscript src/11_MoBi_turku_logan_fits.R
 ```
-# Expected regenerated or validated outputs include:
+## Expected regenerated or validated outputs include:
 ```
 docking/master_stats.csv
 figures/pet_tracer_features_and_z.csv
@@ -48,7 +50,7 @@ figures/leaderboard_composite.png
 figures/scatter_vt_vs_bpnd.png
 data_analysis/outputs/MASTER_VT_logan_with_sensitivity.csv
 ```
-# The full generated docking workspaces are intentionally excluded from GitHub:
+## The full generated docking workspaces are intentionally excluded from GitHub:
 ```
 docking/emap_enum_round1/
 docking/emap_enum_round2/
@@ -76,7 +78,7 @@ The following software is not managed through Conda:
 Processed PK-Sim and MoBi exports are included so that downstream analyses
 can be reproduced without rebuilding every simulation manually.
 
-## Citation
+# Citation
 
 Dhruv Subramanian. In Silico Evaluation of Haloalkylated Human 18kDa Translocator Protein PET Tracer Candidates for Traumatic Brain Injury Neuroinflammation. ChemRxiv. 21 May 2026.
 DOI: https://doi.org/10.26434/chemrxiv.15003660/v1
