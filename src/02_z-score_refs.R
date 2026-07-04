@@ -29,8 +29,8 @@ data_dir <- file.path(project_root, "data_analysis")
 docking_dir <- file.path(project_root, "docking")
 figdir <- file.path(project_root, "figures")
 
-physchem_path <- file.path(data_dir, "pet_physchem.csv")
-metrics_path <- file.path(data_dir, "pet_metrics.csv")
+physchem_path <- file.path(data_dir, "pet_ref_physchem.csv")
+metrics_path <- file.path(data_dir, "pet_ref_metrics.csv")
 docking_path <- file.path(docking_dir, "results.csv")
 
 dir.create(figdir, showWarnings = FALSE, recursive = TRUE)
