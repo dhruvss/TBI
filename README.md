@@ -32,6 +32,32 @@ conda activate tbi-tracer
 ```bash
 conda env update -f environment.yml --prune
 ```
+
+# Then run the core reproducibility checks:
+```
+python -m py_compile src/*.py
+python src/08B_CNS_profile_allroundsref.py
+Rscript src/02_z-score_refs.R
+Rscript src/11_MoBi_turku_logan_fits.R
+```
+# Expected regenerated or validated outputs include:
+```
+docking/master_stats.csv
+figures/pet_tracer_features_and_z.csv
+figures/leaderboard_composite.png
+figures/scatter_vt_vs_bpnd.png
+data_analysis/outputs/MASTER_VT_logan_with_sensitivity.csv
+```
+# The full generated docking workspaces are intentionally excluded from GitHub:
+```
+docking/emap_enum_round1/
+docking/emap_enum_round2/
+docking/emap_enum_round3/
+```
+These directories contain thousands of reproducible intermediate SDF/PDBQT files, docking poses, and logs. Instead, this repository provides the full analog SMILES table, curated docking-result summaries, master statistics, receptor/tracer inputs, analysis scripts, PK-Sim/MoBi exports, and processed outputs needed to reproduce the reported rankings and downstream analyses.
+
+Original docking was performed with AutoDock Vina 1.2.5. The Conda environment installs Vina from conda-forge; minor version differences may slightly affect newly regenerated docking scores, so the processed docking outputs used in the study are included.
+
 ## Important limitation
 
 Do not include PK-Sim or MoBi in this file. They are external GUI applications and need separate installation instructions.
