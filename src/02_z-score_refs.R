@@ -67,6 +67,7 @@ dock     <- dock     %>% mutate(tracer_c = canon(tracer))
 ok("standardized tracer names")
 
 # 4) Filter metrics to healthy/baseline; keep blockade-derived VND
+
 keep_row <- function(cond) {
   cond <- as.character(cond)
 
@@ -82,12 +83,46 @@ keep_row <- function(cond) {
   keep
 }
 
+metrics_f <- metrics %>%
+  mutate(
+    metric = as.character(metric),
+    value = suppressWarnings(as.numeric(value)),
+    condition = as.character(condition),
+    genotype = as.character(genotype),
+    region = as.character(region),
+
+    # Prefer HAB rows when genotype information exists.
+    geno_rank = case_when(
+      str_detect(genotype, regex("HAB", ignore_case = TRUE)) ~ 1L,
+      is.na(genotype) | trimws(genotype) == "" ~ 2L,
+      TRUE ~ 3L
+    ),
+
+    # Prefer global/whole-brain style rows when region information exists.
+    region_rank = case_when(
+      str_detect(region, regex("global|whole|total|brain", ignore_case = TRUE)) ~ 1L,
+      is.na(region) | trimws(region) == "" ~ 2L,
+      TRUE ~ 3L
+    ),
+
+    metric_upper = str_to_upper(metric)
+  ) %>%
+  filter(
+    keep_row(condition) |
+      metric_upper %in% c("VND", "V_ND")
+  ) %>%
+  drop_na(value)
+
+ok("filtered PET metrics")
+
 # pick one value per (tracer, metric)
 metrics_pick <- metrics_f %>%
   arrange(tracer_c, metric, geno_rank, region_rank) %>%
   group_by(tracer_c, metric) %>%
-  slice(1) %>% ungroup() %>%
+  slice(1) %>%
+  ungroup() %>%
   select(tracer_c, metric, value)
+
 ok("selected per-tracer metrics")
 
 # 5) Physchem subset (as provided)
