@@ -176,33 +176,57 @@ def load_Edocks():
     print(f"[merge] energies loaded: {picked} from {len(candidates)} files")
     return energy_by_norm
 
-# main file finder for the all_rounds_smiles and each of the round csvs - merges it all into a master_stats.csv for further big data normalization with enumeration
-# AI was used to write this code snippet - ChatGPT, OpenAI, 5.2 version. 
-if not IN_ALL.is_file():
-    sys.exit(f"Missing {IN_ALL} (expected columns: round,ligand_id,smiles)")
-    base_rows = read_csv(IN_ALL)
+# main file finder for the all_rounds_smiles and each of the round csvs
+# merges it all into master_stats.csv for downstream normalization/analysis.
+# AI was used to help write this code snippet - ChatGPT, OpenAI.
+
+if __name__ == "__main__":
+    if not IN_ALL.is_file():
+        sys.exit(f"Missing {IN_ALL} (expected columns: round,ligand_id,smiles)")
+
+    base_rows = read_csv(str(IN_ALL))
     print(f"[debug] base_rows loaded: {len(base_rows)}")
+
     if not base_rows:
         sys.exit("No rows in all_rounds_smiles.csv")
 
     energy_by_norm = load_Edocks()
 
     out_rows = []
+
     for r in base_rows:
-        lig = (r.get("ligand_id") or r.get("ligand") or r.get("name") or r.get("id") or "").strip()
-        smi = (r.get("smiles")    or r.get("smi")   or "").strip()
-        rnd = (r.get("round")     or "").strip()
+        lig = (
+            r.get("ligand_id")
+            or r.get("ligand")
+            or r.get("name")
+            or r.get("id")
+            or ""
+        ).strip()
+
+        smi = (
+            r.get("smiles")
+            or r.get("smi")
+            or ""
+        ).strip()
+
+        rnd = (
+            r.get("round")
+            or ""
+        ).strip()
 
         if not lig or not smi:
             continue
 
         props = properties(smi)
+
         if props is None:
             continue
+
         mw, tpsa, hbd, hba, rotb, clogp = props
 
-        # measured logD if present just as a safety net for AC5216 value - that is the only value that has a measured logD
+        # measured logD if present; otherwise use estimated logD proxy
         logd_meas = None
+
         if r.get("logd7.4"):
             try:
                 logd_meas = float(r["logd7.4"])
@@ -211,10 +235,25 @@ if not IN_ALL.is_file():
 
         logd_est = None if logd_meas is not None else logD_est(clogp, tpsa)
         logd_use = logd_meas if logd_meas is not None else logd_est
-        logS   = esol_logS_est(clogp, mw, rotb)
-        efflux = efflux_risk_Pgp(mw, logd_use if logd_use is not None else 0.0, hbd, hba, tpsa)
-        mpo    = cns_mpo_IAEA(clogp, logd_use, mw, tpsa, hbd)
-        edock  = energy_by_norm.get(norm_id(lig), "")
+
+        logS = esol_logS_est(clogp, mw, rotb)
+        efflux = efflux_risk_Pgp(
+            mw,
+            logd_use if logd_use is not None else 0.0,
+            hbd,
+            hba,
+            tpsa,
+        )
+
+        mpo = cns_mpo_IAEA(
+            clogp,
+            logd_use,
+            mw,
+            tpsa,
+            hbd,
+        )
+
+        edock = energy_by_norm.get(norm_id(lig), "")
 
         out_rows.append({
             "round": rnd,
@@ -232,7 +271,7 @@ if not IN_ALL.is_file():
             "efflux_risk_0to2": str(efflux),
             "E_dock": edock,
             "CNS_MPO_TE2052": f"{mpo:.3f}" if mpo is not None else "",
-            "Ki_note": ""
+            "Ki_note": "",
         })
 
     print(f"[debug] out_rows from analogs: {len(out_rows)}")
@@ -240,11 +279,14 @@ if not IN_ALL.is_file():
     # append AC-5216 reference row
     if AC_SMILES:
         props = properties(AC_SMILES)
+
         if props:
             mw, tpsa, hbd, hba, rotb, clogp = props
+
             logS = esol_logS_est(clogp, mw, rotb)
             mpo = cns_mpo_IAEA(clogp, AC_LOGD74, mw, tpsa, hbd)
             efflux = efflux_risk_Pgp(mw, AC_LOGD74, hbd, hba, tpsa)
+
             out_rows.append({
                 "round": "REF",
                 "ligand_id": AC_ID,
@@ -261,15 +303,28 @@ if not IN_ALL.is_file():
                 "efflux_risk_0to2": str(efflux),
                 "E_dock": AC_EDOCK,
                 "CNS_MPO_TE2052": f"{mpo:.3f}" if mpo is not None else "",
-                "Ki_note": AC_KI_NOTE
+                "Ki_note": AC_KI_NOTE,
             })
 
     header = [
-        "round","ligand_id","smiles",
-        "MW","cLogP","logD7.4","logD7.4_est",
-        "TPSA","HBD","HBA","RotB",
-        "logS_ESOL_est","efflux_risk_0to2",
-        "E_dock","CNS_MPO_TE2052","Ki_note"
+        "round",
+        "ligand_id",
+        "smiles",
+        "MW",
+        "cLogP",
+        "logD7.4",
+        "logD7.4_est",
+        "TPSA",
+        "HBD",
+        "HBA",
+        "RotB",
+        "logS_ESOL_est",
+        "efflux_risk_0to2",
+        "E_dock",
+        "CNS_MPO_TE2052",
+        "Ki_note",
     ]
+
     write_csv(OUT_CSV, out_rows, header)
+
     print(f"Wrote {OUT_CSV} with {len(out_rows)} rows")
