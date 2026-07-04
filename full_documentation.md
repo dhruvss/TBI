@@ -1,6 +1,5 @@
-# Research Journal
-AI-Driven Novel Fluorinated TSPO Tracers for High-Accuracy TBI Diagnostics
-
+# Documentation
+In Silico Evaluation of Haloalkylated Human TSPO PET Tracer Candidates for TBI Neuroinflammation
 ## Entry 1 — Initial Research Question
 
 **Date:** 3/20/25
@@ -111,7 +110,7 @@ Shift from chronic CTE imaging to **acute traumatic brain injury molecular imagi
 ### Fluid Biomarker Review and Comparative Analysis
 
 **NfL**
-- NfL was originally going to be the top choice for biomarker - being considered a premier axonal neurodegeneration marker, and was involved in the cytoskeleton in 
+- NfL was originally going to be the top choice for biomarker - being considered a premier axonal neurodegeneration marker in TBI neuroinflammation.
 
 **GFAP**
 - Astroglial injury marker (reactive astrogliosis)
@@ -216,8 +215,6 @@ Weighting is a heuristic according to these values, framework for prioritization
 
 **Disclaimer: Statistical normalization, weighting strategy, and error auditing for the tracer prioritization pipeline were developed using R (version 4.5.1) with error assistance from an AI large language model (ChatGPT, OpenAI). All final computations, data handling, and results were independently executed and verified by the author (me).**
 
-AI prompt: "please design a z-score normalization for parameters BPND, VT, fP, VND inverse, docking energies (extracted from Vina), Ki and logD7.4 prioritizing BPND and other PET metrics, make it through R 4.5.1"
-
 ### normalization of all properties to original parameter of TSPO-upregulated control specimens with standardized metrics
 keep_row <- function(cond) if (is.na(cond)) TRUE else !str_detect(cond, "(?i)\\bMS\\b|^ms_")
 metrics_f <- metrics %>%
@@ -289,7 +286,7 @@ mutate(
 
 z_cols <- c("z_Ki_inv","z_VT","z_BPND","z_VND_inv","z_fP","z_VT_over_fP","z_logD","z_dock_inv")
 
-**NOTE** DAA1106 was originally part of the tracer table in the z-score normalization process, but was excluded from the protocol, due to statistically significant amounts of missing PET metric data that couldn't be accomplished through thorough literature searches. Because of this, DAA1106 didn't make the cut to this step in the research process.
+**NOTE** DAA1106 was originally part of the tracer table in the z-score normalization process, but was excluded from the protocol, due to significant amounts of missing PET metric data that couldn't be accomplished through thorough literature searches. Because of this, DAA1106 didn't make the cut to this step in the research process.
 
 **NOTE** In figures, K1 was used as a supplementary measure, however was not part of the overall z-score normalization, due to the emphasis on logD7.4 measurements for BBB permeability, and was also excluded due to insufficient data.
 
@@ -320,11 +317,8 @@ General functional group ideation: Viviano, M. et al. (2022). Essential Principl
     **Round 3** -  Targeted stress tests on molecular weight, polarity, and efflux were the key functional groups/modifications done on the AC5216 pharmacophore. These are R2 mods that included ether-linked (e.g. OCHF2, OCH2CH2CF3, etc.) fluoroalkyls that minimize polarity through transmembrane channels. Relatively higher failure rate due to unloaded docking energies (not suitable with the TSPO receptor)
     **Round 4** - Exploratory testing of silyl ethers and inorganic additions (CH2SiEt3, CH2CH2SiMe3) and addition of silyl ethers - drastically increased molecular weight, and had a high docking failure rate - disproves potential hypothesis of silication being useful in the construction of TSPO radioligand scaffold analogs for synthesis and in vivo validation.
 
-**Gen AI Statements** AI did briefly assist with enumeration as it was used to scan the RDKit documentation in potential pharmacophore identification. AI helped validate pharmacophore adjustment and SMILES conversion, although all final SMILES computations and pharmacophore creation were independently done according to clear literature corroborations of the potential R-substitutions - literature listed above in the rationale. AI helped code the data validation snippets (auxiliary) to validate the main RDKit enumeration protocol.
-
 **Code Used**
 `enumerate_emapunil_round(x).py`
-AI Prompt: based on scaffold SMILES CCN({R1})C(=O)Cn2c3c(cnc(n3)c4ccccc4)n(c2=O){R2} can you please develop a CNS window in Python titled CNS_profile_allroundsref.py off of the IAEA TE-2052 framework prioritizing statistical weights from the documentation - create a multi-parameter optimization score similar to Wager et al. but use TBI permeability parameters and efflux risk as that is hugely important in CNS specific binding to TSPO.
 **Scaffold Template**
 ```python
 TEMPLATE = "CCN({R1})C(=O)Cn2c3c(cnc(n3)c4ccccc4)n(c2=O){R2}"
@@ -354,7 +348,7 @@ CODE REVIEW
 
 Round 1
 Attempt 1 — 2025-11-22
-AI prompt: explain error that occurred with zsh "command not found" and normalize keys preventing traceback (most recent call last).
+AI prompt: explain error that occurred with zsh "command not found" and normalize keys.
 ```zsh
 # [ERROR] 2025-11-22 — zsh: command not found: vina,/Users/...emap2...log
 # Shell interpreted a token with a comma adjacent to 'vina' (likely CSV/filename join).
@@ -581,8 +575,6 @@ RESUME=1 ./round3_docking.zsh
 
 # Entry 11 - CNS Window and Multi-Parametric Optimization
 
-**AI prompt** "Give me a code snippet for a CNS penalty gate on Python through RDKit - here is the documentation: https://www.rdkit.org/docs/source/rdkit.Chem.Descriptors.html#module-rdkit.Chem.Descriptors that takes limits of parameters across docking energy, estimated logD7.4, logS (use ESOL framework from Delaney et al.), clogP, TPSA, molecular weight, HBD, HBA, and RotB with data and key stats weights given." AI was used to create the initial code scaffold for the CNS window, but I checked all code and CNS property modifications with conflicting sources - IAEA was the main source used here, but I crosschecked Wager et al. for any significant conflicts in optimization patterns in the CNS window.
-
 **Dates:** 12/04/25 – 12/18/25 
 
 **Purpose:**  
@@ -691,8 +683,6 @@ Grid space : 0.375
 Exhaustiveness: 32
 CPU: 8
 Verbosity: 1
-
-AI guidance used to help start the VMWare fusion virtual environment for Windows - PKSim only works on windows, AI used for original PKSim start-up help.
 
 PKSim - AC5216 done as ref, test - parameters match AC5216 values. 
 **Anatomy and Physiology** Human_Adult_TBI_Template used as the key "subject" for the in-silico PBPK modeling. Key parameters: European Male Human, 30 years old, 70.00 kg, 175.00 cm, BMI 22.86 kg/m^2. 
@@ -804,8 +794,6 @@ TOP 3 ANALOGS (increasing) - A6, A3, A7
  - 2TCM primary source: https://www.turkupetcentre.net/petanalysis/model_2tcm.html
  - PET framing procedure - https://www.turkupetcentre.net/petanalysis/simulation_frames.html?utm_source=chatgpt.com
 
-**GenAI Statement** AI was used to design the initial code template for the 2-tissue compartment model, and was used to correct errors in the script modeling this linear regression methodology through R and helped install file packages in my virtual environment. 
-
  - Code was taken and cited from kinfitr - R library, Matheson, G. J. (2019). Kinfitr: Reproducible PET Pharmacokinetic Modelling in R. bioRxiv: 755751. https://doi.org/10.1101/755751 and Tjerkaski, J., Cervenka, S., Farde, L., & Matheson, G. J. (2020). 
   - Kinfitr – an open source tool for reproducible PET modelling: Validation and evaluation of test-retest reliability. bioRxiv: 2020.02.20.957738. https://doi.org/10.1101/2020.02.20.957738
 
@@ -901,6 +889,6 @@ Attempt 20 (current attempt)
 Abandoned kinfitr methods - decided to run simple VT regression analysis rather than considering BPND - VT and VT/fp will be the primary PET metrics in this data validation. Simple VT analysis went through! Showed sensitivity and specificity based on critical value of t-test t* changes (10-40 min) - VT stayed constant and acted as a great regression predictor with an r^2 value of 0.999986 - VT stayed constant across all analogs. 
 
 **Analog Results**
-A7 emerged as the best modified analog scaffold - emap2_Bn-3,4diF_CHF2 - all top 3 analogs emerged with fluorinated side chains indicating high success rate of fluorination method
+A7 emerged as the best modified analog scaffold - emap2_Bn-3,4diF_CHF2 - all top 3 analogs emerged with fluorinated side chains indicating high success rate of fluorination method.
 
 
