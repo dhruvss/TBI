@@ -1,0 +1,6 @@
+candidate,role,selection_rationale
+AC-5216,reference scaffold,Parent/reference TSPO ligand used to anchor MD protocol and compare analog pose stability
+A15,ADMET/developability lead,Best consensus ADMET candidate from pkCSM and SwissADME triage
+A3,balanced comparator,Clean categorical toxicity profile and balanced computational profile
+A7,PBPK exposure-maximized stress test,Selected despite weaker ADMET consensus because it was the PBPK exposure-optimized lead
+A17,backup ADMET alternate,Additional ADMET-favorable alternate included as fifth MD candidate

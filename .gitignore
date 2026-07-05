@@ -28,3 +28,25 @@ __pycache__/
 *.tmp
 *.bak
 ~$*
+
+# Molecular dynamics heavy outputs
+md/**/charmm-gui*/
+md/**/trajectories/
+md/**/checkpoints/
+md/**/*.dcd
+md/**/*.xtc
+md/**/*.trr
+md/**/*.nc
+md/**/*.chk
+md/**/*.rst
+md/**/*.restart
+md/**/*.vel
+md/**/*.log
+md/**/*.out
+md/**/*.edr
+md/**/*.cpt
+md/**/*.tpr
+md/**/*.gro
+md/**/*.psf
+md/**/*.crd
+md/**/*.dms
