@@ -1,0 +1,19 @@
+Compound,decision_score,continuous_score,categorical_penalty,bbb_consensus,pgp_consensus,BBB permeability,CNS permeability,BBB permeant,AMES toxicity,hERG I inhibitor,hERG II inhibitor,Hepatotoxicity,PAINS #alerts,Brenk #alerts,md_panel_role
+A15,0.23870866572873606,0.588708665728736,1.0,Concordant favorable,Discordant,-0.787,-2.294,Yes,No,No,Yes,No,0,0,MD lead: strongest ADMET/developability consensus
+A3,-0.23628094456605292,0.46371905543394704,2.0,Discordant,Discordant,-0.984,-2.507,No,No,No,Yes,No,0,0,MD comparator: balanced clean-toxicity candidate
+A4,-0.3393298876951777,0.7106701123048221,3.0,Concordant favorable,Discordant,-0.819,-2.64,Yes,Yes,No,Yes,No,0,0,Not selected for first-pass MD
+AC-5216,-0.3629825666275691,0.6870174333724307,3.0,Concordant favorable,Discordant,-0.759,-2.56,Yes,Yes,No,Yes,No,0,0,MD reference scaffold
+A17,-0.5154935566675217,0.18450644333247826,2.0,Concordant unfavorable,Discordant,-1.021,-2.45,No,No,No,Yes,No,0,0,Backup ADMET alternate
+A8,-0.5362535036525115,0.5137464963474884,3.0,Concordant favorable,Discordant,-0.931,-2.339,Yes,Yes,No,Yes,No,0,0,Not selected for first-pass MD
+A13,-0.7730262873525269,0.276973712647473,3.0,Discordant,Discordant,-1.287,-2.295,Yes,No,No,Yes,Yes,0,0,Not selected for first-pass MD
+A6,-0.7912081330214917,0.2587918669785081,3.0,Discordant,Discordant,-0.996,-3.55,Yes,Yes,No,Yes,No,0,0,Not selected for first-pass MD
+A14,-0.8007627117137853,-0.10076271171378533,2.0,Concordant unfavorable,Discordant,-0.853,-3.368,No,No,No,Yes,No,0,0,Not selected for first-pass MD
+A5,-0.8306292666233371,-0.1306292666233372,2.0,Concordant unfavorable,Discordant,-1.192,-3.802,No,No,No,Yes,No,0,0,Not selected for first-pass MD
+A7,-0.9778773748204472,-0.2778773748204472,2.0,Concordant unfavorable,Discordant,-1.274,-3.534,No,No,No,Yes,No,0,0,MD comparator: PBPK exposure-maximized stress test
+A11,-1.165193158373722,-0.46519315837372216,2.0,Concordant unfavorable,Discordant,-1.084,-2.624,No,No,No,Yes,No,0,0,Not selected for first-pass MD
+A12,-1.3332374355490406,0.06676256445095925,4.0,Concordant unfavorable,Discordant,-1.057,-2.549,No,No,No,Yes,Yes,0,0,Not selected for first-pass MD
+A16,-1.4199958122157987,-0.7199958122157989,2.0,Concordant unfavorable,Discordant,-1.155,-3.546,No,No,No,Yes,No,0,0,Not selected for first-pass MD
+A1,-1.8835732938273695,-0.4835732938273695,4.0,Concordant unfavorable,Discordant,-1.553,-2.647,No,Yes,No,Yes,No,0,0,Not selected for first-pass MD
+A9,-1.8835732938273695,-0.4835732938273695,4.0,Concordant unfavorable,Discordant,-1.553,-2.647,No,Yes,No,Yes,No,0,0,Not selected for first-pass MD
+A2,-1.8973635370335686,-0.49736353703356867,4.0,Concordant unfavorable,Discordant,-1.432,-2.787,No,Yes,No,Yes,No,0,0,Not selected for first-pass MD
+A10,-1.9919279021614607,-0.5919279021614609,4.0,Concordant unfavorable,Discordant,-1.553,-2.71,No,No,No,Yes,Yes,0,0,Not selected for first-pass MD

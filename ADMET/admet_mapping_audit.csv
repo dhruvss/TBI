@@ -1,0 +1,19 @@
+SwissADME_Molecule,Mapped_Compound,pkCSM_Analog,SwissADME_Canonical_SMILES,Mapping_OK
+Molecule 1,A1,A1,CCN(C(=O)Cn1c(=O)n(c2c1nc(nc2)c1ccccc1)C)Cc1ccc(cc1)OC(F)(F)F,True
+Molecule 2,A2,A2,CCN(C(=O)Cn1c(=O)n(c2c1nc(nc2)c1ccccc1)C)Cc1ccc(cc1)OC(F)F,True
+Molecule 3,A3,A3,CCN(C(=O)Cn1c2nc(ncc2n(c1=O)CC(F)(F)F)c1ccccc1)Cc1ccccc1,True
+Molecule 4,A4,A4,CCN(C(=O)Cn1c(=O)n(c2c1nc(nc2)c1ccccc1)C)Cc1ccc(cc1)F,True
+Molecule 5,A5,A5,FCCn1c(=O)n(c2c1cnc(n2)c1ccccc1)CC(=O)N(Cc1ccc(cc1F)F)CC,True
+Molecule 6,A6,A6,CCN(C(=O)Cn1c(=O)n(c2c1nc(nc2)c1ccccc1)C)Cc1cc(F)ccc1F,True
+Molecule 7,A7,A7,CCN(C(=O)Cn1c(=O)n(c2c1nc(nc2)c1ccccc1)C(F)F)Cc1cc(F)ccc1F,True
+Molecule 8,A8,A8,CCN(C(=O)Cn1c(=O)n(c2c1nc(nc2)c1ccccc1)C)Cc1cc(Cl)ccc1Cl,True
+Molecule 9,A9,A9,CCN(C(=O)Cn1c(=O)n(c2c1nc(nc2)c1ccccc1)C)Cc1ccc(cc1)OC(F)(F)F,True
+Molecule 10,A10,A10,CCN(C(=O)Cn1c(=O)n(c2c1nc(nc2)c1ccccc1)CC(F)(F)F)Cc1ccc(cc1)OC,True
+Molecule 11,A11,A11,CCN(C(=O)Cn1c2nc(ncc2n(c1=O)COC(F)(F)F)c1ccccc1)Cc1ccccc1,True
+Molecule 12,A12,A12,CCN(C(=O)Cn1c2nc(ncc2n(c1=O)CC(F)(F)F)c1ccccc1)Cc1cccc(c1)F,True
+Molecule 13,A13,A13,CCN(C(=O)Cn1c2nc(ncc2n(c1=O)CF)c1ccccc1)Cc1cccc(c1)Cl,True
+Molecule 14,A14,A14,CCCn1c(=O)n(c2c1cnc(n2)c1ccccc1)CC(=O)N(Cc1ccc(cc1F)F)CC,True
+Molecule 15,A15,A15,CCN(C(=O)Cn1c(=O)n(c2c1nc(nc2)c1ccccc1)C)Cc1cc(Cl)ccc1Cl,True
+Molecule 16,A16,A16,COc1ccc(c(c1)CN(C(=O)Cn1c2nc(ncc2n(c1=O)C(F)F)c1ccccc1)CC)F,True
+Molecule 17,A17,A17,CCN(C(=O)Cn1c(=O)n(c2c1nc(nc2)c1ccccc1)C)Cc1cc(F)ccc1C(F)(F)F,True
+Molecule 18,AC-5216,AC-5216,CCN(C(=O)Cn1c2nc(ncc2n(c1=O)C)c1ccccc1)Cc1ccccc1,True
