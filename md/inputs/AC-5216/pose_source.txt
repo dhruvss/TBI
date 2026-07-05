@@ -1,0 +1,12 @@
+Ligand pose source: docking/fine_all_rounds/out_pdbqt/AC5216_out.pdbqt
+Docking engine: AutoDock Vina
+Receptor: docking/TSPO/TSPO_receptor.pdbqt
+Ligand input: docking/tracers/AC-5216.pdbqt
+Protein used for MD complex inspection: docking/TSPO/TSPO_prepped.pdb
+Grid center: x=5.2, y=12.8, z=8.3
+Grid size: x=20, y=20, z=20
+Exhaustiveness: 32
+Number of modes: 10
+Selected MD pose: mode 1
+Vina affinity: -6.1 kcal/mol
+Selection rationale: top-ranked fine-docking pose; visually inspected in PyMOL and found to occupy a TSPO pocket/cleft without obvious catastrophic clashes. Close contacts are expected to be relaxed during MD minimization.
