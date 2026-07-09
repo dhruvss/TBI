@@ -75,3 +75,12 @@ CHARMM-GUI job/project ID:
 Downloaded output stored locally at:
 
 Any warnings/errors:
+
+## OpenMM setup attempt 001 inspection
+
+The first local OpenMM membrane setup completed technically, but visual inspection showed that the TSPO helical bundle was not correctly oriented as a transmembrane protein relative to the POPC bilayer. The protein appeared to lie largely parallel to the membrane plane / inside a lipid-cleared cavity rather than spanning the bilayer.
+
+This setup was therefore not used for minimization or production MD.
+
+Next action:
+The TSPO-ligand coordinates will be reoriented so that the predicted transmembrane helical bundle axis is approximately aligned with the membrane normal before rebuilding the POPC membrane system.

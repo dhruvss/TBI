@@ -10,3 +10,9 @@ Number of modes: 10
 Selected MD pose: mode 1
 Vina affinity: -6.1 kcal/mol
 Selection rationale: top-ranked fine-docking pose; visually inspected in PyMOL and found to occupy a TSPO pocket/cleft without obvious catastrophic clashes. Close contacts are expected to be relaxed during MD minimization.
+
+Ligand chemistry repair:
+The initial SDF generated directly from PDBQT/PDB conversion was not used for OpenFF parameterization because PDBQT/PDB conversion does not reliably preserve bond order and aromaticity. For AC-5216, the PubChem SDF was used as the correct-chemistry template, and heavy-atom coordinates from Vina MODEL 1 were transferred onto the template. Hydrogens were then regenerated with RDKit.
+
+OpenFF-ready ligand file:
+md/inputs/AC-5216/ligand_pose_openff.sdf
