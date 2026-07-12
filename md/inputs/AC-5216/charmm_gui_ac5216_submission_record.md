@@ -84,3 +84,24 @@ This setup was therefore not used for minimization or production MD.
 
 Next action:
 The TSPO-ligand coordinates will be reoriented so that the predicted transmembrane helical bundle axis is approximately aligned with the membrane normal before rebuilding the POPC membrane system.
+
+## OpenMM setup attempt 003 inspection
+
+OpenMM setup attempt 003 used the corrected Meeko-exported AC-5216 ligand SDF.
+
+Visual inspection showed that the POPC membrane system was acceptable for minimization:
+- TSPO appeared embedded through the POPC bilayer rather than lying flat on the membrane surface.
+- Water and ions were placed outside the bilayer region.
+- The ligand geometry no longer showed the atom-order-transfer artifact from the rejected SDF attempt.
+- The AC-5216 ligand remained suitable for pocket/contact inspection before minimization.
+
+Accepted setup for minimization:
+
+    /Users/dhruv/Documents/Research/TBI-tracer/MD_runs/AC-5216/openmm_setup_003/
+
+Local visual inspection files:
+
+    /Users/dhruv/Documents/Research/TBI-tracer/MD_runs/AC-5216/openmm_setup_003/setup_003_visual_inspection.pse
+    /Users/dhruv/Documents/Research/TBI-tracer/MD_runs/AC-5216/openmm_setup_003/setup_003_membrane_inspection.png
+
+Setup 003 is accepted as the first AC-5216 membrane-embedded starting system for energy minimization.
