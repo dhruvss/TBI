@@ -105,3 +105,18 @@ Local visual inspection files:
     /Users/dhruv/Documents/Research/TBI-tracer/MD_runs/AC-5216/openmm_setup_003/setup_003_membrane_inspection.png
 
 Setup 003 is accepted as the first AC-5216 membrane-embedded starting system for energy minimization.
+
+## Minimized structure inspection
+
+The minimized AC-5216 OpenMM setup 003 structure was visually inspected in PyMOL.
+
+Inspection outcome:
+- TSPO remained embedded in the POPC membrane.
+- The POPC bilayer remained coherent after minimization.
+- AC-5216 remained in the TSPO binding pocket.
+- AC-5216 ligand geometry remained chemically reasonable.
+- Ligand-protein contacts were retained after minimization.
+- No obvious catastrophic lipid/protein/ligand distortion was observed.
+
+Conclusion:
+The minimized AC-5216 setup 003 system is accepted for restrained equilibration.
