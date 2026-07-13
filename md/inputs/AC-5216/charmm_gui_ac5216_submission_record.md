@@ -120,3 +120,33 @@ Inspection outcome:
 
 Conclusion:
 The minimized AC-5216 setup 003 system is accepted for restrained equilibration.
+
+## Restrained equilibration stage 1 inspection
+
+Restrained equilibration stage 1 completed successfully.
+
+Output directory:
+
+    /Users/dhruv/Documents/Research/TBI-tracer/MD_runs/AC-5216/openmm_setup_003/equilibration_stage1/
+
+Stage 1 results:
+
+    Total simulated time: 5 ps
+    Final temperature: 298.868 K
+    Final potential energy: -632119.422 kJ/mol
+    Final kinetic energy: 172471.213 kJ/mol
+    Final total energy: -459648.209 kJ/mol
+
+Inspection outcome:
+
+    The system completed without NaN coordinates or simulation crash.
+    Temperature smoothly approached 300 K.
+    TSPO remained embedded in the POPC membrane.
+    The POPC bilayer remained coherent.
+    AC-5216 remained in the TSPO pocket.
+    AC-5216 ligand geometry remained chemically reasonable.
+    Ligand-protein contacts were retained after restrained equilibration.
+
+Conclusion:
+
+    AC-5216 restrained equilibration stage 1 is accepted. The system is suitable for a second restrained equilibration stage with reduced positional restraints.
