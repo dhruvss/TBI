@@ -150,3 +150,43 @@ Inspection outcome:
 Conclusion:
 
     AC-5216 restrained equilibration stage 1 is accepted. The system is suitable for a second restrained equilibration stage with reduced positional restraints.
+
+## Restrained equilibration stage 3
+
+Restrained equilibration stage 3 completed successfully using the stage 2 equilibrated PDB as input.
+
+Input files:
+
+    /Users/dhruv/Documents/Research/TBI-tracer/MD_runs/AC-5216/openmm_setup_003/equilibration_stage2/AC-5216_equil_stage2.pdb
+    /Users/dhruv/Documents/Research/TBI-tracer/MD_runs/AC-5216/openmm_setup_003/AC-5216_system.xml
+
+Output directory:
+
+    /Users/dhruv/Documents/Research/TBI-tracer/MD_runs/AC-5216/openmm_setup_003/equilibration_stage3/
+
+Settings:
+
+    Ensemble: NVT
+    Steps: 20000
+    Timestep: 1.0 fs
+    Total simulated time: 20 ps
+    Temperature: 300 K
+    Platform: CPU
+    Protein heavy-atom restraint: 50 kJ/mol/nm^2
+    Ligand heavy-atom restraint: 25 kJ/mol/nm^2
+    Ligand residue name: UNK
+
+Restraint selection:
+
+    Restrained protein heavy atoms: 1340
+    Restrained ligand heavy atoms: 30
+
+Energy result:
+
+    Initial potential energy: -629528.265 kJ/mol
+    Final potential energy: -629003.204 kJ/mol
+    Energy change: 525.061 kJ/mol
+
+Interpretation:
+
+    Stage 3 completed without NaN coordinates or simulation crash. The small energy change relative to stages 1 and 2 is consistent with a stabilized system under light positional restraints. The system is accepted for a 1 ns unrestrained AC-5216 pilot MD run.
