@@ -1,22 +1,4 @@
 #!/usr/bin/env python3
-"""
-make_openff_sdf_from_template_and_pdbqt.py
-
-Create an OpenFF-ready SDF by taking correct ligand chemistry from a template
-SDF and replacing heavy-atom coordinates with the selected Vina PDBQT pose.
-
-This is needed because PDBQT/PDB conversions often lose aromaticity and bond
-orders, causing OpenFF/RDKit to detect invalid radicals.
-
-For AC-5216:
-    Template chemistry: PubChem SDF
-    Pose coordinates: docking/fine_all_rounds/out_pdbqt/AC5216_out.pdbqt, MODEL 1
-
-Assumption:
-    Heavy atom order in the template SDF matches heavy atom order in the PDBQT.
-    This is plausible for AC-5216 because the PDBQT REMARK name is PubChem CID
-    6433109 and the ligand appears to have been prepared from the same source.
-"""
 
 from __future__ import annotations
 
