@@ -1,23 +1,4 @@
 #!/usr/bin/env python3
-"""
-repair_ligand_sdf_from_smiles.py
-
-Repair a ligand SDF generated from Vina/Open Babel by assigning correct bond
-orders from the candidate's canonical SMILES while preserving the docked 3D pose.
-
-Why this is needed:
-    PDBQT/PDB files do not reliably preserve bond order/aromaticity.
-    Open Babel PDBQT -> SDF conversion can produce chemically invalid SDFs.
-    OpenFF then rejects the molecule as radical/invalid.
-
-Inputs:
-    - ligand_pose.pdb from selected docked pose
-    - ADMET/swissadme.csv containing Canonical SMILES
-    - candidate ID, e.g. AC-5216
-
-Output:
-    - ligand_pose_openff.sdf
-"""
 
 from __future__ import annotations
 
