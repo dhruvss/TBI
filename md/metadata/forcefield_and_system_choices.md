@@ -2,28 +2,15 @@
 
 ## Protein force field
 
-Protein systems are prepared using the CHARMM additive force field family through CHARMM-GUI.
-
-For this project, OpenMM output is selected for local or Colab execution.
+Protein systems are prepared using the CHARMM additive force field family through CHARMM-GUI. For this project, OpenMM output is selected for local or Colab execution.
 
 ## Ligand force field
 
-The TSPO ligands are nonstandard small molecules and require ligand parameterization.
-
-Ligand parameters are generated through the CHARMM-GUI ligand parameterization route, typically using Ligand Reader & Modeler / CGenFF-style parameter generation.
-
-Ligand parameterization warnings, penalty scores, formal charge assumptions, and manual corrections should be recorded per candidate.
+The TSPO ligands are nonstandard small molecules and require ligand parameterization. Ligand parameters are generated through the CHARMM-GUI ligand parameterization route, typically using Ligand Reader & Modeler / CGenFF-style parameter generation. Ligand parameterization warnings, penalty scores, formal charge assumptions, and manual corrections should be recorded per candidate.
 
 ## Membrane choice
 
-The first-pass membrane system uses POPC.
-
-Rationale:
-
-- TSPO is a membrane protein and should not be simulated as a protein floating in water.
-- POPC is a simple, standard membrane environment for initial method validation.
-- The first goal is to test whether the TSPO-ligand setup is stable and reproducible.
-- More complex mitochondrial-like membrane compositions can be considered later, after the AC-5216 reference system runs cleanly.
+The first-pass membrane system uses POPC. The POPC is a simple membrane environment commonly used in literature and protein modeling for modeling the TSPO pocket in a transmembrane environment, and this will help develop a solid reproducible equilibration pipeline for molecular dynamics of TSPO and each analog/ligand.
 
 ## Solvent and ions
 
