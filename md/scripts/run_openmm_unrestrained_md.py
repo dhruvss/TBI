@@ -1,19 +1,4 @@
 #!/usr/bin/env python3
-"""
-run_openmm_unrestrained_md.py
-
-Run unrestrained OpenMM MD from an equilibrated membrane-protein-ligand system.
-
-This is intended for short pilot production/stability testing after successful
-minimization and restrained equilibration.
-
-For AC-5216:
-    Input: equilibrated stage 2 or stage 3 PDB
-    System: OpenMM System XML from membrane setup
-    Output: PDB, DCD, CSV log, checkpoint, summary
-
-This script does not add positional restraints.
-"""
 
 from __future__ import annotations
 
