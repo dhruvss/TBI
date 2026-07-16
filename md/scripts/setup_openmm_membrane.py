@@ -1,29 +1,4 @@
 #!/usr/bin/env python3
-"""
-setup_openmm_membrane.py
-
-Local OpenMM fallback for preparing a membrane-embedded TSPO-ligand system.
-
-This script is intended as a CHARMM-GUI fallback when CHARMM-GUI access is not
-available through a legitimate academic/government affiliation route.
-
-Current intended first-pass use:
-    AC-5216 reference system only.
-
-Inputs:
-    - Protein PDB: docking/TSPO/TSPO_prepped.pdb
-    - Ligand SDF: md/inputs/AC-5216/ligand_pose.sdf
-
-Outputs:
-    - Built membrane/water/ion system PDB
-    - Serialized OpenMM System XML
-    - Setup metadata text file
-
-Important:
-    This workflow is for short-timescale pose-stability screening, not absolute
-    binding free energy estimation.
-"""
-
 from __future__ import annotations
 
 import argparse
