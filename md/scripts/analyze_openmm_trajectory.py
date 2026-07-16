@@ -1,27 +1,4 @@
 #!/usr/bin/env python3
-"""
-analyze_openmm_trajectory.py
-
-Analyze an OpenMM protein-ligand membrane trajectory.
-
-Metrics:
-    - protein backbone RMSD over time
-    - ligand heavy-atom RMSD after protein-backbone alignment
-    - minimum ligand-protein heavy-atom distance over time
-    - ligand-protein heavy-atom contact count over time
-    - temperature/energy summary from OpenMM CSV log
-
-Outputs:
-    - trajectory_metrics.csv
-    - trajectory_summary.txt
-    - protein_backbone_rmsd.png
-    - ligand_rmsd.png
-    - ligand_protein_contacts.png
-    - ligand_min_distance.png
-
-This is intended for short pilot MD quality control and manuscript-ready
-pose-stability summaries.
-"""
 
 from __future__ import annotations
 
