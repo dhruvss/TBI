@@ -1,0 +1,129 @@
+## All tracers with experimental logD
+
+logD7_4_EST_rdkit vs experimental_logD7_4
+n = 6
+  Pearson r:  0.735
+  Spearman r: 0.657
+  MAE:        0.729
+  RMSE:       0.760
+
+  Tracers included:
+ tracer  experimental_logD7_4  rdkit_clogP  rdkit_TPSA  logD7_4_EST_rdkit  pubchem_XLogP  pubchem_TPSA  logD7_4_EST_pubchem
+PK11195                  4.58      5.42570       33.20           5.149033            5.5          33.2             5.223333
+DPA-713                  2.41      3.43264       59.73           2.934890            2.9          59.7             2.402500
+ PBR-28                  3.01      4.43560       51.66           4.005100            3.5          51.7             3.069167
+ GE-180                  2.95      3.90770       34.47           3.620450            3.2          34.5             2.912500
+AC-5216                  3.30      2.84570       73.02           2.237200            2.6          69.6             2.020000
+ PBR-O6                  4.05      4.99880       48.00           4.598800            4.6          48.0             4.200000
+
+logD7_4_EST_pubchem vs experimental_logD7_4
+n = 6
+  Pearson r:  0.870
+  Spearman r: 0.657
+  MAE:        0.363
+  RMSE:       0.589
+
+  Tracers included:
+ tracer  experimental_logD7_4  rdkit_clogP  rdkit_TPSA  logD7_4_EST_rdkit  pubchem_XLogP  pubchem_TPSA  logD7_4_EST_pubchem
+PK11195                  4.58      5.42570       33.20           5.149033            5.5          33.2             5.223333
+DPA-713                  2.41      3.43264       59.73           2.934890            2.9          59.7             2.402500
+ PBR-28                  3.01      4.43560       51.66           4.005100            3.5          51.7             3.069167
+ GE-180                  2.95      3.90770       34.47           3.620450            3.2          34.5             2.912500
+AC-5216                  3.30      2.84570       73.02           2.237200            2.6          69.6             2.020000
+ PBR-O6                  4.05      4.99880       48.00           4.598800            4.6          48.0             4.200000
+
+rdkit_clogP vs experimental_logD7_4
+n = 6
+  Pearson r:  0.752
+  Spearman r: 0.657
+  MAE:        0.942
+  RMSE:       0.985
+
+  Tracers included:
+ tracer  experimental_logD7_4  rdkit_clogP  rdkit_TPSA  logD7_4_EST_rdkit  pubchem_XLogP  pubchem_TPSA  logD7_4_EST_pubchem
+PK11195                  4.58      5.42570       33.20           5.149033            5.5          33.2             5.223333
+DPA-713                  2.41      3.43264       59.73           2.934890            2.9          59.7             2.402500
+ PBR-28                  3.01      4.43560       51.66           4.005100            3.5          51.7             3.069167
+ GE-180                  2.95      3.90770       34.47           3.620450            3.2          34.5             2.912500
+AC-5216                  3.30      2.84570       73.02           2.237200            2.6          69.6             2.020000
+ PBR-O6                  4.05      4.99880       48.00           4.598800            4.6          48.0             4.200000
+
+pubchem_XLogP vs experimental_logD7_4
+n = 6
+  Pearson r:  0.886
+  Spearman r: 0.657
+  MAE:        0.567
+  RMSE:       0.603
+
+  Tracers included:
+ tracer  experimental_logD7_4  rdkit_clogP  rdkit_TPSA  logD7_4_EST_rdkit  pubchem_XLogP  pubchem_TPSA  logD7_4_EST_pubchem
+PK11195                  4.58      5.42570       33.20           5.149033            5.5          33.2             5.223333
+DPA-713                  2.41      3.43264       59.73           2.934890            2.9          59.7             2.402500
+ PBR-28                  3.01      4.43560       51.66           4.005100            3.5          51.7             3.069167
+ GE-180                  2.95      3.90770       34.47           3.620450            3.2          34.5             2.912500
+AC-5216                  3.30      2.84570       73.02           2.237200            2.6          69.6             2.020000
+ PBR-O6                  4.05      4.99880       48.00           4.598800            4.6          48.0             4.200000
+
+
+## Sensitivity analysis excluding DPA-713 because one secondary source was extrapolated
+
+logD7_4_EST_rdkit vs experimental_logD7_4
+n = 5
+  Pearson r:  0.686
+  Spearman r: 0.700
+  MAE:        0.769
+  RMSE:       0.799
+
+  Tracers included:
+ tracer  experimental_logD7_4  rdkit_clogP  rdkit_TPSA  logD7_4_EST_rdkit  pubchem_XLogP  pubchem_TPSA  logD7_4_EST_pubchem
+PK11195                  4.58       5.4257       33.20           5.149033            5.5          33.2             5.223333
+ PBR-28                  3.01       4.4356       51.66           4.005100            3.5          51.7             3.069167
+ GE-180                  2.95       3.9077       34.47           3.620450            3.2          34.5             2.912500
+AC-5216                  3.30       2.8457       73.02           2.237200            2.6          69.6             2.020000
+ PBR-O6                  4.05       4.9988       48.00           4.598800            4.6          48.0             4.200000
+
+logD7_4_EST_pubchem vs experimental_logD7_4
+n = 5
+  Pearson r:  0.872
+  Spearman r: 0.700
+  MAE:        0.434
+  RMSE:       0.645
+
+  Tracers included:
+ tracer  experimental_logD7_4  rdkit_clogP  rdkit_TPSA  logD7_4_EST_rdkit  pubchem_XLogP  pubchem_TPSA  logD7_4_EST_pubchem
+PK11195                  4.58       5.4257       33.20           5.149033            5.5          33.2             5.223333
+ PBR-28                  3.01       4.4356       51.66           4.005100            3.5          51.7             3.069167
+ GE-180                  2.95       3.9077       34.47           3.620450            3.2          34.5             2.912500
+AC-5216                  3.30       2.8457       73.02           2.237200            2.6          69.6             2.020000
+ PBR-O6                  4.05       4.9988       48.00           4.598800            4.6          48.0             4.200000
+
+rdkit_clogP vs experimental_logD7_4
+n = 5
+  Pearson r:  0.711
+  Spearman r: 0.700
+  MAE:        0.926
+  RMSE:       0.977
+
+  Tracers included:
+ tracer  experimental_logD7_4  rdkit_clogP  rdkit_TPSA  logD7_4_EST_rdkit  pubchem_XLogP  pubchem_TPSA  logD7_4_EST_pubchem
+PK11195                  4.58       5.4257       33.20           5.149033            5.5          33.2             5.223333
+ PBR-28                  3.01       4.4356       51.66           4.005100            3.5          51.7             3.069167
+ GE-180                  2.95       3.9077       34.47           3.620450            3.2          34.5             2.912500
+AC-5216                  3.30       2.8457       73.02           2.237200            2.6          69.6             2.020000
+ PBR-O6                  4.05       4.9988       48.00           4.598800            4.6          48.0             4.200000
+
+pubchem_XLogP vs experimental_logD7_4
+n = 5
+  Pearson r:  0.898
+  Spearman r: 0.700
+  MAE:        0.582
+  RMSE:       0.623
+
+  Tracers included:
+ tracer  experimental_logD7_4  rdkit_clogP  rdkit_TPSA  logD7_4_EST_rdkit  pubchem_XLogP  pubchem_TPSA  logD7_4_EST_pubchem
+PK11195                  4.58       5.4257       33.20           5.149033            5.5          33.2             5.223333
+ PBR-28                  3.01       4.4356       51.66           4.005100            3.5          51.7             3.069167
+ GE-180                  2.95       3.9077       34.47           3.620450            3.2          34.5             2.912500
+AC-5216                  3.30       2.8457       73.02           2.237200            2.6          69.6             2.020000
+ PBR-O6                  4.05       4.9988       48.00           4.598800            4.6          48.0             4.200000
+
