@@ -13,6 +13,7 @@ import matplotlib.pyplot as plt
 import MDAnalysis as mda
 from MDAnalysis.analysis import align
 from MDAnalysis.analysis.rms import rmsd
+from MDAnalysis.lib.distances import distance_array
 
 
 def fail(msg: str) -> None:
@@ -25,46 +26,28 @@ def ensure_file(path: Path, label: str) -> None:
         fail(f"Missing {label}: {path}")
 
 
-def pairwise_min_distance(coords_a: np.ndarray, coords_b: np.ndarray) -> float:
+def pairwise_min_distance(coords_a: np.ndarray, coords_b: np.ndarray, box=None) -> float:
     """
     Return minimum pairwise distance in Angstrom.
-    Uses chunking to avoid huge memory spikes.
+    Uses minimum-image periodic distances when box is provided.
     """
     if coords_a.size == 0 or coords_b.size == 0:
         return np.nan
 
-    min_d2 = np.inf
-    chunk_size = 512
-
-    for i in range(0, len(coords_a), chunk_size):
-        a = coords_a[i:i + chunk_size]
-        diff = a[:, None, :] - coords_b[None, :, :]
-        d2 = np.sum(diff * diff, axis=2)
-        local_min = float(np.min(d2))
-        if local_min < min_d2:
-            min_d2 = local_min
-
-    return float(np.sqrt(min_d2))
+    d = distance_array(coords_a, coords_b, box=box)
+    return float(np.min(d))
 
 
-def contact_count(coords_a: np.ndarray, coords_b: np.ndarray, cutoff_angstrom: float) -> int:
+def contact_count(coords_a: np.ndarray, coords_b: np.ndarray, cutoff_angstrom: float, box=None) -> int:
     """
     Count heavy-atom ligand-protein contacts below cutoff.
+    Uses minimum-image periodic distances when box is provided.
     """
     if coords_a.size == 0 or coords_b.size == 0:
         return 0
 
-    cutoff2 = cutoff_angstrom * cutoff_angstrom
-    count = 0
-    chunk_size = 512
-
-    for i in range(0, len(coords_a), chunk_size):
-        a = coords_a[i:i + chunk_size]
-        diff = a[:, None, :] - coords_b[None, :, :]
-        d2 = np.sum(diff * diff, axis=2)
-        count += int(np.sum(d2 <= cutoff2))
-
-    return count
+    d = distance_array(coords_a, coords_b, box=box)
+    return int(np.sum(d <= cutoff_angstrom))
 
 
 def load_openmm_csv(csv_path: Path) -> pd.DataFrame:
@@ -175,8 +158,12 @@ def main() -> None:
         lig_coords = ligand_heavy.positions.copy()
         prot_coords = protein_heavy.positions.copy()
 
-        min_dist = pairwise_min_distance(lig_coords, prot_coords)
-        contacts = contact_count(lig_coords, prot_coords, args.contact_cutoff_a)
+        box = ts.dimensions
+        if box is None or len(box) < 6 or np.any(np.asarray(box[:3]) <= 0):
+            box = None
+
+        min_dist = pairwise_min_distance(lig_coords, prot_coords, box=box)
+        contacts = contact_count(lig_coords, prot_coords, args.contact_cutoff_a, box=box)
 
         metrics.append(
             {

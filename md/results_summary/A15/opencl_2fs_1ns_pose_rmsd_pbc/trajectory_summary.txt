@@ -1,0 +1,30 @@
+Trajectory analysis summary
+===========================
+
+Topology PDB: /Users/dhruv/Documents/Research/TBI-tracer/MD_runs/A15/openmm_setup_001/equilibration_stage3/A15_equil_stage3.pdb
+Trajectory DCD: /Users/dhruv/Documents/Research/TBI-tracer/MD_runs/A15/openmm_setup_001/opencl_2fs_1ns/A15_opencl_2fs_1ns.dcd
+Log CSV: /Users/dhruv/Documents/Research/TBI-tracer/MD_runs/A15/openmm_setup_001/opencl_2fs_1ns/A15_opencl_2fs_1ns.csv
+Ligand residue name: UNK
+Contact cutoff: 4.0 A
+Frame stride: 1
+
+Frames analyzed: 100
+Final time analyzed: 1000.000 ps
+
+Trajectory metrics:
+Protein backbone RMSD mean: 1.697 A
+Protein backbone RMSD final: 2.030 A
+Ligand heavy-atom RMSD mean: 50.818 A
+Ligand heavy-atom RMSD final: 70.920 A
+Ligand-protein min distance mean: 7.245 A
+Ligand-protein min distance final: 11.265 A
+Ligand-protein contacts mean: 7.7
+Ligand-protein contacts final: 0.0
+
+OpenMM log metrics:
+Temperature mean: 300.223 K
+Temperature min: 296.939 K
+Temperature max: 303.346 K
+Temperature final: 299.571 K
+Potential energy mean: -631228.299 kJ/mol
+Potential energy final: -631975.781 kJ/mol
