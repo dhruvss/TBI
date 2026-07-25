@@ -1,0 +1,19 @@
+Record_ID,Canonical_ID,Duplicate_Status,RDKit_Canonical_SMILES,InChIKey,Identity_Check
+A1,A1,Primary canonical record,CCN(Cc1ccc(OC(F)(F)F)cc1)C(=O)Cn1c(=O)n(C)c2cnc(-c3ccccc3)nc21,RYAVPURPEWUCGR-UHFFFAOYSA-N,Passed
+A1_2,A1,Technical duplicate of A1,CCN(Cc1ccc(OC(F)(F)F)cc1)C(=O)Cn1c(=O)n(C)c2cnc(-c3ccccc3)nc21,RYAVPURPEWUCGR-UHFFFAOYSA-N,Passed
+A2,A2,Primary canonical record,CCN(Cc1ccc(OC(F)F)cc1)C(=O)Cn1c(=O)n(C)c2cnc(-c3ccccc3)nc21,JYGZVVWKPOSECN-UHFFFAOYSA-N,Passed
+A3,A3,Primary canonical record,CCN(Cc1ccccc1)C(=O)Cn1c(=O)n(CC(F)(F)F)c2cnc(-c3ccccc3)nc21,IVVCXQQZEMWNOK-UHFFFAOYSA-N,Passed
+A4,A4,Primary canonical record,CCN(Cc1ccc(F)cc1)C(=O)Cn1c(=O)n(C)c2cnc(-c3ccccc3)nc21,FBNPWDKOHCTAFT-UHFFFAOYSA-N,Passed
+A5,A5,Primary canonical record,CCN(Cc1ccc(F)cc1F)C(=O)Cn1c(=O)n(CCF)c2cnc(-c3ccccc3)nc21,JZWMBORVCJYGRM-UHFFFAOYSA-N,Passed
+A6,A6,Primary canonical record,CCN(Cc1cc(F)ccc1F)C(=O)Cn1c(=O)n(C)c2cnc(-c3ccccc3)nc21,ROISXNCPSSLCOO-UHFFFAOYSA-N,Passed
+A7,A7,Primary canonical record,CCN(Cc1cc(F)ccc1F)C(=O)Cn1c(=O)n(C(F)F)c2cnc(-c3ccccc3)nc21,WGQOACSSQOYZLN-UHFFFAOYSA-N,Passed
+A8,A8,Primary canonical record,CCN(Cc1cc(Cl)ccc1Cl)C(=O)Cn1c(=O)n(C)c2cnc(-c3ccccc3)nc21,SKIRNMQWXSZAMC-UHFFFAOYSA-N,Passed
+A8_2,A8,Technical duplicate of A8,CCN(Cc1cc(Cl)ccc1Cl)C(=O)Cn1c(=O)n(C)c2cnc(-c3ccccc3)nc21,SKIRNMQWXSZAMC-UHFFFAOYSA-N,Passed
+A9,A9,Primary canonical record,CCN(Cc1ccc(OC)cc1)C(=O)Cn1c(=O)n(CC(F)(F)F)c2cnc(-c3ccccc3)nc21,CRJOUMHDHKDKMB-UHFFFAOYSA-N,Passed
+A10,A10,Primary canonical record,CCN(Cc1ccccc1)C(=O)Cn1c(=O)n(COC(F)(F)F)c2cnc(-c3ccccc3)nc21,QJCBKXCGKKCQEH-UHFFFAOYSA-N,Passed
+A11,A11,Primary canonical record,CCN(Cc1cccc(F)c1)C(=O)Cn1c(=O)n(CC(F)(F)F)c2cnc(-c3ccccc3)nc21,ZYDUWLRQXDFWQH-UHFFFAOYSA-N,Passed
+A12,A12,Primary canonical record,CCN(Cc1cccc(Cl)c1)C(=O)Cn1c(=O)n(CF)c2cnc(-c3ccccc3)nc21,MKUDPGPAVJRDEW-UHFFFAOYSA-N,Passed
+A13,A13,Primary canonical record,CCCn1c(=O)n(CC(=O)N(CC)Cc2ccc(F)cc2F)c2nc(-c3ccccc3)ncc21,XBLUWJWIYJRLOW-UHFFFAOYSA-N,Passed
+A14,A14,Primary canonical record,CCN(Cc1cc(OC)ccc1F)C(=O)Cn1c(=O)n(C(F)F)c2cnc(-c3ccccc3)nc21,VTEVIRHJCWWDGU-UHFFFAOYSA-N,Passed
+A15,A15,Primary canonical record,CCN(Cc1cc(F)ccc1C(F)(F)F)C(=O)Cn1c(=O)n(C)c2cnc(-c3ccccc3)nc21,BMDVLVHNGCQESR-UHFFFAOYSA-N,Passed
+AC-5216,AC-5216,Primary canonical record,CCN(Cc1ccccc1)C(=O)Cn1c(=O)n(C)c2cnc(-c3ccccc3)nc21,NBMBIEOUVBHEBM-UHFFFAOYSA-N,Passed

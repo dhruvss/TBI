@@ -559,6 +559,15 @@ for lig in ${LIG_DIR}/*.pdbqt(N); do
        --out "$out_pdbqt" > "$log_path" 2>&1 || true
 done
 ```
+vina \
+  --receptor docking/TSPO/TSPO_receptor.pdbqt \
+  --ligand path/to/AC5216_ligand.pdbqt \
+  --center_x 5.2 --center_y 12.8 --center_z 8.3 \
+  --size_x 20 --size_y 20 --size_z 20 \
+  --exhaustiveness 32 \
+  --num_modes 10 \
+  --out docking/fine_all_rounds/out_pdbqt/AC5216_out.pdbqt \
+  > docking/fine_all_rounds/logs/AC5216_fine.log 2>&1
 
 ---
 

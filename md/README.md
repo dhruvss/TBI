@@ -5,10 +5,10 @@ This folder contains curated setup files, metadata, scripts, and lightweight sum
 The MD panel contains five compounds:
 
 - AC-5216: reference scaffold
-- A15: strongest ADMET/developability consensus candidate
+- A8: strongest ADMET/developability consensus candidate
 - A3: balanced clean-toxicity comparator
 - A7: PBPK exposure-maximized stress-test candidate
-- A17: backup ADMET-favorable alternate
+- A15: backup ADMET-favorable alternate
 
 The purpose of these simulations is to evaluate whether selected docked TSPO ligand poses remain geometrically stable in a membrane-embedded TSPO model over short-timescale molecular dynamics. These simulations are not intended to provide experimental binding validation or absolute binding free energies.
 

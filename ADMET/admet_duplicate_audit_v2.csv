@@ -1,0 +1,31 @@
+Canonical_ID,Primary_Record,Duplicate_Record,Endpoint,Primary_Value,Duplicate_Value,Exact_Match,Interpretation
+A1,A1,A1_2,BBB permeability,-1.553,-1.553,Yes,
+A1,A1,A1_2,CNS permeability,-2.647,-2.647,Yes,
+A1,A1,A1_2,BBB permeant,No,No,Yes,
+A1,A1,A1_2,P-glycoprotein substrate,Yes,Yes,Yes,
+A1,A1,A1_2,Pgp substrate,No,No,Yes,
+A1,A1,A1_2,Consensus Log P,2.48,2.48,Yes,
+A1,A1,A1_2,TPSA,82.25,82.25,Yes,
+A1,A1,A1_2,ESOL Log S,-5.88,-5.88,Yes,
+A1,A1,A1_2,AMES toxicity,Yes,Yes,Yes,
+A1,A1,A1_2,hERG I inhibitor,No,No,Yes,
+A1,A1,A1_2,hERG II inhibitor,Yes,Yes,Yes,
+A1,A1,A1_2,Hepatotoxicity,No,No,Yes,
+A1,A1,A1_2,PAINS #alerts,0,0,Yes,
+A1,A1,A1_2,Brenk #alerts,0,0,Yes,
+A1,A1,A1_2,Synthetic Accessibility,3.31,3.31,Yes,
+A8,A8,A8_2,BBB permeability,-0.931,-0.787,No,Identical structure yielded discordant prediction; treat as model/run uncertainty
+A8,A8,A8_2,CNS permeability,-2.339,-2.294,No,Identical structure yielded discordant prediction; treat as model/run uncertainty
+A8,A8,A8_2,BBB permeant,Yes,Yes,Yes,
+A8,A8,A8_2,P-glycoprotein substrate,Yes,Yes,Yes,
+A8,A8,A8_2,Pgp substrate,No,No,Yes,
+A8,A8,A8_2,Consensus Log P,2.68,2.62,No,Identical structure yielded discordant prediction; treat as model/run uncertainty
+A8,A8,A8_2,TPSA,73.02,73.02,Yes,
+A8,A8,A8_2,ESOL Log S,-6.01,-6.01,Yes,
+A8,A8,A8_2,AMES toxicity,Yes,No,No,Identical structure yielded discordant prediction; treat as model/run uncertainty
+A8,A8,A8_2,hERG I inhibitor,No,No,Yes,
+A8,A8,A8_2,hERG II inhibitor,Yes,Yes,Yes,
+A8,A8,A8_2,Hepatotoxicity,No,No,Yes,
+A8,A8,A8_2,PAINS #alerts,0,0,Yes,
+A8,A8,A8_2,Brenk #alerts,0,0,Yes,
+A8,A8,A8_2,Synthetic Accessibility,3.26,3.26,Yes,
