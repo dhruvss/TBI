@@ -56,7 +56,7 @@ def norm_keys(s: str) -> str:
     return "".join(ch for ch in (s or "") if ch.isalnum()).lower()
 
 # Used RDKit documentation to reach this method - https://www.rdkit.org/docs/source/rdkit.Chem.Descriptors.html#module-rdkit.Chem.Descriptors
-# Crippen's mlogP used here - ties into mlogD prpl used in fP calculations for PKsim
+# Crippen's mollogP used here
 def properties(smiles: str):
     m = Chem.MolFromSmiles(smiles)
     if not m:
@@ -68,10 +68,10 @@ def properties(smiles: str):
     rotb = rdMolDescriptors.CalcNumRotatableBonds(m)
     clogp= Crippen.MolLogP(m)
     return mw, tpsa, hbd, hba, rotb, clogp
-# Delaney et al. ESOL
+# Delaney et al. ESOL without aromaticity correction -  https://pubs.acs.org/doi/10.1021/ci034243x but with original coefs.
 def esol_logS_est(clogp, mw, rotb):
     return 0.16 - 0.63*clogp - 0.0062*mw + 0.066*rotb
-# logD estimation based on clogP and TPSA - proxy based on Shityakov et al. for logBB studies (BBB permeability)
+# logD estimation based on clogP and TPSA - proxy
 def logD_est(clogp, tpsa):
     return clogp - (tpsa/120.0)
 
@@ -91,9 +91,9 @@ def MPO_score_BANDS(x, good, ok):
     if x >= lo_o and x <= hi_o: return 0.5
     return 0.0
 
-# IAEA FRAMEWORK with TECDOC 2052 as basis for the multi-parametric optimization, MPO was originally theorized by Wager et al. for radiotracer research
+# IAEA FRAMEWORK with TECDOC 2052 as basis for the multi-parametric optimization
 # TE-2052 was the comprehensive parameter weighting study that I used to determine penalty gates
-# Wager et al. MPO function + TE-2052 stats weights was the overall MPO pipeline
+# TE-2052 CNS window 
 def cns_mpo_IAEA(clogp, logd74, mw, tpsa, hbd, pka=None):
     terms = []
     if clogp is not None: terms.append(MPO_score_BANDS(clogp, (1.5,4.0), (1.0,4.5)))

@@ -17,13 +17,13 @@ OUT_DIR.mkdir(parents=True, exist_ok=True)
 RNG_SEED = 1337
 
 # CNS window (for annotation only; we DO NOT filter), defined based on typical CNS properties and MPO framework (Wager et al, IAEA TECDOC-2052)
-CNS_MAX_MW    = 490.0
+CNS_MAX_MW    = 550.0
 CNS_TPSA_MIN  = 30.0
 CNS_TPSA_MAX  = 95.0
 CNS_HBD_MAX   = 1
 CNS_HBA_MAX   = 6
 CNS_RB_MAX    = 8
-CNS_CLOGP_MIN = 2.0
+CNS_CLOGP_MIN = 1.5
 CNS_CLOGP_MAX = 4.2
 # --------------------------------------------------------------
 
@@ -33,11 +33,11 @@ pathlib.Path(OUT_DIR).mkdir(parents=True, exist_ok=True)
 # AC-5216 template with replaceable parts:
 # Parent: CCN(Cc1ccccc1)C(=O)Cn2c3c(cnc(n3)c4ccccc4)n(c2=O)C
 # We replace:
-#   - R1 inside N( … ) : default "Cc1ccccc1" - heterocyclic nitrogen at purine nucleus
-#   - R2 after c2=O    : default "C" - terminal benzyl group at end
-TEMPLATE = "CCN({R1})C(=O)Cn2c3c(cnc(n3)c4ccccc4)n(c2=O){R2}"
+#   - R2 inside N( … ) : default "Cc1ccccc1" - heterocyclic nitrogen at purine nucleus
+#   - R3 after c2=O    : default "C" - terminal benzyl group at end
+TEMPLATE = "CCN({R2})C(=O)Cn2c3c(cnc(n3)c4ccccc4)n(c2=O){R3}"
 
-R1_LIST = [
+R2_LIST = [
     ("Bn",        "Cc1ccccc1"),
     ("Bn-4F",     "Cc1ccc(F)cc1"),
     ("Bn-3,5diF", "Cc1c(F)cc(F)cc1"),
@@ -48,7 +48,7 @@ R1_LIST = [
     ("Bn-4CN",    "Cc1ccc(C#N)cc1"),
 ]
 
-R2_LIST = [
+R3_LIST = [
     ("Me",      "C"),
     ("Et",      "CC"),
     ("CH2F",    "CF"),
@@ -105,10 +105,10 @@ summary  = os.path.join(OUT_DIR, "SUMMARY.txt")
 rows=[]; smi_lines=[]; total=0; wrote=0; n3d=0
 # Embedded 3D auxiliary lines - 3D conformers were first used as a CNS gating measure, but I decided to focus completely on physchem
 # This allowed for better statistical weighting when looking at TBI pathology in particular.
-for (r1n, r1s), (r2n, r2s) in itertools.product(R1_LIST, R2_LIST):
+for (r2n, r2s), (r3n, r3s) in itertools.product(R2_LIST, R3_LIST):
     total += 1
-    name = f"emap_{r1n}_{r2n}"
-    smi  = TEMPLATE.format(R1=r1s, R2=r2s)
+    name = f"emap_{r2n}_{r3n}"
+    smi  = TEMPLATE.format(R2=r2s, R3=r3s)
     m = Chem.MolFromSmiles(smi)
     if m is None:
         continue
@@ -133,7 +133,7 @@ with open(csv_path, "w", newline="") as f:
     for r in rows: w.writerow({k: r[k] for k in cols})
 
 with open(summary, "w") as f:
-    f.write(f"Enumerated R1xR2 combos: {total}\n")
+    f.write(f"Enumerated R2xR3 combos: {total}\n")
     f.write(f"Wrote SDFs (all):        {wrote}\n")
     f.write(f"Embedded 3D via RDKit:   {n3d}\n")
     f.write(f"SDFs directory:          {OUT_DIR}\n")

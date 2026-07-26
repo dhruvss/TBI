@@ -10,6 +10,7 @@ The code supports the major computational stages of the project:
 5. Lead candidate filtering
 6. PBPK output aggregation
 7. PET kinetic and Logan-analysis workflows
+8. ADMET consensus (v1) and ADMET profile management + error correction
 
 Scripts are organized according to their role in the computational pipeline where possible. Processed outputs and supplementary CSV tables are stored separately in the processed data folder.
 

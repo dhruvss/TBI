@@ -17,9 +17,9 @@ RNG_SEED = 20251002
 
 pathlib.Path(OUT_DIR).mkdir(parents=True, exist_ok=True)
 
-TEMPLATE = "CCN({R1})C(=O)Cn2c3c(cnc(n3)c4ccccc4)n(c2=O){R2}"
-# permutation list for R1 and R2 functional group substitutions which gives us 112 analog permutes from round 2 - focused on 
-R1_LIST = [
+TEMPLATE = "CCN({R2})C(=O)Cn2c3c(cnc(n3)c4ccccc4)n(c2=O){R3}"
+# permutation list for R2 and R3 functional group substitutions which gives us 112 analog permutes from round 2 - focused on 
+R2_LIST = [
     ("Bn","Cc1ccccc1"),
     ("Bn-4F","Cc1ccc(F)cc1"),
     ("Bn-3,5diF","Cc1c(F)cc(F)cc1"),
@@ -36,7 +36,7 @@ R1_LIST = [
     ("Bn-4SF5","Cc1ccc(S(F)(F)(F)(F)F)cc1"),
 ]
 
-R2_LIST = [
+R3_LIST = [
     ("Me","C"),
     ("Et","CC"),
     ("iPr","C(C)C"),
@@ -81,11 +81,11 @@ summary  = os.path.join(OUT_DIR, "SUMMARY_round2.txt")
 
 rows=[]; smi_lines=[]; total=0; wrote=0; n3d=0
 # smiles generated for the master_stats.csv starting from round 1, R1.
-for (r1n, r1s) in R1_LIST:
-    for (r2n, r2s) in R2_LIST:
+for (r2n, r2s) in R2_LIST:
+    for (r3n, r3s) in R3_LIST:
         total += 1
-        name = f"emap2_{r1n}_{r2n}"
-        smi  = TEMPLATE.format(R1=r1s, R2=r2s)
+        name = f"emap2_{r2n}_{r3n}"
+        smi  = TEMPLATE.format(R2=r2s, R3=r3s)
         m = Chem.MolFromSmiles(smi)
         if m is None: 
             continue
@@ -106,7 +106,7 @@ with open(csv_path,"w",newline="") as f:
     for r in rows: w.writerow({k:r[k] for k in cols})
 # Validation prints given by ChatGPT - OPENAI 2025
 open(summary,"w").write(
-    f"Enumerated R1xR2 combos: {total}\n"
+    f"Enumerated R2xR3 combos: {total}\n"
     f"Wrote SDFs (all):        {wrote}\n"
     f"Embedded 3D via RDKit:   {n3d}\n"
     f"SDFs directory:          {OUT_DIR}\n"

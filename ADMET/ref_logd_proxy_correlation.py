@@ -15,7 +15,7 @@ from rdkit.Chem import Crippen, rdMolDescriptors
 OUTDIR = Path("ADMET/ref_logd_proxy_correlation")
 OUTDIR.mkdir(parents=True, exist_ok=True)
 
-# Experimental logD values from user's reference table.
+# Experimental logD values from reference table.
 # PBR-111 and DAA1106 are retained for descriptor retrieval but excluded from correlation.
 REFS = [
     {
