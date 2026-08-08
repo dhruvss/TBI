@@ -1,0 +1,8 @@
+standard_metric,source_column,resolved
+time_ns,time_ps,True
+protein_backbone_rmsd_a,protein_backbone_rmsd_A,True
+ligand_pose_rmsd_a,,False
+minimum_ligand_protein_distance_a,fixed_pocket_min_distance_A,True
+fixed_pocket_contacts,,False
+all_protein_contacts,,False
+com_to_pocket_distance_a,,False

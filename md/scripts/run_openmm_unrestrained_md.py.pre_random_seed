@@ -36,25 +36,6 @@ def main() -> None:
     parser.add_argument("--checkpoint-interval", type=int, default=5000)
     parser.add_argument("--platform", default="CPU")
 
-    parser.add_argument(
-
-        "--random-seed",
-
-        type=int,
-
-        default=None,
-
-        help=(
-
-            "Seed for Langevin dynamics and "
-
-            "Maxwell-Boltzmann velocity assignment"
-
-        ),
-
-    )
-
-
     args = parser.parse_args()
 
     pdb_path = Path(args.pdb).expanduser().resolve()
@@ -96,9 +77,6 @@ def main() -> None:
         args.timestep_fs * unit.femtoseconds,
     )
 
-    if args.random_seed is not None:
-        integrator.setRandomNumberSeed(args.random_seed)
-
     try:
         platform = Platform.getPlatformByName(args.platform)
         simulation = Simulation(pdb.topology, system, integrator, platform)
@@ -110,15 +88,8 @@ def main() -> None:
         print(f"Using default platform: {actual_platform}")
 
     simulation.context.setPositions(pdb.positions)
-    if args.random_seed is None:
-        simulation.context.setVelocitiesToTemperature(
-            args.temperature_k * unit.kelvin
-        )
-    else:
-        simulation.context.setVelocitiesToTemperature(
-            args.temperature_k * unit.kelvin,
-            args.random_seed,
-        )
+    simulation.context.setVelocitiesToTemperature(args.temperature_k * unit.kelvin)
+
     initial_energy = get_energy_kj_per_mol(simulation)
     print(f"Initial potential energy: {initial_energy:.3f} kJ/mol")
 

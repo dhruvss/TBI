@@ -1,0 +1,31 @@
+PBC-corrected trajectory analysis
+=================================
+Topology: /Users/dhruv/Documents/Research/TBI-tracer/MD_runs_v2/A15/openmm_setup_fine14_001/equilibration_stage3/A15_equil_stage3.pdb
+Trajectory: /Users/dhruv/Documents/Research/TBI-tracer/MD_runs_v2/A15/openmm_setup_fine14_001/opencl_2fs_10ns/A15_fine14_opencl_2fs_10ns.dcd
+Ligand residue: UNK
+Frames analyzed: 1000
+Fixed pocket residues: PHE11, ALA14, PRO15, VAL21, THR86, LEU89, ALA90, LEU91, TRP93, ALA94, PRO97
+
+Whole trajectory:
+Protein backbone RMSD mean: 2.302 A
+Ligand RMSD mean: 5.023 A
+Fixed-pocket contacts mean: 16.03
+All-protein contacts mean: 16.23
+Fixed-pocket min distance mean: 3.312 A
+All-protein min distance mean: 3.311 A
+Ligand COM-to-pocket mean: 8.131 A
+
+Occupancy fractions:
+Fixed-pocket contacts >=5: 0.9870
+Fixed-pocket contacts >=10: 0.8570
+All-protein contacts >=5: 0.9870
+All-protein contacts >=10: 0.8640
+Fixed-pocket min distance <=4 A: 1.0000
+All-protein min distance <=4 A: 1.0000
+
+Final frame:
+ frame     time_ps  protein_backbone_rmsd_A  ligand_heavy_rmsd_A  fixed_pocket_contact_count_4A  all_protein_contact_count_4A  fixed_pocket_min_distance_A  all_protein_min_distance_A  ligand_COM_to_fixed_pocket_center_A
+   999 10000.00003                 2.593394             4.933761                             18                            18                       3.0471                      3.0471                             8.416241
+
+Temperature mean: 300.309 K
+Temperature final: 300.962 K
