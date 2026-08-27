@@ -1,0 +1,46 @@
+endpoint,endpoint_label,candidate,replicate,value,rank_within_replicate
+fixed_contacts_mean,Fixed-pocket contacts,A3,1,12.205,5.0
+fixed_contacts_mean,Fixed-pocket contacts,A7,1,26.6,1.0
+fixed_contacts_mean,Fixed-pocket contacts,A8,1,14.602,4.0
+fixed_contacts_mean,Fixed-pocket contacts,A15,1,16.033,3.0
+fixed_contacts_mean,Fixed-pocket contacts,AC-5216,1,20.866,2.0
+fixed_contacts_mean,Fixed-pocket contacts,A3,2,19.672,2.0
+fixed_contacts_mean,Fixed-pocket contacts,A7,2,36.121,1.0
+fixed_contacts_mean,Fixed-pocket contacts,A8,2,17.656,3.0
+fixed_contacts_mean,Fixed-pocket contacts,A15,2,14.612,5.0
+fixed_contacts_mean,Fixed-pocket contacts,AC-5216,2,15.977,4.0
+fixed_contacts_mean,Fixed-pocket contacts,A3,3,4.949,5.0
+fixed_contacts_mean,Fixed-pocket contacts,A7,3,21.302,1.0
+fixed_contacts_mean,Fixed-pocket contacts,A8,3,14.455,4.0
+fixed_contacts_mean,Fixed-pocket contacts,A15,3,20.404,2.0
+fixed_contacts_mean,Fixed-pocket contacts,AC-5216,3,19.403,3.0
+com_to_pocket_mean_A,COM-to-pocket distance,A3,1,7.35202374124527,3.0
+com_to_pocket_mean_A,COM-to-pocket distance,A7,1,5.073873855352402,1.0
+com_to_pocket_mean_A,COM-to-pocket distance,A8,1,7.4984113070964815,4.0
+com_to_pocket_mean_A,COM-to-pocket distance,A15,1,8.130674294948578,5.0
+com_to_pocket_mean_A,COM-to-pocket distance,AC-5216,1,6.044256760597229,2.0
+com_to_pocket_mean_A,COM-to-pocket distance,A3,2,8.068481847763062,4.0
+com_to_pocket_mean_A,COM-to-pocket distance,A7,2,5.962780526638031,1.0
+com_to_pocket_mean_A,COM-to-pocket distance,A8,2,7.538317336082459,3.0
+com_to_pocket_mean_A,COM-to-pocket distance,A15,2,9.098033597946166,5.0
+com_to_pocket_mean_A,COM-to-pocket distance,AC-5216,2,7.412183788776398,2.0
+com_to_pocket_mean_A,COM-to-pocket distance,A3,3,11.429842762470246,5.0
+com_to_pocket_mean_A,COM-to-pocket distance,A7,3,7.521880741119385,3.0
+com_to_pocket_mean_A,COM-to-pocket distance,A8,3,7.958078488349915,4.0
+com_to_pocket_mean_A,COM-to-pocket distance,A15,3,7.012035150051117,1.0
+com_to_pocket_mean_A,COM-to-pocket distance,AC-5216,3,7.512438255786896,2.0
+frames_fixed_contacts_ge10_pct,Frames with >=10 fixed-pocket contacts,A3,1,66.10000000000001,5.0
+frames_fixed_contacts_ge10_pct,Frames with >=10 fixed-pocket contacts,A7,1,99.8,1.0
+frames_fixed_contacts_ge10_pct,Frames with >=10 fixed-pocket contacts,A8,1,75.5,4.0
+frames_fixed_contacts_ge10_pct,Frames with >=10 fixed-pocket contacts,A15,1,85.7,3.0
+frames_fixed_contacts_ge10_pct,Frames with >=10 fixed-pocket contacts,AC-5216,1,95.7,2.0
+frames_fixed_contacts_ge10_pct,Frames with >=10 fixed-pocket contacts,A3,2,72.89999999999999,5.0
+frames_fixed_contacts_ge10_pct,Frames with >=10 fixed-pocket contacts,A7,2,99.8,1.0
+frames_fixed_contacts_ge10_pct,Frames with >=10 fixed-pocket contacts,A8,2,91.0,2.0
+frames_fixed_contacts_ge10_pct,Frames with >=10 fixed-pocket contacts,A15,2,77.3,3.0
+frames_fixed_contacts_ge10_pct,Frames with >=10 fixed-pocket contacts,AC-5216,2,73.3,4.0
+frames_fixed_contacts_ge10_pct,Frames with >=10 fixed-pocket contacts,A3,3,15.7,5.0
+frames_fixed_contacts_ge10_pct,Frames with >=10 fixed-pocket contacts,A7,3,94.9,1.0
+frames_fixed_contacts_ge10_pct,Frames with >=10 fixed-pocket contacts,A8,3,82.3,4.0
+frames_fixed_contacts_ge10_pct,Frames with >=10 fixed-pocket contacts,A15,3,91.7,3.0
+frames_fixed_contacts_ge10_pct,Frames with >=10 fixed-pocket contacts,AC-5216,3,93.1,2.0

@@ -1,0 +1,4 @@
+endpoint,endpoint_label,test,n_groups,n_per_group,H_statistic,p_value,analysis_status
+fixed_contacts_mean,Fixed-pocket contacts,Kruskal-Wallis,5,3,8.933333333333337,0.06278760356187257,exploratory
+com_to_pocket_mean_A,COM-to-pocket distance,Kruskal-Wallis,5,3,5.366666666666667,0.2517005494121613,exploratory
+frames_fixed_contacts_ge10_pct,Frames with >=10 fixed-pocket contacts,Kruskal-Wallis,5,3,10.65235539654145,0.030761804148747372,exploratory

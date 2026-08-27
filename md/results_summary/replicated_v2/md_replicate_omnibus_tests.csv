@@ -1,0 +1,13 @@
+endpoint,endpoint_label,test,n_groups,n_per_group,H_statistic,p_value,analysis_status
+fixed_contacts_mean,Fixed-pocket contacts,Kruskal-Wallis,5,3,8.933333333333337,0.06278760356187257,exploratory
+com_to_pocket_mean_A,COM-to-pocket distance,Kruskal-Wallis,5,3,5.366666666666667,0.2517005494121613,exploratory
+frames_fixed_contacts_ge10_pct,Frames with >=10 fixed-pocket contacts,Kruskal-Wallis,5,3,10.65235539654145,0.030761804148747372,exploratory
+ligand_rmsd_mean_A,Ligand heavy-atom RMSD,Kruskal-Wallis,5,3,2.0333333333333314,0.7296278398272582,exploratory
+ligand_rmsd_final2ns_mean_A,Ligand RMSD final 2 ns,Kruskal-Wallis,5,3,2.4000000000000057,0.6626272662068438,exploratory
+all_min_distance_mean_A,All-protein minimum distance,Kruskal-Wallis,5,3,10.866666666666674,0.028104079757241825,exploratory
+protein_rmsd_mean_A,Protein backbone RMSD,Kruskal-Wallis,5,3,5.733333333333341,0.21996785493825852,exploratory
+fixed_contacts_final2ns_mean,Fixed-pocket contacts final 2 ns,Kruskal-Wallis,5,3,6.433333333333337,0.16903968989861667,exploratory
+com_to_pocket_final2ns_mean_A,COM-to-pocket distance final 2 ns,Kruskal-Wallis,5,3,5.733333333333327,0.21996785493825965,exploratory
+fixed_contacts_delta_final_minus_first,Fixed-pocket contact drift,Kruskal-Wallis,5,3,5.066666666666663,0.28052522737901,exploratory
+com_delta_final_minus_first_A,COM-to-pocket drift,Kruskal-Wallis,5,3,4.233333333333341,0.37534765141572607,exploratory
+ligand_rmsd_delta_final_minus_first_A,Ligand RMSD drift,Kruskal-Wallis,5,3,4.066666666666663,0.3970586768928915,exploratory
