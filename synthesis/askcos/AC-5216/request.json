@@ -1,0 +1,5 @@
+{
+  "smiles": "CCN(Cc1ccccc1)C(=O)Cn1c(=O)n(C)c2cnc(-c3ccccc3)nc21",
+  "description": "AC-5216 feasibility benchmark",
+  "tags": "benchmark-ac5216"
+}

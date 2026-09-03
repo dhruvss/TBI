@@ -1,0 +1,73 @@
+{
+  "step_name": "N-alkylation of a pre-difluoromethylated heterocycle with benzyl 2-chloroacetate (NOT direct CHF2-installation)",
+  "reaction_smiles": "O=C(CCl)OCc1ccccc1.O=c1[nH]c2nc(-c3ccccc3)ncc2n1C(F)F>>O=C(Cn1c(=O)n(C(F)F)c2cnc(-c3ccccc3)nc21)OCc1ccccc1",
+  "reclassification_note": "AUDIT CORRECTION: The reactant already contains 'n1C(F)F'. This is NOT a CHF2-installation reaction. It is N-alkylation of a second ring nitrogen on an already-difluoromethylated scaffold. No genuine N7-difluoromethylation reactions were recovered by the ASKCOS search.",
+  "plausibility": 0.9999886751174927,
+  "model_metadata": {
+    "direction": "retro",
+    "backend": "template_relevance",
+    "model_name": "reaxys",
+    "attributes": {
+      "max_num_templates": 1000,
+      "max_cum_prob": 0.995,
+      "attribute_filter": []
+    },
+    "model_score": 0.6369718313217163,
+    "normalized_model_score": 0.6369718313217163,
+    "rank": 1,
+    "reaction_id": null,
+    "reaction_set": null,
+    "source": {
+      "template": {
+        "count": 97,
+        "dimer_only": false,
+        "index": 10502,
+        "intra_only": false,
+        "necessary_reagent": "",
+        "reaction_smarts": "[#7;a:5]:[c:6]:[n;H0;D3;+0:7](:[c:8])-[CH2;D2;+0:1]-[C:2](-[#8:3])=[O;D1;H0:4]>>Cl-[CH2;D2;+0:1]-[C:2](-[#8:3])=[O;D1;H0:4].[#7;a:5]:[c:6]:[nH;D2;+0:7]:[c:8]",
+        "template_set": "reaxys",
+        "_id": "5e1f4b6e634883285099867c",
+        "template_score": 0.6369718313217163,
+        "template_rank": 1,
+        "tforms": [
+          "5e1f4b6e634883285099867c",
+          "5e1f4b6e63488328509968f3",
+          "5e1f4b6e6348832850997887",
+          "5e1f4b6e63488328509986ef"
+        ],
+        "num_examples": 663
+      },
+      "reaction_data": null
+    }
+  },
+  "precursor_properties": {
+    "precursor_prices": {
+      "O=C(CCl)OCc1ccccc1": {
+        "ppg": 1.0,
+        "source": ""
+      },
+      "O=c1[nH]c2nc(-c3ccccc3)ncc2n1C(F)F": {
+        "ppg": 0.0,
+        "source": ""
+      }
+    },
+    "rms_molwt": 226.43500636079258,
+    "num_rings": 4,
+    "scscore": 3.845117177669288
+  },
+  "reaction_properties": {
+    "canonical_reaction_smiles": "O=C(CCl)OCc1ccccc1.O=c1[nH]c2nc(-c3ccccc3)ncc2n1C(F)F>>O=C(Cn1c(=O)n(C(F)F)c2cnc(-c3ccccc3)nc21)OCc1ccccc1",
+    "mapped_smiles": "",
+    "plausibility": 0.9999886751174927,
+    "reacting_atoms": [],
+    "selec_error": null,
+    "cluster_id": null,
+    "cluster_name": null
+  },
+  "interpretation": "CORRECTED: This reaction is N-alkylation of a pre-difluoromethylated heterocycle with benzyl 2-chloroacetate. The N-CHF2 substituent is already present in the heterocyclic reactant; no carboxylic acid coupling, amide formation, or direct CHF2 installation occurs. The ASKCOS tree does NOT recover direct N7-difluoromethylation. The unresolved chemistry is preparation of the N-difluoromethylated purinone core itself.",
+  "genuine_chf2_installation_found": false,
+  "direct_chf2_installation_recovered": false,
+  "genuine_chf2_installation_reactions": 0,
+  "unresolved_step": "Preparation of the N-difluoromethylated purinone core itself",
+  "needs_literature_validation": true
+}

@@ -1,0 +1,5 @@
+{
+  "smiles": "CCN(Cc1cc(F)ccc1F)C(=O)Cn1c(=O)n(C(F)F)c2cnc(-c3ccccc3)nc21",
+  "description": "A7 N7-difluoromethyl TSPO tracer",
+  "tags": "TSPO,A7,N7-CHF2"
+}

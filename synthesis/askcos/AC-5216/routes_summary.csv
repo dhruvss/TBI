@@ -1,0 +1,2 @@
+route_id,route_index,step_count,longest_linear_sequence,terminal_materials,buyable_terminal,route_score,notes
+NO_COMPLETE_ROUTE_FOUND,0,0,0,,FALSE,,ASKCOS returned 200 pathways but none reached a terminal buyable/complete leaf node in the response graph.

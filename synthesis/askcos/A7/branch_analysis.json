@@ -1,0 +1,222 @@
+{
+  "A7_structure": "CCN(Cc1cc(F)ccc1F)C(=O)Cn1c(=O)n(C(F)F)c2cnc(-c3ccccc3)nc21",
+  "total_nodes": 1213,
+  "total_reactions": 697,
+  "reactions_containing_chf2": 591,
+  "genuine_chf2_installation_reactions": 0,
+  "genuine_chf2_search_note": "AUDIT RESULT: Of 697 reaction nodes, 591 contain C(F)F; this is a presence count, not a CHF2-installation count. No genuine CHF2-installation reactions were found. Seven reactions appear to install CHF2 under a literal substring comparison because the reactant uses the equivalent SMILES notation 'FC(F)n1...' while the product uses '...n1C(F)F'; the N-CHF2 substituent is already present chemically in those reactants. No direct N7-difluoromethylation is recovered by ASKCOS. The N7-CHF2 core is treated as a pre-existing precursor.",
+  "top_branches": [
+    {
+      "branch_id": 1,
+      "product": "CCN(Cc1cc(F)ccc1F)C(=O)Cn1c(=O)n(C(F)F)c2cnc(-c3ccccc3)nc21",
+      "reaction_smiles": "CCNCc1cc(F)ccc1F.O=C(Cl)Cn1c(=O)n(C(F)F)c2cnc(-c3ccccc3)nc21>>CCN(Cc1cc(F)ccc1F)C(=O)Cn1c(=O)n(C(F)F)c2cnc(-c3ccccc3)nc21",
+      "model_metadata": [
+        {
+          "direction": "retro",
+          "backend": "template_relevance",
+          "model_name": "reaxys",
+          "attributes": {
+            "max_num_templates": 1000,
+            "max_cum_prob": 0.995,
+            "attribute_filter": []
+          },
+          "model_score": 0.17009706795215607,
+          "normalized_model_score": 0.17009706795215607,
+          "rank": 1,
+          "reaction_id": null,
+          "reaction_set": null,
+          "source": {
+            "template": {
+              "count": 6932,
+              "dimer_only": false,
+              "index": 108,
+              "intra_only": false,
+              "necessary_reagent": "",
+              "reaction_smarts": "[C:4]-[N;H0;D3;+0:5](-[C:6])-[C;H0;D3;+0:1](-[C:2])=[O;D1;H0:3]>>Cl-[C;H0;D3;+0:1](-[C:2])=[O;D1;H0:3].[C:4]-[NH;D2;+0:5]-[C:6]",
+              "template_set": "reaxys",
+              "_id": "5e1f4b6e6348832850995de2",
+              "template_score": 0.17009706795215607,
+              "template_rank": 2,
+              "tforms": [
+                "5e1f4b6e6348832850995de2",
+                "5e1f4b6e6348832850995e68",
+                "5e1f4b6e6348832850997d4c"
+              ],
+              "num_examples": 10287
+            },
+            "reaction_data": null
+          }
+        }
+      ],
+      "plausibility": 0.9999771118164062,
+      "precursor_properties": {
+        "precursor_prices": {
+          "CCNCc1cc(F)ccc1F": {
+            "ppg": 0.0,
+            "source": ""
+          },
+          "O=C(Cl)Cn1c(=O)n(C(F)F)c2cnc(-c3ccccc3)nc21": {
+            "ppg": 0.0,
+            "source": ""
+          }
+        },
+        "rms_molwt": 267.8994545079249,
+        "num_rings": 4,
+        "scscore": 4.506398251240477
+      },
+      "reaction_properties": {
+        "canonical_reaction_smiles": "CCNCc1cc(F)ccc1F.O=C(Cl)Cn1c(=O)n(C(F)F)c2cnc(-c3ccccc3)nc21>>CCN(Cc1cc(F)ccc1F)C(=O)Cn1c(=O)n(C(F)F)c2cnc(-c3ccccc3)nc21",
+        "mapped_smiles": "",
+        "plausibility": 0.9999771118164062,
+        "reacting_atoms": [],
+        "selec_error": null,
+        "cluster_id": null,
+        "cluster_name": null
+      }
+    },
+    {
+      "branch_id": 2,
+      "product": "CCN(Cc1cc(F)ccc1F)C(=O)Cn1c(=O)n(C(F)F)c2cnc(-c3ccccc3)nc21",
+      "reaction_smiles": "CCNCc1cc(F)ccc1F.O=C(O)Cn1c(=O)n(C(F)F)c2cnc(-c3ccccc3)nc21>>CCN(Cc1cc(F)ccc1F)C(=O)Cn1c(=O)n(C(F)F)c2cnc(-c3ccccc3)nc21",
+      "model_metadata": [
+        {
+          "direction": "retro",
+          "backend": "template_relevance",
+          "model_name": "reaxys",
+          "attributes": {
+            "max_num_templates": 1000,
+            "max_cum_prob": 0.995,
+            "attribute_filter": []
+          },
+          "model_score": 0.15923677384853363,
+          "normalized_model_score": 0.15923677384853363,
+          "rank": 2,
+          "reaction_id": null,
+          "reaction_set": null,
+          "source": {
+            "template": {
+              "count": 10702,
+              "dimer_only": false,
+              "index": 52,
+              "intra_only": false,
+              "necessary_reagent": "",
+              "reaction_smarts": "[C:4]-[N;H0;D3;+0:5](-[C:6])-[C;H0;D3;+0:1](-[C:2])=[O;H0;D1;+0:3]>>O=[C;H0;D3;+0:1](-[C:2])-[OH;D1;+0:3].[C:4]-[NH;D2;+0:5]-[C:6]",
+              "template_set": "reaxys",
+              "_id": "5e1f4b6e6348832850995daa",
+              "template_score": 0.15923677384853363,
+              "template_rank": 3,
+              "tforms": [
+                "5e1f4b6e6348832850995daa",
+                "5e1f4b6e6348832850995db2",
+                "5e1f4b6e6348832850996092",
+                "5e1f4b6e6348832850996a4a",
+                "5e1f4b6e6348832850996755"
+              ],
+              "num_examples": 22366
+            },
+            "reaction_data": null
+          }
+        }
+      ],
+      "plausibility": 0.9999837875366211,
+      "precursor_properties": {
+        "precursor_prices": {
+          "CCNCc1cc(F)ccc1F": {
+            "ppg": 0.0,
+            "source": ""
+          },
+          "O=C(O)Cn1c(=O)n(C(F)F)c2cnc(-c3ccccc3)nc21": {
+            "ppg": 0.0,
+            "source": ""
+          }
+        },
+        "rms_molwt": 256.6286727004455,
+        "num_rings": 4,
+        "scscore": 4.421728338466154
+      },
+      "reaction_properties": {
+        "canonical_reaction_smiles": "CCNCc1cc(F)ccc1F.O=C(O)Cn1c(=O)n(C(F)F)c2cnc(-c3ccccc3)nc21>>CCN(Cc1cc(F)ccc1F)C(=O)Cn1c(=O)n(C(F)F)c2cnc(-c3ccccc3)nc21",
+        "mapped_smiles": "",
+        "plausibility": 0.9999837875366211,
+        "reacting_atoms": [],
+        "selec_error": null,
+        "cluster_id": null,
+        "cluster_name": null
+      }
+    },
+    {
+      "branch_id": 3,
+      "product": "CCN(Cc1cc(F)ccc1F)C(=O)Cn1c(=O)n(C(F)F)c2cnc(-c3ccccc3)nc21",
+      "reaction_smiles": "CCNCc1cc(F)ccc1F.COC(=O)Cn1c(=O)n(C(F)F)c2cnc(-c3ccccc3)nc21>>CCN(Cc1cc(F)ccc1F)C(=O)Cn1c(=O)n(C(F)F)c2cnc(-c3ccccc3)nc21",
+      "model_metadata": [
+        {
+          "direction": "retro",
+          "backend": "template_relevance",
+          "model_name": "reaxys",
+          "attributes": {
+            "max_num_templates": 1000,
+            "max_cum_prob": 0.995,
+            "attribute_filter": []
+          },
+          "model_score": 0.0019880994223058224,
+          "normalized_model_score": 0.0019880994223058224,
+          "rank": 3,
+          "reaction_id": null,
+          "reaction_set": null,
+          "source": {
+            "template": {
+              "count": 348,
+              "dimer_only": false,
+              "index": 2716,
+              "intra_only": false,
+              "necessary_reagent": "",
+              "reaction_smarts": "[C:2]-[C;H0;D3;+0:1](=[O;D1;H0:3])-[N;H0;D3;+0:5](-[C:4])-[C:6]>>C-O-[C;H0;D3;+0:1](-[C:2])=[O;D1;H0:3].[C:4]-[NH;D2;+0:5]-[C:6]",
+              "template_set": "reaxys",
+              "_id": "5e1f4b6e6348832850996812",
+              "template_score": 0.0019880994223058224,
+              "template_rank": 29,
+              "tforms": [
+                "5e1f4b6e6348832850996812"
+              ],
+              "num_examples": 348
+            },
+            "reaction_data": null
+          }
+        }
+      ],
+      "plausibility": 0.9996905326843262,
+      "precursor_properties": {
+        "precursor_prices": {
+          "CCNCc1cc(F)ccc1F": {
+            "ppg": 0.0,
+            "source": ""
+          },
+          "COC(=O)Cn1c(=O)n(C(F)F)c2cnc(-c3ccccc3)nc21": {
+            "ppg": 0.0,
+            "source": ""
+          }
+        },
+        "rms_molwt": 265.4100852959951,
+        "num_rings": 4,
+        "scscore": 4.011697679034483
+      },
+      "reaction_properties": {
+        "canonical_reaction_smiles": "CCNCc1cc(F)ccc1F.COC(=O)Cn1c(=O)n(C(F)F)c2cnc(-c3ccccc3)nc21>>CCN(Cc1cc(F)ccc1F)C(=O)Cn1c(=O)n(C(F)F)c2cnc(-c3ccccc3)nc21",
+        "mapped_smiles": "",
+        "plausibility": 0.9996905326843262,
+        "reacting_atoms": [],
+        "selec_error": null,
+        "cluster_id": null,
+        "cluster_name": null
+      }
+    }
+  ],
+  "chf2_formation_candidates_note": "AUDIT CORRECTION: The reactions below were initially labeled as N7-CHF2-formation candidates, but all contain 'n1C(F)F' in the reactants. They represent N-alkylation on pre-difluoromethylated scaffolds, NOT direct CHF2-installation. No genuine N7-difluoromethylation reactions were found where reactants lack C(F)F but products have n(C(F)F).",
+  "chf2_formation_candidates_misclassified": [
+    "CCN(Cc1cc(F)ccc1F)C(=O)CBr.O=c1[nH]c2nc(Cl)ncc2n1C(F)F>>CCN(Cc1cc(F)ccc1F)C(=O)Cn1c(=O)n(C(F)F)c2cnc(Cl)nc21",
+    "CCN(Cc1cc(F)ccc1F)C(=O)CCl.O=c1[nH]c2nc(Cl)ncc2n1C(F)F>>CCN(Cc1cc(F)ccc1F)C(=O)Cn1c(=O)n(C(F)F)c2cnc(Cl)nc21",
+    "O=C(CBr)NCc1cc(F)ccc1F.O=c1[nH]c2nc(Cl)ncc2n1C(F)F>>O=C(Cn1c(=O)n(C(F)F)c2cnc(Cl)nc21)NCc1cc(F)ccc1F",
+    "O=C(CCl)NCc1cc(F)ccc1F.O=c1[nH]c2nc(Cl)ncc2n1C(F)F>>O=C(Cn1c(=O)n(C(F)F)c2cnc(Cl)nc21)NCc1cc(F)ccc1F",
+    "O=C(CO)NCc1cc(F)ccc1F.O=c1[nH]c2nc(Cl)ncc2n1C(F)F>>O=C(Cn1c(=O)n(C(F)F)c2cnc(Cl)nc21)NCc1cc(F)ccc1F"
+  ]
+}
