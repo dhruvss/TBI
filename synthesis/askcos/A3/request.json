@@ -1,0 +1,5 @@
+{
+  "smiles": "CCN(Cc1ccccc1)C(=O)Cn1c(=O)n(CC(F)(F)F)c2cnc(-c3ccccc3)nc21",
+  "description": "A3 synthesis-feasibility analysis",
+  "tags": "TSPO,A3,N-trifluoroethyl"
+}

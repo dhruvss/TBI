@@ -1,0 +1,5 @@
+{
+  "smiles": "CCN(Cc1cc(F)ccc1C(F)(F)F)C(=O)Cn1c(=O)n(C)c2cnc(-c3ccccc3)nc21",
+  "description": "A15 synthesis-feasibility analysis",
+  "tags": "TSPO,A15,3-CF3-4-F-benzyl,N-methyl"
+}
