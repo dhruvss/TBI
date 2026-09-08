@@ -1,10 +1,24 @@
 AI USE LOG — TBI/TSPO PET TRACER PROJECT
 
-ENUMERATION
-
+ORIGINAL WEIGHTING SCHEME
+ChatGPT - OpenAI, 5.2 version
 Prompt:
 
-“We are continuing off in our computational pipeline for acute TBI. Here is what YOU wanted me to carry over into this new chat - Project root: ~/Documents/Research/TBI-tracer
+“for the statistical weighting scheme at the beginning - - BPND: 0.32
+- VT/fP: 0.18
+- VT: 0.08
+- VND inverse: 0.05
+- Docking: -0.20 (according to directional changes - the more negative the better)
+- pKi: 0.10
+- logD closeness: 0.05
+- fP: 0.02
+- K1: 0.00
+- Generate a full z-score normalization containing these study-defined heuristic weights to arrive at the top second-generation TSPO tracer for modification.
+
+
+ENUMERATION
+ChatGPT - OpenAI, 5.2 version
+Prompt:
 
 Envs: tspo-tracer2 (RDKit/OpenBabel), tspo-tracer (AutoDock Vina)
 
@@ -24,17 +38,12 @@ Scoring: R pipeline with equal-weighted z’s across Ki, PET metrics, docking, l
 
 Lead scaffold: AC-5216 (emapunil) with R-group enumeration (round 2)
 
-Give me a short title for the new chat (e.g., “AC5216 TBI tracer — Round 2”), and tell me your immediate next action:
 
-rerun docking and rebuild z-scores,
-
-expand enumeration (round 3),
-
-or prep a professor-facing summary + figures. We are done with docking for round 2, but I feel like it is good to go for round 3. We got two results below -7 kcal/mol which is much better than the past run, and I would like to see if we can possibly make some fluorinated analogs or add silicon to analogs as well (SiO possible), if the tracer's effects are more pronounced in those cases. Currently the highest results are emap2_Bn-3__4diF_CH2CF3,-6.932, emap2_Bn-3__5diF_CH2CF3,-7.028, emap2_Bn-4Br_CH2CF3,-6.740, emap2_Bn-4CF3_CH2F,-6.924, emap2_Bn-4CF3_iPr,-6.947, emap2_Bn-4SF5_CH2CF3,-7.046, emap2_Bn-4SF5_CHF2,-6.901. The rest are quite mediocre. In order to jog your memory, here is an abstract of this project: Background: Traumatic brain injury currently remains as one of the most prevalent neurological conditions, with more than 50 million cases worldwide. The condition can be caused by any major injury to the skull, such as car accidents, sports injuries, and military injuries. The most common demographics affected by TBI include sportspeople in contact sports such as football, motorsport, and martial arts, and soldiers stationed in active combat and blast zones. Despite its magnitude, however, TBI is one of the least understood neurodegenerative conditions, especially at a molecular and histological level.
+We are done with docking for round 2, but I feel like it is good to go for round 3. We got two results below -7 kcal/mol which is much better than the past run, and I would like to see if we can possibly make some fluorinated analogs or add silicon to analogs as well (silyl ethers and trifluoromethyl ethers in particular), if the tracer's effects are more pronounced in those cases. Currently the highest results are emap2_Bn-3__4diF_CH2CF3,-6.932, emap2_Bn-3__5diF_CH2CF3,-7.028, emap2_Bn-4Br_CH2CF3,-6.740, emap2_Bn-4CF3_CH2F,-6.924, emap2_Bn-4CF3_iPr,-6.947, emap2_Bn-4SF5_CH2CF3,-7.046, emap2_Bn-4SF5_CHF2,-6.901. The rest are quite mediocre. In order to jog your memory, here is an abstract of this project: Background: Traumatic brain injury currently remains as one of the most prevalent neurological conditions, with more than 50 million cases worldwide. The condition can be caused by any major injury to the skull, such as car accidents, sports injuries, and military injuries. The most common demographics affected by TBI include sportspeople in contact sports such as football, motorsport, and martial arts, and soldiers stationed in active combat and blast zones. Despite its magnitude, however, TBI is one of the least understood neurodegenerative conditions, especially at a molecular and histological level.
 
 Current Literature: The current understanding of this molecular damage mainly includes the activation of microglia, which secrete neuroinflammatory biomarkers such as neurofilament light chain (NfL) and other proteins that collect near the injury site. Conventional structural approaches lack the capability of detecting molecular and diffuse damage, hence researchers now turn to molecular imaging in the form of positron emission tomography (PET imaging). Researchers employ ligands and binding agents known as radiotracers that bind to key biomarker proteins to visualize the diffuse damage that occurs in TBI.
 
-Rationale: In this project, the main biomarker targeted is the human 18 kDa translocator protein (TSPO), a key binding protein expressed in traumatic brain injury. TSPO was chosen for its unique ability to visualize diffuse damage in the brain at specific points in TBI phases (acute, subacute, and chronic). According to current literature, TSPO peaks as early as 2-3 days post-injury allowing for acute detection, 28 days post-injury during the subacute phase, and again 17 years post-injury (as shown in an NFL study), during the chronic phase, making a possible future direction of this research be chronic traumatic encephalopathy diagnostics. ****However, while TSPO has multiple radiotracers used for visualization of other neurodegenerative conditions (e.g. Alzheimer’s and multiple sclerosis), TSPO currently does not have a radiotracer specifically optimized for TBI purposes.
+Rationale: In this project, the main biomarker targeted is the human 18 kDa translocator protein (TSPO), a key binding protein expressed in traumatic brain injury. TSPO was chosen for its unique ability to visualize diffuse damage in the brain at specific points in TBI phases (acute, subacute, and chronic). According to current literature, TSPO peaks as early as 2-3 days post-injury allowing for acute detection, 28 days post-injury during the subacute phase, and again 17 years post-injury (as shown in an NFL study), during the chronic phase, making a possible future direction of this research be chronic traumatic encephalopathy diagnostics. ****However, while TSPO has multiple radiotracers used for visualization of other neurodegenerative conditions (e.g. Alzheimer’s and multiple sclerosis), TSPO currently does not have a radiotracer specifically optimized for TBI purposes. We are also testing out a new haloalkylation rationale specifically focusing on fluorine mods to existing TSPO PET tracer cores.
 
 Objective: The main objective of this research project is to synthesize a radiotracer that can bind to TSPO’s peripheral benzodiazepine receptor (which is upregulated in microglial activation), specifically modified and optimized for use in traumatic brain injury. I developed a computational pipeline that normalizes PET metrics (VT, BP_ND, VND, VT/fP, and VND/fP), inhibition constant values (Ki), and docking energies from molecular docking analysis into z-scores with weights specifically tuned for TBI.
 
@@ -42,44 +51,33 @@ Results (so far): 8 tracers were selected for this statistical analysis (PK11195
 
 Future Directions: The next step in this research would be synthesis of the novel radiotracer. This would include the fluorination of specific R-groups for better binding potential and affinity to key radioisotopes 11C and 18F. Then, in vitro testing would occur using the shake-flask method of combining octanol and PBS buffer (7.4 pH) to have the optimal environment for tracer binding to TSPO. If possible, the next step would be radiolabeling of the tracer in wet lab, through nuclear magnetic resonance (NMR), with a pilot label of either **N-[^11C]methyl** or **aryl/^18F-fluoroalkyl** depending on the best possible synthesis guideline (either methylation or fluorination in R1 and R2).
 
-Major Questions:
-
-A. Any red-flag steps for installing **R¹ benzyl (para-F/OCF3/CF3)** or **R² CH2F / CH2CH2F** late-stage - how does this affect radiolabeling during synthesis?
-
-B. What is the required threshold in terms of PET metrics and binding potential where synthesis would be warranted for this tracer (e.g., **BPND↑, VT/fP↑**, **logD closeness ~2.7**, clogP range, docking ≤ −9 kcal/mol)?
-
-C. As AC-5216 contains benefits for neuroinflammation through GABAergic transmission by boosting neurosteroid synthesis - hence inhibiting neuroinflammatory pathways, what steps can we take in order to increase the therapeutic potential of the tracer analog?
-
-- follow-up to that: What does the pharmacology of TSPO look like, and how can we exploit these properties to increase this therapeutic potential?”
-
 
 ENUMERATION — FOCUSED MODIFICATION SETS
-
+ChatGPT - OpenAI, 5.2 version
 Prompt:
 
-“Make 3 focused sets (20–40 compounds total):
+“Make 3 focused sets (R1: ~30 mods, R2: ~60 mods permuting the key nitrogen heterocycle at position 7):
 
 1. Halogen/fluoroalkyl scan at solvent vector (BBB/logD tuning). 
 2. Pocket-fill mini-frags (small rings, F/CF₃ swaps) near hydrophobic subpockets. 
-3. Label-ready variants (para-F, fluoroethyl linkers, 11C-methyl positions).”
+3. Label-ready variants (para-F, fluoroethyl linkers) Trifluoromethyl ethers are also an interesting add here.”
 
 
 STRUCTURE / FUNCTIONAL-GROUP CHECK
 
 Prompt:
+“quick question, for our modifications of the functional groups of emapunil as of now, what are the functional groups and where are they located in the structure? how many functional groups for TSPO binding are there in total for this molecule?”
 
-“quick question, for our modifications of the functional groups of emapunil as of now, what are the functional groups and where are they located in the structure? how many functional groups for TBI binding are there in total for this molecule?”
 
-
-ADME / CNS PROFILE
-
+CNS PROFILE
+ChatGPT - OpenAI, 5.2 version
 Prompt:
 
 “let's not do pksim until we have the final set of analogs that we will be fine docking and testing. I want the script for a full adme profile of all round 1 2 and 3, With MPO, all the params listed, + logS EST, efflux rist, CNS gate and other params (i already got everything except MPO for rounds 1 and 2 but I want to rerun), I want to run a full adme profile on every single analog we have - take example from the CNS window python script we ran for 1 and 2., and I also want to append docking energy to master_stats.csv - which combined with the boundaries will give us the TBI tracer analog subset. I also want everything that we are doing for the analogs/mods, for AC5216 so I can compare and show the distinguishable impact, with all the given stats: logD₇․₄ (measured) = 3.3 (your data) Ki (TSPO) = 2.4 (your data; include units) MW (Da) TPSA (Å²) HBD, HBA, RotB cLogP (report only as a stat; don’t use it for permeability) logS (ESOL-style estimate) Efflux risk (heuristic / model flag) Docking energy (your fine docking) CNS MPO (TE-style, 0–6). We can also include sections for relative wins against AC5216 in optimization for TBI in particular (please take from literature, give detailed logic on why this is TBI specific each time - with your boundaries in mind that is - tie into the overall TBI pathology). I've already run fine docking on all TSPO tracers that have associated chemical structures AND proper data with PET metrics, Ki and logD7.4 which are clear wet lab measurements, so I believe I am good. We should claim permeability prediction in the case of logD7.4 and PKSIM stats that we run later. I already have docking energies for AC5216, but I feel like an addition of an ADME profile for AC5216 is a good idea to compare. The membrane environment of TSPO will be a great place to use logD7.4 instead of cLogP (which the presentation made the grave mistake of) in a pH changing biological environment that is at flux.”
 
 
 CNS WINDOW
-
+ChatGPT - OpenAI, 5.2 version
 Prompt:
 
 “why did you give me this window in the first place then? I want to understand the logic. You MUST use the literature given as according to TE-2052 - I want to make sure these are good for radiolabeling as well, and must pose limited efflux risk. This is for all rounds - all rounds failed in this statistical test. I don't want an ac-5216-like profile, the whole damn point of the project is to make this better than AC5216 FOR TBI - AC5216 profile may lead to false positives. We need this extra TBI tightening, and we also need to make tradeoffs based on the statistical importance of a value for example logD7.4 compared to molecular weight. Let's make some hard cutoffs - possibly run a smarter round 4, 350-550 MW, docking below 6.5, 1.5 - 4.2 log D (hard gate), TPSA < 90 A, HBD≤1, HBA ≤ 9, RotB≤10 - for tradeoff potential.”
@@ -87,21 +85,6 @@ Prompt:
 Prompt:
 
 “can you cross check with the literature PDF I gave you for ideal cns windows for radiotracers?”
-
-
-ORIGINAL WEIGHTING SCHEME
-
-Prompt:
-
-“for the statistical weighting scheme at the beginning - - BPND: 0.32
-- VT/fP: 0.18
-- VT: 0.08
-- VND inverse: 0.05
-- Docking: -0.20 (according to directional changes - the more negative the better)
-- pKi: 0.10
-- logD closeness: 0.05
-- fP: 0.02
-- K1: 0.00 give me the exact documentation for it.”
 
 
 MPO / CNS WINDOW / WEIGHTED SCORE FRAMING
