@@ -88,6 +88,7 @@ Prompt:
 
 
 MPO / CNS WINDOW / WEIGHTED SCORE FRAMING
+ChatGPT - OpenAI, 5.2 version
 
 Prompt:
 
@@ -95,6 +96,7 @@ Prompt:
 
 
 2TCM / LOGAN / KINETIC MODELING
+ChatGPT - OpenAI, 5.2 version
 
 Prompt:
 
@@ -110,6 +112,7 @@ Prompt:
 
 
 PBPK SCORING AUDIT
+ChatGPT - OpenAI, 5.2 version
 
 Prompt:
 
@@ -174,6 +177,7 @@ The baseline score was originally computed only in Excel; there may be no existi
 
 
 ASKCOS API SETUP
+ChatGPT - OpenAI, 5.2 version
 
 Prompt:
 
@@ -245,6 +249,7 @@ Return the connectivity result and files created before doing any chemistry.”
 
 
 ASKCOS — A7 AUDIT
+ChatGPT - OpenAI, 5.2 version
 
 Prompt:
 
@@ -276,6 +281,7 @@ Do not rerun MCTS, forward prediction, or modify unrelated files.”
 
 
 ASKCOS — A7 CORRECTION
+ChatGPT - OpenAI, 5.2 version
 
 Prompt:
 
@@ -316,6 +322,7 @@ Do not add new analyses.”
 
 
 ASKCOS — A3
+ChatGPT - OpenAI, 5.2 version
 
 Prompt:
 
@@ -374,6 +381,7 @@ Return:
 
 
 ASKCOS — A8
+ChatGPT - OpenAI, 5.2 version
 
 Prompt:
 
@@ -486,6 +494,7 @@ Return:
 
 
 ASKCOS — A15
+ChatGPT - OpenAI, 5.2 version
 
 Prompt:
 
@@ -590,6 +599,7 @@ After editing, validate:
 
 
 MD STATISTICS — AUDIT
+ChatGPT - OpenAI, 5.2 version
 
 Prompt:
 
@@ -624,6 +634,7 @@ First task: inspect the existing aggregation, statistics, and plotting scripts a
 
 
 MD STATISTICS — IMPLEMENTATION
+ChatGPT - OpenAI, 5.2 version
 
 Prompt:
 
