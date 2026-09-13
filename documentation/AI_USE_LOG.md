@@ -647,3 +647,93 @@ Add a three-panel primary figure showing all trajectory-level points and mean ±
 Add regression tests for Holm adjustment, Cliff’s delta direction, Hedges’ g direction, duplicate/missing trajectories, candidate/replicate validation, and prevention of frame-level inference.
 
 Do not alter the scientific endpoint definitions or statistical plan. Do not add new hypothesis tests. Keep the implementation minimal and publication-focused.”
+
+
+Prompt: 
+
+Run the finalized replicated-MD statistics pipeline for the TSPO project using the existing authoritative scripts and completed n=5 dataset.
+
+Repository root:
+`/Users/dhruv/Documents/Research/TBI`
+
+Important constraints:
+- Do not modify any code.
+- Do not modify any scientific definitions.
+- Do not change endpoints.
+- Do not add hypothesis tests.
+- Do not change candidate names or replicate IDs.
+- Do not edit source trajectory-analysis outputs.
+- Do not “fix” validation failures automatically.
+- If validation fails, stop and report the exact problem.
+- Use the existing scripts exactly as currently committed.
+
+Final study design:
+- A3: reps 1–5
+- A7: reps 1–5
+- A8: reps 1–5
+- A15: reps 1–5
+- AC-5216: reps 1–5
+- 25 independent 10 ns trajectories total
+- statistical unit = independent trajectory, never individual frame
+
+Prespecified primary endpoints:
+1. mean fixed-pocket contact count
+2. mean ligand COM-to-fixed-pocket-center distance
+3. percentage of frames with >=10 fixed-pocket contacts
+
+Authoritative statistics script:
+`md/scripts/analyze_md_replicate_statistics.py`
+
+First:
+1. identify the existing aggregation script used by the finalized replicated-MD pipeline;
+2. inspect only enough to determine its required CLI/input paths;
+3. run it on all 25 completed trajectory-analysis outputs;
+4. generate the replicate-level aggregate CSV and provenance manifest expected by the authoritative statistics script.
+
+Then run:
+
+`md/scripts/analyze_md_replicate_statistics.py`
+
+using the completed aggregate CSV and manifest.
+
+The existing pipeline should enforce:
+- exactly five candidates;
+- exactly replicates 1–5 per candidate;
+- unique candidate–replicate keys;
+- finite primary endpoint values;
+- expected frame count and time coverage;
+- no ambiguous input matches;
+- explicit replicate sorting.
+
+Run the existing prespecified analyses only:
+- mean ± SD for all replicate-level endpoints;
+- Kruskal-Wallis omnibus test for each of the three primary endpoints;
+- four analog-vs-AC-5216 Mann-Whitney comparisons within each endpoint;
+- exact two-sided Mann-Whitney when no cross-group ties are present;
+- asymptotic/tie-corrected Mann-Whitney when ties are present;
+- record the method used;
+- Holm correction across the four analog-vs-AC-5216 comparisons separately within each endpoint;
+- Cliff’s delta;
+- Hedges’ g;
+- secondary endpoints descriptive only;
+- no frame-level inference;
+- no all-pairs testing;
+- no significance stars;
+- no additional exploratory tests.
+
+Generate the existing three-panel primary MD figure and provenance outputs.
+
+Do not change any files except for newly generated analysis outputs in the intended results/output directory.
+
+When finished, return:
+1. exact commands executed;
+2. validation status for all 25 trajectories;
+3. paths to the aggregate CSV and provenance manifest;
+4. descriptive statistics for the three primary endpoints;
+5. Kruskal-Wallis results;
+6. analog-vs-AC-5216 Mann-Whitney results with raw p, Holm-adjusted p, test method, Cliff’s delta, and Hedges’ g;
+7. paths to all generated figures/tables;
+8. any warnings;
+9. git status confirming no tracked source/code files were modified.
+
+Do not reinterpret the scientific results yet. Just run and report the finalized pipeline.
