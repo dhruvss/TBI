@@ -1,0 +1,6 @@
+candidate,pareto_optimal,dominated_by,dominates,PBPK_rank,ADMET_major_liability,ASKCOS_classification
+A3,false,A7,,2,Predicted hERG II; BBB discordant; P-gp discordant,strong scaffold precedent recovered
+A7,true,,A3; A8; A15,1,Predicted hERG II; BBB concordant nonsupportive; P-gp discordant,plausible route with one unresolved key step
+A8,false,A7,,7,Predicted Ames; hERG II; BBB concordant supportive; P-gp discordant; Ames duplicate-run discordance,strong scaffold precedent recovered
+A15,false,A7,,8,Predicted hERG II; BBB concordant nonsupportive; P-gp discordant,strong scaffold precedent recovered
+AC-5216,true,,,,Predicted Ames; hERG II; BBB concordant supportive; P-gp discordant,strong scaffold precedent recovered

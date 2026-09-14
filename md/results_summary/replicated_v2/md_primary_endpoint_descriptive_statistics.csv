@@ -1,0 +1,16 @@
+endpoint,endpoint_label,endpoint_class,candidate,n_independent_trajectories,mean,sd,median,min,max,analysis_type
+fixed_contacts_mean,Mean fixed-pocket contact count,primary,A3,5,11.575,6.201778494915794,12.205,4.949,19.672,descriptive
+fixed_contacts_mean,Mean fixed-pocket contact count,primary,A7,5,28.2546,5.944030560150242,26.6,21.302,36.121,descriptive
+fixed_contacts_mean,Mean fixed-pocket contact count,primary,A8,5,16.635199999999998,3.043998800919605,14.912,14.455,21.551,descriptive
+fixed_contacts_mean,Mean fixed-pocket contact count,primary,A15,5,17.0422,3.3060122050591403,16.033,13.511,20.651,descriptive
+fixed_contacts_mean,Mean fixed-pocket contact count,primary,AC-5216,5,18.4902,2.18622658935436,19.403,15.977,20.866,descriptive
+com_to_pocket_mean_A,Mean ligand COM-to-fixed-pocket-center distance,primary,A3,5,8.864522393894196,1.6945290700193705,8.068481847763062,7.35202374124527,11.429842762470246,descriptive
+com_to_pocket_mean_A,Mean ligand COM-to-fixed-pocket-center distance,primary,A7,5,6.646957113695146,1.0799291291285615,7.3118469786643985,5.073873855352402,7.521880741119385,descriptive
+com_to_pocket_mean_A,Mean ligand COM-to-fixed-pocket-center distance,primary,A8,5,6.981768728399277,0.9591377653718908,7.4984113070964815,5.799367861747742,7.958078488349915,descriptive
+com_to_pocket_mean_A,Mean ligand COM-to-fixed-pocket-center distance,primary,A15,5,8.303408801841735,0.8308775112435766,8.315339328289031,7.012035150051117,9.098033597946166,descriptive
+com_to_pocket_mean_A,Mean ligand COM-to-fixed-pocket-center distance,primary,AC-5216,5,6.564729441785812,0.8602001421310871,6.288033997535705,5.566734406232833,7.512438255786896,descriptive
+frames_fixed_contacts_ge10_pct,Frames with >=10 fixed-pocket contacts,primary,A3,5,54.08,28.747730345194206,66.10000000000001,15.7,83.39999999999999,descriptive
+frames_fixed_contacts_ge10_pct,Frames with >=10 fixed-pocket contacts,primary,A7,5,97.96000000000001,2.035436071214222,98.0,94.9,99.8,descriptive
+frames_fixed_contacts_ge10_pct,Frames with >=10 fixed-pocket contacts,primary,A8,5,85.76,8.26335283041938,83.2,75.5,96.8,descriptive
+frames_fixed_contacts_ge10_pct,Frames with >=10 fixed-pocket contacts,primary,A15,5,82.14,9.510152469860829,85.7,68.0,91.7,descriptive
+frames_fixed_contacts_ge10_pct,Frames with >=10 fixed-pocket contacts,primary,AC-5216,5,87.97999999999999,9.151611879882147,92.9,73.3,95.7,descriptive
