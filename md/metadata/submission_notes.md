@@ -41,7 +41,7 @@ Docking settings:
     Receptor: docking/TSPO/TSPO_receptor.pdbqt
     Ligand: docking/tracers/AC-5216.pdbqt
     Grid center: x=5.2, y=12.8, z=8.3
-    Grid size: x=20, y=20, z=20
+    Grid size: x=14, y=14, z=14
     Exhaustiveness: 32
     Number of modes: 10
     Selected pose: mode 1
