@@ -895,7 +895,7 @@ Attempts 6-19
 Exited with multiple errors either due to missing data inputted into master CSVs, K4 running poorly and hitting penalty limits - this is due to interstitial brain concentrations being 240x larger than tissue concentration which meant Mobi tissue specs came from extravascular origin rather than intravascular. Hence, BPND is not a reliable measure.
 
 Attempt 20 (current attempt)
-Abandoned kinfitr methods - decided to run simple VT regression analysis rather than considering BPND - VT and VT/fp will be the primary PET metrics in this data validation. Simple VT analysis went through! Showed sensitivity and specificity based on critical value of t-test t* changes (10-40 min) - VT stayed constant and acted as a great regression predictor with an r^2 value of 0.999986 - VT stayed constant across all analogs. 
+Abandoned kinfitr methods - decided to run simple VT regression analysis rather than considering BPND - VT and VT/fp will be the primary PET metrics in this data validation. Simple VT analysis went through! Showed sensitivity and specificity based on t* changes (10-40 min) - VT stayed constant and acted as a great regression predictor with an r^2 value of 0.999986 - VT stayed constant across all analogs. 
 
 **Analog Results**
 A7 emerged as the best modified analog scaffold - emap2_Bn-3,4diF_CHF2 - all top 3 analogs emerged with fluorinated side chains indicating high success rate of fluorination method.
