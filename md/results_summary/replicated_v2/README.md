@@ -1,14 +1,15 @@
 # Replicated MD analysis
 
-The checked-in trajectory tables in this directory are interim three-replicate
-data and are not the final inferential analysis. Obsolete three-replicate test
-outputs were removed to prevent accidental publication or interpretation.
+The checked-in trajectory tables and statistical outputs in this directory
+contain the finalized five-replicate analysis: five independent 10 ns trajectories
+for each of A3, A7, A8, A15, and AC-5216, yielding 25 trajectories in total.
 
 The authoritative workflow requires exactly five independent 10 ns trajectories
 for each of A3, A7, A8, A15, and AC-5216. It fails before writing outputs if the
 complete 5 x 5 design or frame-level validation is not satisfied.
 
-Run, after all 25 trajectories have been analyzed:
+To regenerate the outputs from the locally retained per-trajectory analyses,
+run from the repository root:
 
 ```bash
 python md/scripts/aggregate_md_reps.py

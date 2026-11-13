@@ -16,7 +16,7 @@ sys.path.insert(0, str(SCRIPTS))
 import analyze_pbpk_weight_sensitivity as analysis  # noqa: E402
 
 REPO = Path(__file__).resolve().parents[2]
-SOURCE = REPO / "processed_data_supplements" / "Supplementary Table - Pharmacokinetics.csv"
+SOURCE = REPO / "processed_data_supplements" / "Supplementary S4 - Pharmacokinetics.csv"
 
 
 class WeightTests(unittest.TestCase):

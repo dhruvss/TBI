@@ -26,7 +26,7 @@ All five finalized ADMET profiles have no predicted hERG I or hepatotoxicity fla
 
 ## Sources and identity handling
 
-The supplementary pharmacokinetics table supplies Final_Weighted_Score unchanged; sensitivity baseline output supplies existing ranks only. This existing score already includes its original component definitions, including docking; it is neither decomposed nor reweighted here. The requested finalized n=5 MD CSV takes precedence over the directory README's older three-replicate description.
+The supplementary pharmacokinetics table supplies Final_Weighted_Score unchanged; sensitivity baseline output supplies existing ranks only. This existing score already includes its original component definitions, including docking; it is neither decomposed nor reweighted here. The finalized MD CSV contains n=5 independent trajectories per candidate.
 
 Current candidates are mapped by finalized ADMET InChIKey through the existing compound identity map to PBPK enumeration labels:
 
@@ -40,7 +40,7 @@ Current A15 is the F/CF3 candidate formerly A17; legacy A15 is an A8 duplicate a
 
 Source files (all read-only):
 
-- [processed_data_supplements/Supplementary Table - Pharmacokinetics.csv](../processed_data_supplements/Supplementary%20Table%20-%20Pharmacokinetics.csv)
+- [processed_data_supplements/Supplementary S4 - Pharmacokinetics.csv](../processed_data_supplements/Supplementary%20S4%20-%20Pharmacokinetics.csv)
 - [PKSim/sensitivity_analysis/pbpk_sensitivity_scores_and_ranks.csv](../PKSim/sensitivity_analysis/pbpk_sensitivity_scores_and_ranks.csv)
 - [PKSim/sensitivity_analysis/README.md](../PKSim/sensitivity_analysis/README.md)
 - [md/results_summary/replicated_v2/md_primary_endpoint_descriptive_statistics.csv](../md/results_summary/replicated_v2/md_primary_endpoint_descriptive_statistics.csv)

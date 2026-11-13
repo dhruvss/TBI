@@ -291,7 +291,7 @@ def main() -> None:
     parser.add_argument(
         "--source",
         type=Path,
-        default=repo / "processed_data_supplements" / "Supplementary Table - Pharmacokinetics.csv",
+        default=repo / "processed_data_supplements" / "Supplementary S4 - Pharmacokinetics.csv",
     )
     parser.add_argument(
         "--outdir",

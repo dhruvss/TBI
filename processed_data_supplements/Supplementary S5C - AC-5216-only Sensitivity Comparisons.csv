@@ -1,0 +1,9 @@
+ligand_id,scenario,score
+AC5216_ref,baseline,-2.013148944385297
+AC5216_ref,equal_weights,-2.0085709270148
+AC5216_ref,leave_out_BP60,-1.4687116561026206
+AC5216_ref,leave_out_BP30,-1.8098985401842143
+AC5216_ref,leave_out_BP90,-1.8748149169643338
+AC5216_ref,leave_out_brain_AUC,-2.4665168935206463
+AC5216_ref,leave_out_CNS_MPO,-2.463376093723359
+AC5216_ref,leave_out_docking,-1.9386846486097733
