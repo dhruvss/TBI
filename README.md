@@ -1,4 +1,4 @@
-# In Silico Evaluation of Haloalkylated TSPO PET Tracer Candidates for Traumatic Brain Injury Neuroinflammation
+# Multi-Objective Pipeline for PET Tracer Development - Improved Inflammation Imaging for Traumatic Brain Injury
 
 This repository contains code, processed data, figures, and supplementary materials for a computational study prioritizing haloalkylated emapunil-derived TSPO PET tracer candidates for traumatic brain injury neuroinflammation.
 
@@ -99,6 +99,42 @@ The following software is not managed entirely through the Conda environment:
 
 # Citation
 
+Please cite these papers/ChemRxiv versions if you are using any of the codes that have been posted in this repository.
+
+
 Dhruv Subramanian. In Silico Evaluation of Haloalkylated Human 18kDa Translocator Protein PET Tracer Candidates for Traumatic Brain Injury Neuroinflammation. ChemRxiv. 21 May 2026. DOI: https://doi.org/10.26434/chemrxiv.15003660/v1
+Dhruv Subramanian. The Multi-Objective Computational Design and Prioritization of Novel TSPO PET Radioligands for Improved Inflammation Imaging after Traumatic Brain Injury. ChemRxiv. 16 November 2026.
+DOI: https://doi.org/10.26434/chemrxiv.15003660/v2
 
 The repository includes the expanded ChemRxiv v2 analysis and supporting materials. The citation above should be updated to the version-of-record URL after ChemRxiv v2 is posted.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
